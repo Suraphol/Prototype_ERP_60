@@ -1,0 +1,82 @@
+<form>
+	<div class="panel panel-primary">{{fromName}}
+		<div class="panel-heading"><table width="100%">
+				<tr>
+					<td width="95%"><label>{{pageName}}</label></td>
+					<td><label>{{pageCode}}</label></td>
+				</tr>
+			</table></div>
+		<div class="panel-body">
+		<div class="list-group-item active">ข้อมูล</div>
+		<div class="well">
+			<table width="95%" border="0" align="center">
+				<tr>
+					<td width="20%" align="right">เลขที่บัตร:</td>
+					<td width="30%"><input type="text" class="form-control custom-form-control" style="width:55%"> &nbsp;<font color="red">*</font><button type="button" class="btn btn-info">ดึงข้อมูลบัตร</button></td>
+					<td width="20%" align="right"></td>
+					<td width="30%"></td>
+				</tr>
+                <tr>
+                    <td  align="right">ผู้ถือบัตรเครดิต:</td>
+                    <td><input type="text" class="form-control custom-form-control" style="width:90%"  ng-model="person" disabled></td>
+                    <td  align="right">หน่วยงาน:</td>
+                    <td><input type="text" class="form-control custom-form-control" style="width:90%"  ng-model="person" disabled></td>
+                </tr>
+				<tr>
+                    <td  align="right">เบอร์ติดต่อภายใน:</td>
+                    <td><input type="text" class="form-control custom-form-control" style="width:50%" disabled></td>
+                    <td  align="right">เบอร์ติดต่อมือถือ:</td>
+                    <td><input type="text" class="form-control custom-form-control" style="width:50%" disabled></td>
+                </tr>
+				<tr>
+                    <td  align="right">บัตรวงเงิน:</td>
+                    <td><label class="radio-inline">
+						  <input type="radio" name="inlineRadioOptions" id="a1" value="false" ng-model="a1" ng-init="a1='false'">ชั่วคราว
+						</label>
+						<label class="radio-inline">
+						  <input type="radio" name="inlineRadioOptions" id="a1" value="true" ng-model="a1">ถาวร
+						</label></td>
+                    <td  align="right"><div ng-show="a1"> ที่เก็บ:</div></td>
+                    <td><div ng-show="a1"><label class="radio-inline">
+						  <input type="radio" name="a2" id="a2" value="option3" checked="" disabled="true"> เก็บเอง
+						</label>
+						<label class="radio-inline">
+						  <input type="radio" name="a2" id="a2" value="option4" disabled="true">ฝากกองคลัง
+						</label></div> </td>
+                </tr>
+                <tr>
+                    <td  align="right">วันที่ออกบัตร:</td>
+                    <td><input type="text" class="form-control custom-form-control" style="width:50%" disabled></td>
+                    <td  align="right">วันที่บัตรหมดอายุ:</td>
+                    <td><input type="text" class="form-control custom-form-control" style="width:50%" disabled></td>
+                </tr>
+                <tr>
+                    <td align="right">วงเงินบัตร(บาท): </td>
+                    <td><input type="text" class="form-control custom-form-control" style="width:50%"><font color="red">*&nbsp; </font></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+				<tr>
+                    <td align="right">เลขที่หนังสืออนุมัติ: </td>
+                    <td><input type="text" class="form-control custom-form-control" style="width:50%"><font color="red">*&nbsp; </font></td>
+                    <td align="right">วงเงินขอเบิก(บาท):</td>
+                    <td><input type="text" class="form-control custom-form-control" style="width:50%"></td>
+                </tr>
+				<tr>
+                    <td align="right">ระยะเวลาที่ได้รับอนุมัติ: </td>
+                    <td><input type="text" class="form-control custom-form-control" style="width:50%"><font color="red">*&nbsp; </font><img src="images/calendar_32.png" width="24" height="24"></td>
+                    <td align="right">ถึง:</td>
+                    <td><input type="text" class="form-control custom-form-control" style="width:50%"><font color="red">*&nbsp; </font><img src="images/calendar_32.png" width="24" height="24"></td>
+                </tr>
+
+
+				<tr>
+					<td colspan="6" align="center"><button type="button" class="btn btn-success">บันทึก</button> 
+						<a ui-sref="erp03.erps013"><button type="button" class="btn btn-warning">&nbsp;&nbsp;กลับ&nbsp;&nbsp;</button></a>
+						</td>
+				</tr>
+			</table>
+		</div>	
+		</div>
+	</div>
+</form>

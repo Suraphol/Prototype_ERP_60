@@ -1,0 +1,71 @@
+<form ng-controller="erps004FController">
+	<div class="panel panel-primary">{{fromName}}
+		<div class="panel-heading"><table width="100%">
+				<tr>
+					<td width="95%"><label>รายละเอียดธนาคาร</label></td>
+					<td><label>ERPS004</label></td>
+				</tr>
+			</table></div>
+		<div class="panel-body">
+		<div class="list-group-item active">ข้อมูล</div>
+		<div class="well">
+			<table width="100%" border="0" align="center" >
+				<tr>
+                    <td align="right">ธนาคาร:</td>
+                    <td><select class="form-control input-ms" style="width:200px">
+							<option value=""><-- กรุณาเลือก --></option>
+							<option ng-repeat="bank in bankMasterList" value="{{bank.id}}"> {{bank.name}}</option>
+						</select> &nbsp;<font color="red">*</font></td>
+                    <td  align="right">เลขที่สัญญา:</td>
+                    <td><input type="text" class="form-control col-xs-10" placeholder="เลขที่สัญญา">&nbsp;<font color="red">*</font></td>
+                    <td  align="right">วดป.ของสัญญา:</td>
+                    <td><input type="text" class="form-control col-xs-10" placeholder="วดป.ของสัญญา" style="width:150px"><img src="images/calendar_32.png" width="24" height="24">&nbsp;<font color="red">*</font></td>
+                </tr>
+                <tr>
+                    <td  align="right">ระยะเวลากู้:</td>
+                    <td><input type="text" class="form-control col-xs-10" placeholder="ระยะ">&nbsp;<font color="red">*</font></td>
+                    <td  align="right">เริ่มต้น:</td>
+                    <td><input type="text" class="form-control col-xs-10" placeholder="เริ่มต้น" style="width:150px"><img src="images/calendar_32.png" width="24" height="24">&nbsp;<font color="red">*</font></td>
+                    <td  align="right">สิ้นสุด:</td>
+                    <td><input type="text" class="form-control col-xs-10" placeholder="สิ้นสุด" style="width:150px"><img src="images/calendar_32.png" width="24" height="24">&nbsp;<font color="red">*</font></td>
+                </tr>
+				<tr>
+                    <td  align="right">วัตถุประสงค์:</td>
+                    <td><input type="text" class="form-control col-xs-10" placeholder="วัตถุประสงค์">&nbsp;<font color="red">*</font></td>
+                    <td  align="right"></td>
+                    <td></td>
+                    <td  align="right"></td>
+                    <td></td>
+                </tr>
+				<tr>
+					<td colspan="6" align="center"><button type="button" class="btn btn-success">บันทึก</button> 
+						<a ui-sref="erp01.erps004.add"><button type="button" class="btn btn-warning" ng-click="backForm()">&nbsp;&nbsp;กลับ&nbsp;&nbsp;</button></a>
+						</td>
+				</tr>
+			</table>
+
+			<table width="50%" class="table table-bordered table-striped table-list" border="1">
+				<tr>
+					<th width="20%">ปีที่</th>
+					<th width="30%">อัตราค่าผ่อนชำระ</th>
+					<th width="30%">หมายเหตุ</th>
+					<th aling="center"><a ui-sref=".add"><button type="button" class="btn btn-primary" ng-click="add()">เพิ่มข้อมูล</button></th>
+				</tr>
+				<tr>
+					<td align="center">1</td>
+					<td><input type="text" class="form-control col-xs-20" placeholder="อัตราการผ่อนชำระ" style="width:200px"></td>
+					<td><input type="text" class="form-control col-xs-20" placeholder="หมายเหตุ" style="width:200px"></td>
+					<td align="center"><img src="images/ic_delet.png" width="24" height="24"></img>
+				</tr>
+				<tr>
+					<td align="center">2</td>
+					<td><input type="text" class="form-control col-xs-10" placeholder="อัตราการผ่อนชำระ" style="width:200px"></td>
+					<td><input type="text" class="form-control col-xs-20" placeholder="หมายเหตุ" style="width:200px"></td>
+					<td align="center"><img src="images/ic_delet.png" width="24" height="24"></img>
+				</tr>
+
+			</table>
+		</div>
+		</div>
+	</div>
+</form>

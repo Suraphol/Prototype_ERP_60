@@ -1,0 +1,106 @@
+<form>
+	<div class="panel panel-primary">{{fromName}}
+		<div class="panel-heading"><table width="100%">
+				<tr>
+					<td width="95%"><label>บันทึกเลขอนุมัติและสัญญา</label></td>
+					<td><label>ERPS004</label></td>
+				</tr>
+			</table></div>
+		<div class="panel-body">
+		<div class="list-group-item active">เงื่อนไขการค้นหา</div>
+		<div class="well">
+			<table width="85%" border="0" align="center">
+				<tr>
+					<td>เลขอนุมัติ:</td>
+					<td><input type="text" class="form-control" placeholder="เลขอนุมัติ"></td>
+					<td>ประเภท:</td>
+					<td><select class="form-control input-sm">
+						<option value=""><--ทั้งหมด--></option>
+						<option value="A">เช่าบ้าน</option>
+						<option value="A">เช่าชื้อ</option>
+					</select> </td>
+				</tr>
+				<tr>
+					<td>เลขบัตรประชาชน:</td>
+					<td><input type="text" class="form-control" placeholder="เลขบัตรประชาชน"></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>ชื่อ: </td>
+					<td><input type="text" class="form-control" placeholder="ชื่อ"></td>
+					<td>นามสกุล</td>
+					<td><input type="text" class="form-control" placeholder="นามสกุล"></td>
+				</tr>
+				<tr>
+					<td colspan="4" align="center">
+						<button type="button" class="btn btn-primary">ค้นหา</button> 
+						<button type="button" class="btn btn-warning">ทั้งหมด</button>
+					</td>
+				</tr>
+			</table>
+		</div>
+		</div>
+	</div>
+	
+	<div class="nav" style="padding:4px; text-align:center; text-align:right;">
+	<a ui-sref=".add"><button type="button" class="btn btn-primary" ng-click="add()">เพิ่มข้อมูล</button></a>
+	</div>
+	<table class="table table-bordered table-striped table-list" border="1">
+		<tr>
+			<th>ลำดับ</th>
+			<th>เลขที่อนุมัติ</th>
+			<th>วันที่อนุมัติ</th>
+			<th>ประเภท</th>
+			<th>เลขประจำตัวประชาชน</th>
+			<th>ชื่อ - นามสกุล</th>
+			<th>&nbsp;</th>
+		</tr>
+		<tr>
+			<td width="4%" align="center">1</td>
+			<td align="center">1/60</td>
+			<td align="center">01/10/2559</td>
+			<td align="center">เช่าบ้าน</td>
+			<td align="center">x-xxxx-xxxxx-xx-x</td>
+			<td>cc xxxxxxxxx xxxxxxxxx</td>
+			<td width="10%" align="center"><img src="images/ic_see.png" width="24" height="24"></img>&nbsp; <img src="images/ic_edit.png" width="24" height="24"></img></td>
+		</tr>
+		<tr>
+			<td align="center">2</td>
+			<td align="center">2/60</td>
+			<td align="center">12/10/2559</td>
+			<td align="center">เช่าบ้าน</td>
+			<td align="center">x-xxxx-xxxxx-xx-x</td>
+			<td>cc xxxxxxxxx xxxxxxxxx</td>
+			<td align="center"><img src="images/ic_see.png" width="24" height="24"></img>&nbsp; <img src="images/ic_edit.png" width="24" height="24"></img></td>
+		</tr>
+		<tr>
+			<td align="center">3</td>
+			<td align="center">3/60</td>
+			<td align="center">12/10/2559</td>
+			<td align="center">เช่าชื้อ</td>
+			<td align="center">x-xxxx-xxxxx-xx-x</td>
+			<td>cc xxxxxxxxx xxxxxxxxx</td>
+			<td align="center"><img src="images/ic_see.png" width="24" height="24"></img>&nbsp; <img src="images/ic_edit.png" width="24" height="24"></img></td>
+		</tr>
+		<tr>
+			<td align="center">4</td>
+			<td align="center">4/60</td>
+			<td align="center">12/01/2560</td>
+			<td align="center">เช่าชื้อ</td>
+			<td align="center">x-xxxx-xxxxx-xx-x</td>
+			<td>cc xxxxxxxxx xxxxxxxxx</td>
+			<td align="center"><img src="images/ic_see.png" width="24" height="24"></img>&nbsp; <img src="images/ic_edit.png" width="24" height="24"></img></td>
+		</tr>
+		<tr>
+			<td align="center">5</td>
+			<td align="center">5/60</td>
+			<td align="center">12/01/2560</td>
+			<td align="center">เช่าบ้าน</td>
+			<td align="center">x-xxxx-xxxxx-xx-x</td>
+			<td>cc xxxxxxxxx xxxxxxxxx</td>
+			<td align="center"><img src="images/ic_see.png" width="24" height="24"></img>&nbsp; <img src="images/ic_edit.png" width="24" height="24"></img></td>
+		</tr>
+
+	</table>
+</form>

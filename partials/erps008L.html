@@ -1,0 +1,63 @@
+<form>
+	<div class="panel panel-primary">{{fromName}}
+		<div class="panel-heading"><table width="100%">
+				<tr>
+					<td width="95%"><label>{{pageName}}</label></td>
+					<td><label>{{pageCode}}</label></td>
+				</tr>
+			</table></div>
+		<div class="panel-body">
+		<div class="list-group-item active">เงื่อนไขการค้นหา</div>
+		<div class="well">
+			<table width="85%" border="0" align="center">
+				<tr>
+					<td width="20%" align="right">รายการ: </td>
+					<td width="40%"><input type="text" class="form-control" placeholder="รายการ" style="width:250px"></td>
+				</tr>
+				<tr>
+					<td colspan="4" align="center">
+						<button type="button" class="btn btn-primary">ค้นหา</button> 
+						<button type="button" class="btn btn-warning">ทั้งหมด</button>
+					</td>
+				</tr>
+			</table>
+		</div>
+		</div>
+	</div>
+	
+	<div class="nav" style="padding:4px; text-align:center; text-align:right;">
+	<a ui-sref=".add"><button type="button" class="btn btn-primary" ng-click="add()">เพิ่มข้อมูล</button></a>
+	</div>
+	<table class="table table-bordered table-striped table-list" border="1">
+		<tr>
+			<th>ลำดับ</th>
+			<th>รายการ</th>
+			<th>&nbsp;</th>
+		</tr>
+		<tr>
+			<td width="4%" align="center">1</td>
+			<td>ค่าสมนาคุณวิทยากร</td>
+			<td width="10%" align="center"><img src="images/ic_see.png" width="24" height="24"></img>&nbsp; <img src="images/ic_edit.png" width="24" height="24"></img></td>
+		</tr>
+		<tr>
+			<td align="center">2</td>
+			<td>ค่าใช้จ่ายเดินทางไปราชการ</td>
+			<td align="center"><img src="images/ic_see.png" width="24" height="24"></img>&nbsp; <img src="images/ic_edit.png" width="24" height="24"></img></td>
+		</tr>
+        <tr>
+			<td align="center">3</td>
+			<td>ค่าห้องพัก</td>
+			<td align="center"><img src="images/ic_see.png" width="24" height="24"></img>&nbsp; <img src="images/ic_edit.png" width="24" height="24"></img></td>
+		</tr>
+        <tr>
+			<td align="center">4</td>
+			<td>ค่าอาหาร</td>
+			<td align="center"><img src="images/ic_see.png" width="24" height="24"></img>&nbsp; <img src="images/ic_edit.png" width="24" height="24"></img></td>
+		</tr>
+        <tr>
+			<td align="center">5</td>
+			<td>ค่าอาหารว่างและเครื่องดื่ม</td>
+			<td align="center"><img src="images/ic_see.png" width="24" height="24"></img>&nbsp; <img src="images/ic_edit.png" width="24" height="24"></img></td>
+		</tr>
+	</table>
+</form>

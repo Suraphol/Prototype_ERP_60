@@ -1,0 +1,243 @@
+<form ng-controller="erps001FController">
+	<div class="panel panel-primary">{{fromName}}
+		<div class="panel-heading"><table width="100%">
+				<tr>
+					<td width="95%"><label>จัดการบุคลากร</label></td>
+					<td><label>ERPS001</label></td>
+				</tr>
+			</table></div>
+		<div class="panel-body">
+		<div class="list-group-item active">ข้อมูล</div>
+		<div class="well">
+			<table width="85%" border="0" align="center">
+				<tr>
+					<td>เลขบัตรประชาชน:</td>
+					<td><input type="text" class="form-control" placeholder="เลขบัตรประชาชน" width="15" maxlength="13">&nbsp;<font color="red">*</font></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td aling="right">ปัจจุบัน คำนำหน้า:</td>
+					<td><select class="form-control input-sm" disabled>
+						<option value=""><-- กรุณาเลือก --></option>
+						<option value="">นาย</option>
+						<option value="">นาง</option>
+						<option value="">นางสาว</option>
+						<option value="">ว่าที่ร้อยตรี</option>
+						<option value="">ว่าที่ร้อยโท</option>
+						<option value="">ว่าที่ร้อยเอก</option>
+					</select>&nbsp;<font color="red">*</font>
+					</td>
+					<td>ชื่อ:</td>
+					<td><input type="text" class="form-control" placeholder="ชื่อ" disabled>&nbsp;<font color="red" >*</font></td>
+					<td>นามสกุล:</td>
+					<td><input type="text" class="form-control" placeholder="นามสกุล" disabled>&nbsp;<font color="red">*</font></td>
+				</tr>
+				<tr>
+					<td colspan="6"><button type="button" class="btn btn-primary" ng-click="add()">เพิ่มประวัติเปลียนแปลงชื่อ สกุล</button></td>
+				</tr>
+				<tr>
+					<td align="right">คำนำหน้า:</td>
+					<td><select class="form-control input-sm">
+						<option value=""><-- กรุณาเลือก --></option>
+						<option value="">นาย</option>
+						<option value="">นาง</option>
+						<option value="">นางสาว</option>
+						<option value="">ว่าที่ร้อยตรี</option>
+						<option value="">ว่าที่ร้อยโท</option>
+						<option value="">ว่าที่ร้อยเอก</option>
+					</select>&nbsp;<font color="red">*</font>
+					</td>
+					<td>ชื่อ:</td>
+					<td><input type="text" class="form-control" placeholder="ชื่อ">&nbsp;<font color="red">*</font></td>
+					<td>นามสกุล:</td>
+					<td><input type="text" class="form-control" placeholder="นามสกุล">&nbsp;<font color="red">*</font></td>
+				</tr>
+				<tr>
+					<td align="right"><input type="text" class="form-control col-xs-10" placeholder="วันที่" size="5"></div>
+					<img src="images/calendar_32.png" width="24" height="24">คำนำหน้า:</td>
+					<td><select class="form-control input-sm">
+						<option value=""><-- กรุณาเลือก --></option>
+						<option value="">นาย</option>
+						<option value="">นาง</option>
+						<option value="">นางสาว</option>
+						<option value="">ว่าที่ร้อยตรี</option>
+						<option value="">ว่าที่ร้อยโท</option>
+						<option value="">ว่าที่ร้อยเอก</option>
+					</select>&nbsp;<font color="red">*</font>
+					</td>
+					<td>ชื่อ:</td>
+					<td><input type="text" class="form-control" placeholder="ชื่อ">&nbsp;<font color="red">*</font></td>
+					<td>นามสกุล:</td>
+					<td><input type="text" class="form-control" placeholder="นามสกุล">&nbsp;<font color="red">*</font></td>
+				</tr>
+
+
+				<tr>
+					<td>เพศ:</td>
+					<td><label class="radio-inline">
+						  <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" checked=""> ชาย
+						</label>
+						<label class="radio-inline">
+						  <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> หญิง
+						</label></td>
+					<td>วันเกิด:</td>
+					<td><div class="col-xs-10"> <input type="text" class="form-control col-xs-10" placeholder="วันเกิด" size="5"></div>
+					<img src="images/calendar_32.png" width="24" height="24"> <!--&nbsp;<font color="red">*</font>--> </td>
+					<td>อายุ:</td>
+					<td>
+						<table>
+							<tr>
+								<td><input type="text" class="form-control" name="Y" style="width: 10px" readonly></td>
+								<td>ปี</td>
+								<td><input type="text" class="form-control" name="Y" style="width: 10px" readonly></td>
+								<td>เดือน</td>
+								<td><input type="text" class="form-control" name="Y" style="width: 10px" readonly></td>
+								<td>วัน</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td>ตำแหน่งปัจจุบัน:</td>
+					<td><input type="text" class="form-control" placeholder="ตำแหน่ง" width="15" maxlength="13" readonly>
+					</td>
+					<td>ระดับปัจจุบัน:</td>
+					<td><input type="text" class="form-control" placeholder="ระดับ" width="15" maxlength="13" readonly></te>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>สังกัด:</td>
+					<td><label class="radio-inline">
+						<input type="radio" value="1" ng-model="subType" ng-change="showDetailsub()"> ส่วนกลาง
+						</label>
+						<label class="radio-inline">
+						<input type="radio" value="2" ng-model="subType" ng-change="showDetailsub()"> สถจ.</label></td>
+					<td><div ng-show="AA"> สำนัก/กอง:</div><div ng-show="BB">จังหวัด:</div></td>
+					<td><div ng-show="AA"> <select class="form-control input-ms">
+						<option value=""><-- กรุณาเลือก --></option>
+						<option ng-repeat="unit in units" vale="{{unit.id}}">{{unit.name}}</option>
+					</select></div>
+					<div ng-show="BB">
+						<select class="form-control input-ms">
+							<option value=""><-- กรุณาเลือก --></option>
+							<option value="1">กระบี่</option>
+							<option value="2">กาญจนบุรี</option>
+							<option value="3">กาฬสินธุ์</option>
+							<option value="4">กำแพงเพชร</option>
+							<option value="5">ขอนแก่น</option>
+							<option value="6">จันทบุรี</option>					
+						</select>
+
+					</div>
+					
+					
+					 &nbsp;<font color="red">*</font></td>
+					 <td></td><td></td>
+					
+				</tr>
+				<tr>
+					<td>เงินเดือนตั้งจ่าย:</td>
+					<td><select class="form-control input-ms" ng-change="showDetailPros()" ng-model="subType2">
+							<option value=""><-- กรุณาเลือก --></option>
+							<option value="0">ส่วนกลาง</option>
+							<option value="1">กระบี่</option>
+							<option value="2">กาญจนบุรี</option>
+							<option value="3">กาฬสินธุ์</option>
+							<option value="4">กำแพงเพชร</option>
+							<option value="5">ขอนแก่น</option>
+							<option value="6">จันทบุรี</option>					
+						</select></td>
+					<td><div ng-show="Affiliation" >สังกัด:</div> </td>
+					<td><div ng-show="Affiliation" ><select class="form-control input-ms">
+						<option value=""><-- กรุณาเลือก --></option>
+						<option ng-repeat="unit in units" vale="{{unit.id}}">{{unit.name}}</option>
+					</select></div> </td>
+					<td></td>
+					<td></td>
+				</tr>
+
+				<tr>
+					<td>เงินเดือนปัจจุบัน:</td>
+					<td><input type="text" class="form-control" placeholder="เงินเดือนปัจจุบัน" width="15" maxlength="13" readonly></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td colspan="6" align="center"><button type="button" class="btn btn-success">บันทึก</button> 
+						<a ui-sref="{{back}}"><button type="button" class="btn btn-warning">&nbsp;&nbsp;กลับ&nbsp;&nbsp;</button></a>
+					</td>
+				</tr>
+			</table>
+			</div>
+			<!-- tabs -->
+			<ul class="nav nav-tabs" width="85%">
+				<li class="active"><a href="#" data-toggle="tab" data-target="#menu1">ประวัติเงินเดือน</a></li>
+				<li><!-- <a href="#" data-toggle="tab" data-target="#menu2">บุคคลในครอบครัว</a> --></li>
+			</ul>
+			<div class="well">
+			<div class="tab-content">
+				<div id="menu1" class="tab-pane fade in active">
+					<h3>ประวัติเงินเดือน/สิทธิ</h3>
+					<table  width="100%" border="0" align="center" class="table table-bordered table-striped table-list">
+						<tr>
+							<th width="20%">วันที่</th>
+							<th width="10%">ตำแหน่ง</th>
+							<th width="10%">ระดับ</th>
+							<th width="15%">เงินเดือน(บาท)</th>
+							<th width="15%">สิทธิตามระเบียบ</th>
+							<th width="15%">สิทธิเบิกได้</th>
+							<th width="5%"><button type="button" class="btn btn-success">เพิ่ม</button></th>
+						</tr>
+						<tr>
+							<td><div class="col-xs-10"> <input type="text" class="form-control col-xs-10" placeholder="วันที่" size="5"></div>
+						<img src="images/calendar_32.png" width="24" height="24"></td>
+						<td><select class="form-control input-sm" style="width:200px">
+						<option value=""><-- กรุณาเลือก --></option>
+						<option value="1">ประเภทบริหาร</option>
+						<option value="2">ประเภทอำนวยการ</option>
+						<option value="3">ประเภทวิชาการ</option>
+						<option value="4">ประเภททั่วไป</option>
+						<option value="4">พนักงานราชการ</option>
+						<option value="4">ลูกจ้างประจำ</option>
+					</select></td>
+						<td><select class="form-control input-sm" style="width:200px">
+						<option value=""><-- กรุณาเลือก --></option>
+						<option value="1">ระดับต้น</option> <!-- ประเภทบริหาร,ประเภทบริหาร -->
+						<option value="2">ระดับสูง</option> <!-- ประเภทบริหาร,ประเภทบริหาร -->
+						<option value="3">ระดับปฎิบัติการ</option> <!-- ประเภทวิชาการ,ประเภททั่วไป -->
+						<option value="4">ระดับชำนาญการ</option> <!-- ประเภทวิชาการ -->
+						<option value="5">ระดับชำนาญการพิเศษ</option> <!-- ประเภทวิชาการ -->
+						<option value="6">ระดับเชี่ยวชาญ</option> <!-- ประเภทวิชาการ -->
+						<option value="7">ระดับทรงคุณวุฒิ</option> <!-- ประเภทวิชาการ -->
+						<option value="8">ระดับปฎิบัติงาน</option> <!-- ประเภททั่วไป -->
+						<option value="8">ระดับชำนาญงาน</option> <!-- ประเภททั่วไป -->
+						<option value="9">ระดับอาวุโส</option> <!-- ประเภททั่วไป -->
+						<option value="10">ระดับทักษะพิเศษ</option> <!-- ประเภททั่วไป -->
+					</select></td>
+							<td><div class="col-xs-10"> <input type="text" class="form-control col-xs-10" placeholder="จำนวนเงินเดือน" size="5"></td>
+							<td><div class="col-xs-10"> <input type="text" class="form-control col-xs-10" placeholder="" size="5"></td>
+							<td><div class="col-xs-10"> <input type="text" class="form-control col-xs-10" placeholder="" size="5"></td>
+							<td align="center"><button type="button" class="btn btn-danger">ลบ</button>
+							</td>
+							
+						</tr>
+					</table>
+				</div>
+
+				<!-- <div id="menu2" class="tab-pane fade">
+					<h3>บุคคลในครอบครัว</h3>
+				</div> -->
+			</div>
+
+
+			<!-- end tabs -->
+		</div>
+		</div>
+	</div>
+</form>

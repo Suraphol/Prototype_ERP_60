@@ -1,0 +1,61 @@
+<form>
+	<div class="panel panel-primary">{{fromName}}
+		<div class="panel-heading"><table width="100%">
+				<tr>
+					<td width="95%"><label>{{pageName}}</label></td>
+					<td><label>{{pageCode}}</label></td>
+				</tr>
+			</table></div>
+		<div class="panel-body">
+		<div class="list-group-item active">ข้อมูล</div>
+		<div class="well">
+			<table width="95%" border="0" align="center">
+				<tr>
+					<td align="right">ปีงบประมาณ:</td>
+					<td><select class="form-control custom-form-control" style="width:200px">
+						<option value="2559">2559</option>
+						<option value="2560" selected>2560</option>
+						<option value="2561">2561</option>
+					</select>&nbsp;<font color="red">*</font></td>
+					<td align="right">รหัสหลักสูตร:</td>
+					<td>
+                            <input type="text" maxlength="4" class="form-control custom-form-control" style="width:50%">&nbsp;<font color="red">*</font>
+                            <button type="button" class="btn btn-info">ดึงข้อมูลหลักสูตร</button>
+
+                    </td>
+				</tr>
+                <tr>
+					<td align="right">ชื่อหลักสูตร / โครงการ:</td>
+					<td><textarea class="form-control" disabled></textarea></td>
+					<td align="right">รุ่นที่:</td>
+					<td><select class="form-control custom-form-control" style="width:60%">
+							<option><--กรุณาเลือก--></option>
+							<option>1</option>
+							<option>2</option>
+							<option>3</option>
+						</select><font color="red">*</font><div></div> <font color="red">RM:จำนวนรุ่นจะตามโครงการ</font></td>
+				</tr>
+				<tr>
+					<td align="right">รายรับ:</td>
+					<td><input type="text" maxlength="4" class="form-control custom-form-control" style="width:60%" disabled></td>
+					<td align="right">รายจ่าย:</td>
+					<td><input type="text" maxlength="4" class="form-control custom-form-control" style="width:50%" disabled></td>
+				</tr>
+                <tr>
+                    <td align="right">คงเหลือนำส่ง:</td>
+                    <td><input type="text" maxlength="4" class="form-control custom-form-control" style="width:60%"></td>
+                    <td align="right">วันที่นำส่ง:</td>
+                    <td><input type="text" maxlength="4" class="form-control custom-form-control" style="width:50%">&nbsp;<font color="red">*</font><img src="images/calendar_32.png" width="24" height="24"></td>
+                </tr>
+				
+				<tr>
+					<td colspan="6" align="center"><button type="button" class="btn btn-success">บันทึก</button> 
+						<a ui-sref="erp03.erps017"><button type="button" class="btn btn-warning">&nbsp;&nbsp;กลับ&nbsp;&nbsp;</button></a>
+						<button type="button" class="btn btn-warning">ออกรายงาน</button> <!-- เหมือนกับ รายงาน RECR014-->
+						</td>
+				</tr>
+			</table>
+		</div>		
+		</div>
+	</div>
+</form>

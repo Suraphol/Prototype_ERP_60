@@ -1,0 +1,34 @@
+
+<form>
+	<div class="panel panel-primary">{{fromName}}
+		<div class="panel-heading"><table width="100%">
+				<tr>
+					<td width="95%"><label>{{pageName}}</label></td>
+					<td><label>{{pageCode}}</label></td>
+				</tr>
+			</table></div>
+		<div class="panel-body">
+		<div class="list-group-item active">เงื่อนไขออกรายงาน</div>
+		<div class="well">
+			<table width="85%" border="0" align="center">
+				<tr>
+					<td width="20%" align="right">ปีงบประมาณ: </td>
+					<td width="23%" align="left"><select class="form-control custom-form-control" style="width:50%">
+						<option value="2559">2559</option>
+						<option value="2560" selected>2560</option>
+						<option value="2561">2561</option>
+					</select>&nbsp;<font color="red">*</font></td> 
+					<td width="10%" align="right">รหัสหลักสูตร: </td>
+					<td width="25%" align="left"><input type="text" class="form-control custom-form-control" maxlength="4" style="width:50%">&nbsp;<font color="red">*</font></td>
+				</tr>
+				<tr>
+					<td colspan="4" align="center">
+						<button type="button" class="btn btn-primary">ค้นหา</button> 
+					</td>
+				</tr>
+			</table>
+		</div>
+        <button type="button" class="btn btn-warning">ออกรายงาน</button>
+		</div>
+	</div>
+</form>

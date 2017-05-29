@@ -1,0 +1,39 @@
+<form>
+	<div class="panel panel-primary">{{fromName}}
+		<div class="panel-heading"><table width="100%">
+				<tr>
+					<td width="95%"><label>{{pageName}}</label></td>
+					<td><label>{{pageCode}}</label></td>
+				</tr>
+			</table></div>
+		<div class="panel-body">
+		<div class="list-group-item active">ข้อมูล</div>
+		<div class="well">
+			<table width="85%" border="0" align="center">
+				<tr>
+					<td align="right">โรงแรม :</td>
+					<td><textarea class="form-control" rows="3" style="width:85%"></textarea>&nbsp;<font color="red">*</font></td>
+					<td align="right">จังหวัด:</td>
+					<td><select class="form-control custom-form-control" style="width:95%">
+							<option><--เลือก--> </option>
+							<option value="0">กรุงเทพฯ</option>
+							<option value="1">กระบี่</option>
+							<option value="2">กาญจนบุรี</option>
+							<option value="3">กาฬสินธุ์</option>
+							<option value="4">กำแพงเพชร</option>
+							<option value="5">ขอนแก่น</option>
+							<option value="6">จันทบุรี</option>	
+						</select>&nbsp;<font color="red">*</font> </td>
+					<td></td>
+					<td></td>
+				</tr>				
+				<tr>
+					<td colspan="6" align="center"><button type="button" class="btn btn-success">บันทึก</button> 
+						<a ui-sref="erp03.erps016"><button type="button" class="btn btn-warning">&nbsp;&nbsp;กลับ&nbsp;&nbsp;</button></a>
+						</td>
+				</tr>
+			</table>
+		</div>
+		</div>
+	</div>
+</form>

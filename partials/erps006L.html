@@ -1,0 +1,81 @@
+<form>
+	<div class="panel panel-primary">{{fromName}}
+		<div class="panel-heading"><table width="100%">
+				<tr>
+					<td width="95%"><label>บันทึกรายการยืมเงิน</label></td>
+					<td><label>ERPS006</label></td>
+				</tr>
+			</table></div>
+		<div class="panel-body">
+		<div class="list-group-item active">เงื่อนไขการค้นหา</div>
+		<div class="well">
+			<table width="85%" border="0" align="center">
+				<tr>
+					<td aling="right">ประเภทเงินยืม:</td>
+					<td><select class="form-control" style="width:200px">
+							<option vlaue=""><--ทั้งหมด--> </option>
+							<option vlaue="1">เงินทดรองราชการ</option>
+							<option vlaue="2">เงินงบประมาณ</option>
+							<option vlaue="3">เงินนอกงบประมาณ</option>
+							<option vlaue="4">เงินนอกงบประมาณ (ลงทะเบียน)</option>
+						</select> </td>
+					<td aling="right">เลขที่ยืม:</td>
+					<td><input type="text" class="form-control" placeholder="เลขที่ยืม"> </td>
+				</tr>
+				<tr>
+					<td colspan="4" align="center">
+						<button type="button" class="btn btn-primary">ค้นหา</button> 
+						<button type="button" class="btn btn-warning">ทั้งหมด</button>
+					</td>
+				</tr>
+			</table>
+		</div>
+		</div>
+	</div>
+	{{pathAdd}}
+	<div class="nav" style="padding:4px; text-align:center; text-align:right;">
+	<a ui-sref=".add"><button type="button" class="btn btn-primary" ng-click="add()">เพิ่มข้อมูล</button></a>
+	</div>
+	<table class="table table-bordered table-striped table-list" border="1">
+		<tr>
+			<th>ลำดับ</th>
+			<th>เลขที่ยืม</th>
+			<th>ประเภทเงินยืม</th>
+			<th>วันที่ยืม</th>
+			<th>ชื่อ - นามสกุล ผู้ยืม</th>
+			<th>จำนวนเงิน(บาท)</th>
+			<th>&nbsp;</th>
+		</tr>
+		<tr style="background-colo:#80ff00">
+			<td width="4%">1</td>
+			<td>บย.1/60</td>
+			<td>เงินทดรองราชการ</td>
+			<td>1/10/2560</td>
+			<td>cc xxxxxxxxx xxxxxxxxx</td>
+			<td align="right">x,xxx.xx</td>
+			<td width="10%" align="center"><img src="images/ic_see.png" width="24" height="24"></img>&nbsp; <img src="images/ic_edit.png" width="24" height="24"></img>
+			&nbsp;<img src="images/ic_print.png" width="24" height="24"></td>
+		</tr>
+		<tr>
+			<td width="4%">1</td>
+			<td>บย.2/60</td>
+			<td>เงินงบประมาณ</td>
+			<td>10/10/2560</td>
+			<td>cc xxxxxxxxx xxxxxxxxx</td>
+			<td align="right">x,xxx.xx</td>
+			<td width="10%" align="center"><img src="images/ic_see.png" width="24" height="24"></img>&nbsp; <img src="images/ic_edit.png" width="24" height="24"></img>
+			&nbsp;<img src="images/ic_print.png" width="24" height="24"</td>
+		</tr>
+		<tr>
+			<td width="4%">1</td>
+			<td>บย.3/60</td>
+			<td>เงินนอกงบประมาณ</td>
+			<td>11/10/2560</td>
+			<td>cc xxxxxxxxx xxxxxxxxx</td>
+			<td align="right">x,xxx.xx</td>
+			<td width="10%" align="center"><img src="images/ic_see.png" width="24" height="24"></img>&nbsp; <img src="images/ic_edit.png" width="24" height="24"></img>
+			&nbsp;<img src="images/ic_print.png" width="24" height="24"></td>
+		</tr>
+
+	</table>
+</form>
