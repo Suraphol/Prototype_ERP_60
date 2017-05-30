@@ -1,0 +1,78 @@
+<form ng-controller="erps001FMController">
+	<div class="panel panel-primary">
+		<div class="panel-heading"><table width="100%">
+				<tr>
+					<td width="95%"><label>บุคคลในครอบครัว</label></td>
+					<td><label>ERPS001</label></td>
+				</tr>
+			</table></div>
+		<div class="panel-body">
+		<div class="list-group-item active">ข้อมูล</div>
+		<div class="well">
+			<table width="85%" border="0" align="center">
+				<tr>
+					<td>เลขบัตรประชาชน:</td>
+					<td><input type="text" class="form-control custom-form-control" style="width:90%" placeholder="เลขบัตรประชาชน" width="15" maxlength="13">&nbsp;<font color="red">*</font></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td aling="right">คำนำหน้า:</td>
+					<td><select class="form-control input-sm custom-form-control" style="width:90%">
+						<option value=""><-- กรุณาเลือก --></option>
+						<option value="">นาย</option>
+						<option value="">นาง</option>
+						<option value="">นางสาว</option>
+						<option value="">ว่าที่ร้อยตรี</option>
+						<option value="">ว่าที่ร้อยโท</option>
+						<option value="">ว่าที่ร้อยเอก</option>
+					</select>&nbsp;<font color="red">*</font>
+					</td>
+					<td>ชื่อ:</td>
+					<td><input type="text" class="form-control custom-form-control" placeholder="ชื่อ" style="width:95%">&nbsp;<font color="red" >*</font></td>
+					<td>นามสกุล:</td>
+					<td><input type="text" class="form-control custom-form-control" placeholder="นามสกุล" style="width:95%">&nbsp;<font color="red">*</font></td>
+				</tr>
+                <tr>
+                    <td>วันเกิด:</td>
+					<td><input type="text" class="form-control custom-form-control" placeholder="วันเกิด" size="5" style="width:75%"></div>
+					<img src="images/calendar_32.png" width="24" height="24">&nbsp;<font color="red">*</font></td>
+					<td>อายุ:</td>
+					<td colspan="3"><input type="text" class="form-control custom-form-control" name="Y" style="width: 10%" readonly> ปี
+                    <input type="text" class="form-control custom-form-control" name="Y" style="width: 10%" readonly> เดือน
+                    <input type="text" class="form-control custom-form-control" name="Y" style="width: 10%" readonly> วัน</td>
+                </tr>
+                <tr>
+                    <td>ความสัมพันธ์:</td>
+					<td><select class="form-control input-sm custom-form-control" style="width:90%" ng-change="relationType()" ng-model="relationId">
+						<option value=""><-- กรุณาเลือก --></option>
+						<option ng-repeat="list in statusFamailyList" value="{{list.id}}">{{list.name}} </option>
+					</select>&nbsp;<font color="red">*</font> </td>
+					<td><div ng-show="showCount"> คนที่:</div></td>
+					<td><div ng-show="showCount"><input type="text" class="form-control custom-form-control" name="Y" style="width: 50%"><font color="red">*</font><div> </td>
+					<td></td>
+					<td></td>
+                </tr>	
+                <tr>
+                    <td>สถานะ:</td>
+					<td><select class="form-control input-sm custom-form-control" style="width:90%">
+						<option value=""><-- กรุณาเลือก --></option>
+						<option>ยังมีชีวิต</option>
+                        <option>เสียชีวิต</option>
+					</select>&nbsp;<font color="red">*</font> </td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+                </tr>
+                <tr>
+					<td colspan="6" align="center"><button type="button" class="btn btn-success">บันทึก</button> 
+						<a ui-sref="{{back}}"><button type="button" class="btn btn-warning">&nbsp;&nbsp;กลับ&nbsp;&nbsp;</button></a>
+					</td>
+				</tr>
+		</div>
+		</div>
+	</div>
+</form>

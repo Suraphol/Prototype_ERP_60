@@ -48,6 +48,12 @@ var app = angular.module('myApp', ['ui.router']);
 	{id:'5',name:'ค่าอาหารว่างและเครื่องดื่ม'},
 	{id:'6',name:'ค่าใช้จ่ายเดินทางไปราชการ'}];
 
+	var statusFamailyList = [{id:'1',name:'บิดา'},
+	{id:'2',name:'มารดา'},
+	{id:'3',name:'ภรรยา'},
+	{id:'4',name:'สามี'},
+	{id:'5',name:'บุตรคน'}];
+
 app.controller('erps001FController',function($scope){
 	$scope.units = unit;
 	$scope.AA = true;
@@ -199,6 +205,14 @@ app.controller('erps001FController',function($scope){
 }).controller('erpr002CController',function($scope){
 	console.log('erpr002CController');
 	$scope.units=unit;
+}).controller('erps001FMController',function($scope){
+	$scope.showCount = false;	
+	$scope.relationType = function(){
+		console.log('erps001FMController'+$scope.relationId);
+		if($scope.relationId == '5'){
+			$scope.showCount = true;
+		}
+	}
 });
 
 // MenuMain
@@ -214,6 +228,9 @@ app.config(function($stateProvider, $urlRouterProvider){
 	})
 	.state('erp03',{url:"/erp03",
 		templateUrl:"partials/erp03.html"
+	})
+	.state('erp04',{url:"/erp04",
+		templateUrl:"partials/erp04.html"
 	});
 });
 
@@ -235,6 +252,16 @@ app.config(function($stateProvider, $urlRouterProvider){
 			controller:function($scope){
 				$scope.back='erp01.erps001';
 			}}
+		}		
+	})
+	.state('erp01.erps001.add.family',{url:"/addFamily",
+		views:{
+			'from@erp01':{templateUrl:"partials/erps001FM.html",
+			controller:function($scope){
+				$scope.back='erp01.erps001.add';
+				$scope.statusFamailyList = statusFamailyList;
+			}
+		}
 		}		
 	})
 	.state('erp01.erps002',{url:"/erps002",
@@ -345,6 +372,16 @@ app.config(function($stateProvider, $urlRouterProvider){
 			'from@erp02':{templateUrl:"partials/erps001F.html",
 			controller:function($scope){
 				$scope.back='erp02.erps001';
+			}
+		}
+		}		
+	})
+	.state('erp02.erps001.add.family',{url:"/addFamily",
+		views:{
+			'from@erp02':{templateUrl:"partials/erps001FM.html",
+			controller:function($scope){
+				$scope.back='erp02.erps001.add';
+				$scope.statusFamailyList = statusFamailyList;
 			}
 		}
 		}		
@@ -678,5 +715,39 @@ app.config(function($stateProvider, $urlRouterProvider){
 });
 	
 //end erp03
+
+//erp04
+app.config(function($stateProvider, $urlRouterProvider){
+	$urlRouterProvider.otherwise("/home");
+	$stateProvider
+	.state('erp04.erps001',{
+		url:"/erps001",
+		views:{
+			'from@erp04':{templateUrl:"partials/erps001L.html"}
+		}
+	})
+	.state('erp04.erps001.add',{url:"/add",
+		views:{
+			'from@erp04':{templateUrl:"partials/erps001F.html",
+			controller:function($scope){
+				$scope.back='erp04.erps001';
+			}
+		}
+		}		
+	})
+	.state('erp04.erps001.add.family',{url:"/addFamily",
+		views:{
+			'from@erp04':{templateUrl:"partials/erps001FM.html",
+			controller:function($scope){
+				$scope.back='erp04.erps001.add';
+				$scope.statusFamailyList = statusFamailyList;
+			}
+		}
+		}		
+	});
+});
+
+
+//end erp04
 
 //end Menu
