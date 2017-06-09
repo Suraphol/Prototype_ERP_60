@@ -1,0 +1,204 @@
+<form ng-controller="erps019FController">
+	<div class="panel panel-primary">
+		<div class="panel-heading"><table width="100%">
+				<tr>
+					<td width="95%"><label>{{pageName}}</label></td>
+					<td><label>{{pageCode}}</label></td>
+				</tr>
+			</table></div>
+		<div class="panel-body">
+		<div class="list-group-item active">ข้อมูล</div>
+		<div class="well">
+			<table width="85%" border="0" align="center">
+				<tr>
+					<td width="20%" align="right">ปีงบประมาณ:</td>
+					<td width="30%"><select class="form-control" style="width:200px">
+						<option value="2559">2559</option>
+						<option value="2560" selected>2560</option>
+						<option value="2561">2561</option>
+					</select></td>
+					<td width="30%"></td>
+				</tr>
+				<tr>
+					<td width="20%" align="right">วันที่:</td>
+					<td width="30%"><input type="text" maxlength="4" class="form-control custom-form-control" style="width:80%">&nbsp;<font color="red">*</font>
+                    <img src="images/calendar_32.png" width="24" height="24"> </td>
+					<td align="right" width="20%">ฎีกาคลัง :</td>
+					<td width="30%"><input type="text" maxlength="4" class="form-control custom-form-control" style="width:50%">&nbsp;<font color="red">*</font></td>
+				</tr>
+
+
+				
+			</table>
+		</div>
+		<div class="well">
+			<table width="85%" border="0" align="center">
+				<tr>
+					<td align="right">เลขบัตรประชาชน:</td>
+					<td ><input type="text" maxlength="4" class="form-control custom-form-control" style="width:80%">&nbsp;<font color="red">*</font></td>
+					<td ><button type="button" class="btn btn-info">ดึงข้อมูล</button></td>
+					<td ></td>
+					<td ></td>
+					<td ></td>
+				</tr>
+				<tr>
+					<td align="right">คำนำหน้า:</td>
+					<td><input type="text" class="form-control custom-form-control" width="3" readonly>
+					</td>
+					<td align="right">ชื่อ:</td>
+					<td><input type="text" class="form-control custom-form-control" readonly></td>
+					<td align="right">นามสกุล:</td>
+					<td><input type="text" class="form-control custom-form-control" readonly></td>
+				</tr>
+				<tr>
+					<td align="right">ตำแหน่ง:</td>
+					<td><input type="text" class="form-control custom-form-control" readonly></td>
+					<td align="right">สำนัก/กอง:</td>
+					<td><input type="text" class="form-control custom-form-control" readonly></td>
+                    <td align="right"></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td colspan="5"><p><strong>คู้สมรส</strong> </td>
+                </tr>
+                <tr>
+                    <td align="right">คำนำหน้า:</td>
+					<td><input type="text" class="form-control custom-form-control" width="3" readonly>
+					</td>
+					<td align="right">ชื่อ:</td>
+					<td><input type="text" class="form-control custom-form-control" readonly></td>
+					<td align="right">นามสกุล:</td>
+					<td><input type="text" class="form-control custom-form-control" readonly></td>
+                </tr>
+                <tr>
+                    <td align="right">อาชีพ:</td>
+					<td><input type="text" class="form-control custom-form-control" readonly></td>
+					<td align="right">ตำแหน่ง:</td>
+					<td><input type="text" class="form-control custom-form-control" readonly></td>
+					<td align="right">สังกัด:</td>
+					<td><input type="text" class="form-control custom-form-control" readonly></td>
+                </tr>
+                <tr>
+                    <td colspan="5"><p><strong>สำหรับการศึกษาของบุตร</strong>&nbsp; <font color="red">RM: สามารเบิกได้ อนุบาน -> ปี.ตรี และ อายุช่วง 3-25ปี</font> </td>
+                </tr>
+                <tr>
+                    <td align="right">บุตรคนที่:</td>
+					<td><select class="form-control custom-form-control" style="width:95%">
+                            <option value="">--กรุณาเลือก--</option>
+                            <option value="">1</option>
+                            <option value="">2</option>
+                            <option value="">3</option>
+                        </select>&nbsp;<font color="red">*</font> </td>
+					<td align="right"></td>
+					<td></td>
+					<td align="right"></td>
+					<td></td>
+                </tr>
+                <tr>
+                    <td align="right">คำนำหน้า:</td>
+					<td><input type="text" class="form-control custom-form-control" readonly>
+					</td>
+					<td align="right">ชื่อ:</td>
+					<td><input type="text" class="form-control custom-form-control" readonly></td>
+					<td align="right">นามสกุล:</td>
+					<td><input type="text" class="form-control custom-form-control" readonly></td>
+                </tr>
+                <tr>
+                    <td align="right">เกิดเมื่อ:</td>
+					<td><input type="text" class="form-control custom-form-control" size="5" style="width:75%" readonly>
+					</td>
+					<td align="right">อายุ:</td>
+					<td colspan="3"><input type="text" class="form-control custom-form-control" name="Y" style="width: 10%" readonly> ปี
+                    <input type="text" class="form-control custom-form-control" name="Y" style="width: 10%" readonly> เดือน
+                    <input type="text" class="form-control custom-form-control" name="Y" style="width: 10%" readonly> วัน</td>
+                </tr>
+                <tr>
+                    <td align="right">สถานศึกษา:</td>
+					<td><input type="text" class="form-control custom-form-control" style="width:90%">&nbsp;<font color="red">*</font></td>
+					<td align="right">จังหวัด:</td>
+					<td><select class="form-control custom-form-control" style="width:90%">
+                            <option ng-repeat="list in changwatsThList">{{list.name}}</option>
+                        </select></td>
+                    <td align="right">อำเภอ:</td>
+					<td><select class="form-control custom-form-control" style="width:90%">
+                            <option ng-repeat="list in changwatsThList">{{list.name}}</option>
+                        </select></td></td>
+                    
+                </tr>
+                <tr>
+                    <td align="right">ชั้นที่ศึกษา:</td>
+					<td><input type="text" class="form-control custom-form-control" style="width:90%">&nbsp;<font color="red">*</font>
+					</td>
+					<td align="right">ภาคเรียนที่:</td>
+					<td><input type="text" class="form-control custom-form-control" style="width:90%">&nbsp;<font color="red">*</font></td>
+					<td align="right">ปีการศึกษา :</td>
+					<td><input type="text" class="form-control custom-form-control" style="width:90%">&nbsp;<font color="red">*</font></td>
+                </tr>
+                <tr>
+                    <td align="right">จำนวนเงิน:</td>
+					<td><input type="text" class="form-control custom-form-control" style="width:90%">&nbsp;<font color="red">*</font></td>
+					<td align="right">เงิน:</td>
+					<td><input type="radio" value="1" name="KK"  checked="true"> เงินบำรุงการศึกษา<div></div>
+						<input type="radio" value="2" name="KK"> เงินค่าเล่าเรียน</td>
+					<td align="right"></td>
+					<td></td>
+                </tr>
+             	<tr>
+					<td align="right">อัพโหลดไฟล์:</td>
+					<td><input type="file" id="exampleInputFile"></td>
+					<td align="right"></td>
+					<td></td>
+					<td></td><td></td>
+				</tr>
+
+
+				<tr>
+					<td colspan="6" align="center"><button type="button" class="btn btn-success">บันทึก</button> 
+						<a ui-sref="erp04.erps019"><button type="button" class="btn btn-warning">&nbsp;&nbsp;กลับ&nbsp;&nbsp;</button></a>
+						</td>
+				</tr>
+			</table>
+
+		</div>
+
+		<div>
+			<table class="table table-bordered table-striped table-list" border="1">
+				<tr>					
+					<th width="30%">ชื่อ-สกุล เจ้าของสิทธิ</th>					
+					<th width="30%">ชื่อ-สกุล ผู้รับ</th>
+                    <th>เบิกให้บุตรคนที่</th>
+                    <th>ภาคเรียนที่</th>
+					<th>จำนวนเงิน(บาท)</th>
+					<th>&nbsp;</th>
+				</tr>
+                <tr>
+                    <td>xxx xxxx xxxxxx</td>
+                    <td>xxx xxxx xxxxxx</td>
+                    <td align="center">1</td>
+                    <td>1</td>
+                    <td align="right">xx,xxx.xx</td>
+                    <td align="center"><img src="images/ic_delet.png" width="24" height="24"></img>&nbsp; <img src="images/ic_edit.png" width="24" height="24"></img></td>
+                </tr>
+                <tr>
+                    <td>xxx xxxx xxxxxx</td>
+                    <td>xxx xxxx xxxxxx</td>
+                    <td align="center">3</td>
+                    <td>1</td>
+                    <td align="right">xx,xxx.xx</td>
+                    <td align="center"><img src="images/ic_delet.png" width="24" height="24"></img>&nbsp; <img src="images/ic_edit.png" width="24" height="24"></img></td>
+                </tr>
+                <tr>
+                    <td colspan="4" align="center">รวม</td>
+                    <td align="right">xx,xxx.xx</td>
+                    <td></td>
+                </tr>
+
+
+			</table>
+
+		</div>
+
+
+		</div>
+	</div>
+</form>

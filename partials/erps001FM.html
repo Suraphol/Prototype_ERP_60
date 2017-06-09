@@ -13,7 +13,7 @@
 				<tr>
 					<td>เลขบัตรประชาชน:</td>
 					<td><input type="text" class="form-control custom-form-control" style="width:90%" placeholder="เลขบัตรประชาชน" width="15" maxlength="13">&nbsp;<font color="red">*</font></td>
-					<td></td>
+					<td ></td>
 					<td></td>
 					<td></td>
 					<td></td>
@@ -52,8 +52,28 @@
 					</select>&nbsp;<font color="red">*</font> </td>
 					<td><div ng-show="showCount"> คนที่:</div></td>
 					<td><div ng-show="showCount"><input type="text" class="form-control custom-form-control" name="Y" style="width: 50%"><font color="red">*</font><div> </td>
+					<td><div ng-show="showCount"></div></td>
+					<td><div ng-show="showCount"></td>
+                </tr>
+				<tr ng-show="showCount">
+                    <td>สิทธิ:</td>
+					<td><input type="radio" value="1" name="KK"  checked="true"> เป็นบิดาชอบด้วยกฎหมาย<div></div>
+						<input type="radio" value="2" name="KK"> เป็นมารดา</div></td>
+					<td></td>
+					<td><input type="checkbox">&nbsp; จดทะเบียนสมรส </td>
 					<td></td>
 					<td></td>
+                </tr>
+				<tr ng-show="showCareer">
+                    <td>อาชีพ:</td>
+					<td><select class="form-control input-sm custom-form-control" style="width:90%" ng-change="showPosition()" ng-model="careerId">
+						<option value=""><-- กรุณาเลือก --></option>
+						<option ng-repeat="list in careerList" value="{{list.id}}">{{list.name}} </option>
+					</select>&nbsp;<font color="red">*</font> </td>
+					<td><div ng-show="showPositionDetail">ตำแหน่ง:</div></td>
+					<td><div ng-show="showPositionDetail"><input type="text" class="form-control custom-form-control" style="width:95%"></div></td>
+					<td><div ng-show="showPositionDetail">สังกัด:</div></td>
+					<td><div ng-show="showPositionDetail"><input type="text" class="form-control custom-form-control" style="width:95%"></div></td>
                 </tr>	
                 <tr>
                     <td>สถานะ:</td>

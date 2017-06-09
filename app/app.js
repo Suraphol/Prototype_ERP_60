@@ -54,6 +54,11 @@ var app = angular.module('myApp', ['ui.router']);
 	{id:'4',name:'สามี'},
 	{id:'5',name:'บุตรคน'}];
 
+	var career = [{id:'1', name:'ไม่เป็นราชการประจำหรือลูกจ้างประจำ'},
+	{id:'2', name:"เป็นข้าราชการ"},
+	{id:'3', name:"ลูกจ้างประจำ"},
+	{id:'4', name:'เป็นพนักงานหรือลูกจ้างในรัฐวิสาหกิจ'}];
+
 app.controller('erps001FController',function($scope){
 	$scope.units = unit;
 	$scope.AA = true;
@@ -206,13 +211,45 @@ app.controller('erps001FController',function($scope){
 	console.log('erpr002CController');
 	$scope.units=unit;
 }).controller('erps001FMController',function($scope){
+	$scope.careerList = career;
+	$scope.showCount = false;
+	$scope.showCareer = false;
+	$scope.showPositionDetail = false;
+	$scope.relationType = function(){
+		if($scope.relationId == '5'){
+			$scope.showCount = true;
+			$scope.showCareer = false;
+		}else if($scope.relationId == '3' ||$scope.relationId == '4' ){
+			$scope.showCount = false;
+			$scope.showCareer = true;
+		}else{
+			$scope.showCount = false;
+			$scope.showCareer = false;
+		}
+	}
+
+	$scope.showPosition =function(){
+		if($scope.careerId != '1'){
+			$scope.showPositionDetail = true;
+		}else{
+			$scope.showPositionDetail = false;
+		}
+	}
+
+})
+.controller('erps018FController',function($scope){
 	$scope.showCount = false;	
 	$scope.relationType = function(){
-		console.log('erps001FMController'+$scope.relationId);
 		if($scope.relationId == '5'){
 			$scope.showCount = true;
 		}
 	}
+})
+.controller('erps019FController',function($scope, $http){
+	console.log('erps019FController');
+	$http.get('changwats_th.json').success(function(response){
+		console.log(response.th.changwats[0].name);
+	});
 });
 
 // MenuMain
@@ -231,6 +268,9 @@ app.config(function($stateProvider, $urlRouterProvider){
 	})
 	.state('erp04',{url:"/erp04",
 		templateUrl:"partials/erp04.html"
+	})
+	.state('erp05',{url:"/erp05",
+		templateUrl:"partials/erp05.html"
 	});
 });
 
@@ -240,6 +280,28 @@ app.config(function($stateProvider, $urlRouterProvider){
 	$urlRouterProvider.otherwise("/home");
 
 	$stateProvider
+	.state('erp01.erps000',{
+		url:"/erps000",
+		views:{
+			'from@erp01':{templateUrl:"partials/erps000L.html",
+			controller:function($scope){
+				$scope.pageCode='EPRS000';
+				$scope.pageName='ข้อกฎหมาย/เอกสารประกอบการเบิก';
+			}
+		}
+		}
+	})
+	.state('erp01.erps000.add',{url:"/add",
+		views:{
+			'from@erp01':{templateUrl:"partials/erps000F.html",
+			controller:function($scope){
+				$scope.back='erp01.erps000';
+				$scope.pageCode='EPRS000';
+				$scope.pageName='ข้อกฎหมาย/เอกสารประกอบการเบิก';
+			}
+		}
+		}		
+	})
 	.state('erp01.erps001',{
 		url:"/erps001",
 		views:{
@@ -361,6 +423,28 @@ app.config(function($stateProvider, $urlRouterProvider){
 app.config(function($stateProvider, $urlRouterProvider){
 	$urlRouterProvider.otherwise("/home");
 	$stateProvider
+	.state('erp02.erps000',{
+		url:"/erps000",
+		views:{
+			'from@erp02':{templateUrl:"partials/erps000L.html",
+			controller:function($scope){
+				$scope.pageCode='EPRS000';
+				$scope.pageName='ข้อกฎหมาย/เอกสารประกอบการเบิก';
+			}
+		}
+		}
+	})
+	.state('erp02.erps000.add',{url:"/add",
+		views:{
+			'from@erp02':{templateUrl:"partials/erps000F.html",
+			controller:function($scope){
+				$scope.back='erp02.erps000';
+				$scope.pageCode='EPRS000';
+				$scope.pageName='ข้อกฎหมาย/เอกสารประกอบการเบิก';
+			}
+		}
+		}		
+	})
 	.state('erp02.erps001',{
 		url:"/erps001",
 		views:{
@@ -427,7 +511,30 @@ app.config(function($stateProvider, $urlRouterProvider){
 //erp003
 app.config(function($stateProvider, $urlRouterProvider){
 	$urlRouterProvider.otherwise("/home");
-	$stateProvider.state('erp03.erps008',{
+	$stateProvider
+	.state('erp03.erps000',{
+		url:"/erps000",
+		views:{
+			'from@erp03':{templateUrl:"partials/erps000L.html",
+			controller:function($scope){
+				$scope.pageCode='EPRS000';
+				$scope.pageName='ข้อกฎหมาย/เอกสารประกอบการเบิก';
+			}
+		}
+		}
+	})
+	.state('erp03.erps000.add',{url:"/add",
+		views:{
+			'from@erp03':{templateUrl:"partials/erps000F.html",
+			controller:function($scope){
+				$scope.back='erp03.erps000';
+				$scope.pageCode='EPRS000';
+				$scope.pageName='ข้อกฎหมาย/เอกสารประกอบการเบิก';
+			}
+		}
+		}		
+	})
+	.state('erp03.erps008',{
 		url:"/erps008",
 		views:{
 			'from@erp03':{templateUrl:"partials/erps008L.html",
@@ -627,7 +734,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 		}
 		}
 	})
-		.state('erp03.erps017',{
+	.state('erp03.erps017',{
 		url:"/erps017",
 		views:{
 			'from@erp03':{templateUrl:"partials/erps017L.html",
@@ -720,6 +827,28 @@ app.config(function($stateProvider, $urlRouterProvider){
 app.config(function($stateProvider, $urlRouterProvider){
 	$urlRouterProvider.otherwise("/home");
 	$stateProvider
+	.state('erp04.erps000',{
+		url:"/erps000",
+		views:{
+			'from@erp04':{templateUrl:"partials/erps000L.html",
+			controller:function($scope){
+				$scope.pageCode='EPRS000';
+				$scope.pageName='ข้อกฎหมาย/เอกสารประกอบการเบิก';
+			}
+		}
+		}
+	})
+	.state('erp04.erps000.add',{url:"/add",
+		views:{
+			'from@erp04':{templateUrl:"partials/erps000F.html",
+			controller:function($scope){
+				$scope.back='erp04.erps000';
+				$scope.pageCode='EPRS000';
+				$scope.pageName='ข้อกฎหมาย/เอกสารประกอบการเบิก';
+			}
+		}
+		}		
+	})
 	.state('erp04.erps001',{
 		url:"/erps001",
 		views:{
@@ -744,10 +873,139 @@ app.config(function($stateProvider, $urlRouterProvider){
 			}
 		}
 		}		
+	})	
+	.state('erp04.erps018',{
+		url:"/erps018",
+		views:{
+			'from@erp04':{templateUrl:"partials/erps018L.html",
+			controller:function($scope){
+				$scope.pageCode='EPRS018';
+				$scope.pageName='เบิกเงินรักษาพยาบาล';
+			}
+		}
+		}
+	})
+	.state('erp04.erps018.add',{
+		url:"/erps018",
+		views:{
+			'from@erp04':{templateUrl:"partials/erps018F.html",
+			controller:function($scope){
+				$scope.pageCode='EPRS018';
+				$scope.pageName='เบิกเงินรักษาพยาบาล';
+				$scope.statusFamailyList = statusFamailyList;
+			}
+		}
+		}
+	})
+	.state('erp04.erps019',{
+		url:"/erps019",
+		views:{
+			'from@erp04':{templateUrl:"partials/erps019L.html",
+			controller:function($scope){
+				$scope.pageCode='EPRS019';
+				$scope.pageName='เบิกเงินค่าเล่าเรียน';
+			}
+		}
+		}
+	})
+	.state('erp04.erps019.add',{
+		url:"/erps019",
+		views:{
+			'from@erp04':{templateUrl:"partials/erps019F.html",
+			controller:function($scope){
+				$scope.pageCode='EPRS019';
+				$scope.pageName='เบิกเงินค่าเล่าเรียน';
+			}
+		}
+		}
+	})
+	.state('erp04.erpr021',{url:"/erpr021",
+		views:{
+			'from@erp04':{templateUrl:"partials/Report/erps021C.html",
+			controller:function($scope){
+				$scope.pageCode='EPRS021';
+				$scope.pageName='รายงานผู้เบิกเงินสวัสดิการ';
+			}}
+		}
+	})
+	.state('erp04.erpr022',{url:"/erpr022",
+		views:{
+			'from@erp04':{templateUrl:"partials/Report/erps022C.html",
+			controller:function($scope){
+				$scope.pageCode='EPRS022';
+				$scope.pageName='รายงานทะเบียนคุมเบิกเงินรักษาพยาบาล';
+			}}
+		}
+	})
+	.state('erp04.erpr023',{url:"/erpr023",
+		views:{
+			'from@erp04':{templateUrl:"partials/Report/erps023C.html",
+			controller:function($scope){
+				$scope.pageCode='EPRS023';
+				$scope.pageName='รายงานทะเบียนคุมเบิกเงินค่าเล่าเรียน';
+			}}
+		}
+	})
+	.state('erp04.erpr024',{url:"/erpr024",
+		views:{
+			'from@erp04':{templateUrl:"partials/Report/erps024C.html",
+			controller:function($scope){
+				$scope.pageCode='EPRS024';
+				$scope.pageName='รายงานทะเบียนคุมเบิกเงินฎีกาคลัง';
+			}}
+		}
 	});
 });
-
-
 //end erp04
 
+//erp05
+app.config(function($stateProvider, $urlRouterProvider){
+	$urlRouterProvider.otherwise("/home");
+	$stateProvider
+	.state('erp05.erps000',{
+		url:"/erps000",
+		views:{
+			'from@erp05':{templateUrl:"partials/erps000L.html",
+			controller:function($scope){
+				$scope.pageCode='EPRS000';
+				$scope.pageName='ข้อกฎหมาย/เอกสารประกอบการเบิก';
+			}
+		}
+		}
+	})
+	.state('erp05.erps000.add',{url:"/add",
+		views:{
+			'from@erp05':{templateUrl:"partials/erps000F.html",
+			controller:function($scope){
+				$scope.back='erp05.erps000';
+				$scope.pageCode='EPRS000';
+				$scope.pageName='ข้อกฎหมาย/เอกสารประกอบการเบิก';
+			}
+		}
+		}		
+	})
+	.state('erp05.erps020',{
+		url:"/erps020",
+		views:{
+			'from@erp05':{templateUrl:"partials/erps020L.html",
+			controller:function($scope){
+				$scope.pageCode='EPRS020';
+				$scope.pageName='หน่วยนับ';
+			}
+		}
+		}
+	})
+	.state('erp05.erps020.add',{url:"/add",
+		views:{
+			'from@erp05':{templateUrl:"partials/erps020F.html",
+			controller:function($scope){
+				$scope.back='erp05.erps020';
+				$scope.pageCode='EPRS020';
+				$scope.pageName='หน่วยนับ';
+			}
+		}
+		}		
+	})
+});
+//end erp05
 //end Menu

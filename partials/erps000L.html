@@ -1,0 +1,65 @@
+<form>
+	<div class="panel panel-primary">
+		<div class="panel-heading">
+			<table width="100%">
+				<tr>
+					<td width="95%"><label>{{pageName}}</label></td>
+					<td><label>{{pageCode}}</label></td>
+				</tr>
+			</table>
+		</div>
+		<div class="panel-body">
+		<div class="list-group-item active">เงื่อนไขการค้นหา</div>
+		<div class="well">
+			<table width="85%" border="0" align="center">
+				<tr>
+					<td align="right">รายการ: </td>
+					<td><input type="text" class="form-control" ></td>
+					<td align="right">ประเภทเอกสาร:</td>
+					<td><select class="form-control" style="width:200px">
+						<option value="">--ทั้งหมด--</option>
+						<option value="1">กฎหมาย</option>
+						<option value="2">เอกสารประกอบ</option>
+						<option value="3">อื่นๆ</option>
+					</select></td>
+				</tr>
+				<tr>
+					<td colspan="4" align="center">
+						<button type="button" class="btn btn-primary">ค้นหา</button> 
+						<button type="button" class="btn btn-warning">ทั้งหมด</button>
+					</td>
+				</tr>
+			</table>
+		</div>
+		</div>
+	</div>
+	<div class="nav" style="padding:4px; text-align:center; text-align:right;">
+	<a ui-sref=".add"><button type="button" class="btn btn-primary" ng-click="add()">เพิ่มข้อมูล</button></a>
+	</div>
+	<table class="table table-bordered table-striped table-list" border="1">
+		<tr>
+			<th>ลำดับ</th>
+			<th>รายการ</th>
+			<th>ประเภทเอกสาร</th>
+			<th>&nbsp;</th>
+		</tr>
+		<tr>
+			<td width="4%" align="center">1</td>
+			<td><a href="#">cc xxxxxxxxx xxxxxxxxx</a></td>
+			<td>กฎหมาย</td>
+			<td width="10%" align="center"><img src="images/ic_see.png" width="24" height="24"></img>&nbsp; <img src="images/ic_edit.png" width="24" height="24"></img></td>
+		</tr>
+		<tr>
+			<td width="4%" align="center">2</td>
+			<td><a href="#">cc xxxxxxxxx xxxxxxxxx</a></td>
+			<td>เอกสารประกอบ</td>
+			<td width="10%" align="center"><img src="images/ic_see.png" width="24" height="24"></img>&nbsp; <img src="images/ic_edit.png" width="24" height="24"></img></td>
+		</tr>
+		<tr>
+			<td width="4%" align="center">3</td>
+			<td><a href="#">cc xxxxxxxxx xxxxxxxxx</a></td>
+			<td>อื่นๆ</td>
+			<td width="10%" align="center"><img src="images/ic_see.png" width="24" height="24"></img>&nbsp; <img src="images/ic_edit.png" width="24" height="24"></img></td>
+		</tr>
+	</table>
+</form>
