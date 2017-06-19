@@ -19,12 +19,25 @@
 						<option value="2561">2561</option>
 					</select></td>
 					<td width="30%"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td width="20%" align="right">ประเภท:</td>
+					<td width="30%"><select class="form-control" style="width:200px">
+						<option value="">--กรุณาเลือก--</option>
+						<option value="1">ผู้ป่วยใน</option>
+						<option value="2">ผู้ป่วยนอก</option>
+					</select></td>
+					<td width="30%"  align="right">สถานพยาบาลของ:</td>
+					<td><input type="radio" value="1" ng-model="inlineRadioOptions" ng-init="inlineRadioOptions='1'"> ทางราชการ
+                          <div></div>
+						  <input type="radio" value="2" ng-model="inlineRadioOptions"> เอกชน</td></td>
 				</tr>
 				<tr>
 					<td width="20%" align="right">วันที่:</td>
 					<td width="30%"><input type="text" maxlength="4" class="form-control custom-form-control" style="width:80%">&nbsp;<font color="red">*</font>
                     <img src="images/calendar_32.png" width="24" height="24"> </td>
-					<td align="right" width="20%">ฎีกาคลัง :</td>
+					<td align="right" width="20%">เลขที่GFMIS :</td>
 					<td width="30%"><input type="text" maxlength="4" class="form-control custom-form-control" style="width:50%">&nbsp;<font color="red">*</font></td>
 				</tr>
 
@@ -89,17 +102,25 @@
 					<td align="right">นามสกุล:</td>
 					<td><input type="text" class="form-control custom-form-control" readonly></td>
 				</tr>
+				<tr>
+					<td align="right">อายุ:</td>
+					<td><input type="text" class="form-control custom-form-control" name="Y" style="width: 10%" readonly> ปี
+                    <input type="text" class="form-control custom-form-control" name="Y" style="width: 10%" readonly> เดือน
+                    <input type="text" class="form-control custom-form-control" name="Y" style="width: 10%" readonly> วัน
+					</td>
+					<td align="right"></td>
+					<td></td>
+					<td align="right"></td>
+					<td></td>
+				</tr>
                 <tr>
 					<td align="right">ป่วยเป็นโรค:</td>
 					<td><textarea class="form-control custom-form-control"></textarea>
 					</td>
 					<td align="right">สถานพยาบาล:</td>
 					<td><textarea class="form-control custom-form-control"></textarea></td>
-					<td align="right">สถานพยาบาลของ:</td>
-					<td>
-						  <input type="radio" value="1" ng-model="inlineRadioOptions" ng-init="inlineRadioOptions='1'"> ทางราชการ
-                          <div></div>
-						  <input type="radio" value="2" ng-model="inlineRadioOptions"> เอกชน</td>
+					<td align="right"></td>
+					<td></td>
 				</tr>
                 <tr>
 					<td align="right">ตั้งแต่วันที่:</td>
@@ -118,9 +139,18 @@
 					<td align="right">ตามใบเสร็จรับเงินที่แนบ จำนวน:</td>
 					<td><input type="text" maxlength="4" class="form-control custom-form-control" style="width:50%">&nbsp; ฉบับ
                     </td>
+					<td align="right"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td align="right">เงินที่เบิกได้(บาท):</td>
+					<td><input type="text" maxlength="4" class="form-control custom-form-control" style="width:80%">&nbsp;<font color="red">*</font>
+                   </td>
 					<td align="right">วันจ่าย:</td>
 					<td><input type="text" maxlength="4" class="form-control custom-form-control" style="width:60%">&nbsp;<font color="red">*</font>
                     <img src="images/calendar_32.png" width="24" height="24"></td>
+					<td align="right"></td>
+					<td></td>
 				</tr>
 				<tr>
 					<td align="right">อัพโหลดไฟล์:</td>
@@ -143,8 +173,8 @@
 				<tr>					
 					<th width="30%">ชื่อ-สกุล เจ้าของสิทธิ</th>
 					<th>เบิกให้</th>
-					<th width="30%">ชื่อ-สกุล ผู้รับ</th>
-					<th>จำนวนเงิน</th>
+					<th width="30%">ชื่อ-สกุล ผู้รับสิทธิ</th>
+					<th>จำนวนเงินที่เบิกได้</th>
 					<th>&nbsp;</th>
 				</tr>
                 <tr>

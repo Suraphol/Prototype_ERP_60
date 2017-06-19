@@ -1,0 +1,69 @@
+<form>
+	<div class="panel panel-primary">
+		<div class="panel-heading"><table width="100%">
+				<tr>
+					<td width="95%"><label>{{pageName}}</label></td>
+					<td><label>{{pageCode}}</label></td>
+				</tr>
+			</table></div>
+		<div class="panel-body">
+		<div class="list-group-item active">ข้อมูล</div>
+		<div class="well">
+			<table width="85%" border="0" align="center">
+                <tr>
+                    <td width="20%" align="right">วันที่:</td>
+					<td width="30%"><input type="text" maxlength="4" class="form-control custom-form-control" style="width:80%">&nbsp;<font color="red">*</font>
+                    <img src="images/calendar_32.png" width="24" height="24"></td>
+                    <td width="20%" align="right">เลขที่:</td>
+                    <td><input type="text" maxlength="4" class="form-control custom-form-control" style="width:80%">&nbsp;<font color="red">*</font></td>
+                </tr>
+                <tr>
+                    <td align="right">ผู้เบิก:</td>
+					<td><input type="text" maxlength="4" class="form-control custom-form-control" style="width:80%">&nbsp;<font color="red">*</font></td>
+                    <td align="right">ตำแหน่ง:</td>
+					<td><input type="text" maxlength="4" class="form-control custom-form-control" style="width:80%">&nbsp;<font color="red">*</font></td>
+                </tr>
+
+                <tr>
+					<td colspan="4" align="center"><button type="button" class="btn btn-success">บันทึก</button> 
+						<a ui-sref="erp05.erps023"><button type="button" class="btn btn-warning">&nbsp;&nbsp;กลับ&nbsp;&nbsp;</button></a>
+						</td>
+				</tr>				
+			</table>
+		</div>
+        <div class="well">
+            <table class="table table-bordered table-striped table-list" border="1">
+            <tr>
+                <th>ประเภท</th>
+                <th>หมวด</th>
+                <th>รายการ</th>
+                <th>จำนวน</th>
+                <th>หมายเหตุ</th>   
+                <th>&nbsp;<button type="button" class="btn btn-primary">เพิ่มข้อมูล</button></th>
+            </tr>
+            <tr>
+                <td><select class="form-control custom-form-control" style="width:90%">
+                            <option>--กรุณาเลือก--</option>
+                            <option>เครื่องเขียน</option>
+                            <option>กระดาษ</option>
+                        </select>&nbsp;<font color="red">*</font></td>
+                <td><select class="form-control custom-form-control" style="width:90%">
+                            <option>--กรุณาเลือก--</option>
+                            <option>ปากกา</option>
+                            <option>ดินสอ</option>
+                        </select>&nbsp;<font color="red">*</font></td>
+                <td><select class="form-control custom-form-control" style="width:90%">
+                            <option>--กรุณาเลือก--</option>
+                            <option>ปากกาลูกลื่น</option>
+                            <option>ปากกาไวท์บอร์ด</option>
+                        </select>&nbsp;<font color="red">*</font></td>
+                <td><input type="text" maxlength="4" class="form-control custom-form-control" style="width:80%">&nbsp;<font color="red">*</font></td>
+                 <td><input type="text" maxlength="4" class="form-control custom-form-control" style="width:80%"></td>
+                <td width="15%" align="center"><img src="images/ic_delet.png" width="24" height="24"></img></td>
+            </tr>
+	</table>
+
+        </div>
+		</div>
+	</div>
+</form>

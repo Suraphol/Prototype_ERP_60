@@ -1,0 +1,140 @@
+<form>
+	<div class="panel panel-primary">
+		<div class="panel-heading"><table width="100%">
+				<tr>
+					<td width="95%"><label>{{pageName}}</label></td>
+					<td><label>{{pageCode}}</label></td>
+				</tr>
+			</table></div>
+		<div class="panel-body">
+		<div class="list-group-item active">ข้อมูล</div>
+		<div class="well">
+			<table width="85%" border="0" align="center">
+                <tr>
+                    <td width="20%" align="right">วันที่:</td>
+					<td width="30%"><input type="text" maxlength="4" class="form-control custom-form-control" style="width:80%">&nbsp;<font color="red">*</font>
+                    <img src="images/calendar_32.png" width="24" height="24"></td>
+                    <td width="20%"></td>
+                    <td width="30%"></td>
+                </tr>
+                <tr>
+                    <td align="right">หน่วยงาน:</td>
+					<td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td align="right">ประเภทเงิน:</td>
+					<td><select class="form-control custom-form-control" style="width:80%">
+                            <option>--กรุณาเลือก--</option>
+                            <option>เงินงบประมาณ</option>
+                            <option>เงินนอกงบประมาณ</option>
+                            <option>เงินบริจาก/เงินช่วยเหลือ</option>
+                            <option>อื่นๆ (รับจากกองคลัง)</option>
+                        </select>&nbsp;<font color="red">*</font></td>
+                    <td align="right">วิธีการได้มา:</td>
+                    <td><select class="form-control custom-form-control" style="width:80%">
+                            <option>--กรุณาเลือก--</option>
+                            <option>ตกลงราคา</option>
+                            <option>สอบราคา</option>
+                            <option>ประกวดราคา</option>
+                            <option>วิธีพิเศษ</option>
+                             <option>รับบริจาก</option>
+                        </select>&nbsp;<font color="red">*</font></td>
+                </tr>
+                <tr>
+                    <td align="right">ประเภท:</td>
+					<td><select class="form-control custom-form-control" style="width:80%">
+                            <option>--กรุณาเลือก--</option>
+                        </select>&nbsp;<font color="red">*</font></td>
+                    <td align="right">ลักษณะ/คุณสมบัติ:</td>
+                    <td><select class="form-control custom-form-control" style="width:80%">
+                            <option>--กรุณาเลือก--</option>
+                        </select>&nbsp;<font color="red">*</font></td>
+                </tr>
+                <tr>
+                    <td align="right">ยี่ห้อ:</td>
+					<td><input type="text" class="form-control custom-form-control" style="width:80%">&nbsp;<font color="red">*</font></td>
+                    <td align="right">รุ่น/แบบ:</td>
+                    <td><input type="text" class="form-control custom-form-control" style="width:80%">&nbsp;<font color="red">*</font></td>
+                </tr>
+                <tr>
+                    <td align="right">ราคาต่อหน่วย/ชุด/กลุ่ม:</td>
+					<td><input type="text" class="form-control custom-form-control" style="width:80%"></td>
+                    <td align="right">อายุใช้งาน:</td>
+                    <td><input type="text" class="form-control custom-form-control" style="width:80%"></td>
+                </tr>
+                <tr>
+                    <td align="right">อัตราค่าเสื่อม (%):</td>
+					<td><input type="text" class="form-control custom-form-control" style="width:80%"></td>
+                    <td align="right"></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td align="right">ค่าเสื่อมราคาประจำปี:</td>
+					<td><input type="text" class="form-control custom-form-control" style="width:80%"></td>
+                    <td align="right">ค่าเสื่อมราคาสะสม:</td>
+                    <td><input type="text" class="form-control custom-form-control" style="width:80%"></td>
+                </tr>
+                <tr>
+                    <td align="right">มูลค่าสุทธิ:</td>
+					<td><input type="text" class="form-control custom-form-control" style="width:80%"></td>
+                    <td align="right"></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td align="right">หมายเหตุ:</td>
+					<td><textarea class="form-control custom-form-control"></textarea> </td>
+                    <td align="right"></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td align="right">ชื่อผู้ขาย:</td>
+					<td><textarea class="form-control custom-form-control"></textarea> </td>
+                    <td align="right"></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td align="right">บริษัท/ห้าง/ร้าน:</td>
+					<td><textarea class="form-control custom-form-control"></textarea> </td>
+                    <td align="right">ที่อยู่:</td>
+                    <td><textarea class="form-control custom-form-control"></textarea></td>
+                </tr>
+                <tr>
+                    <td align="right">โทรศัพท์:</td>
+					<td><input type="text" class="form-control custom-form-control" style="width:80%"> </td>
+                    <td align="right"></td>
+                    <td></td>
+                </tr>
+
+
+                <tr>
+					<td colspan="4" align="center"><button type="button" class="btn btn-success">บันทึก</button> 
+						<a ui-sref="erp05.erps025"><button type="button" class="btn btn-warning">&nbsp;&nbsp;กลับ&nbsp;&nbsp;</button></a>
+						</td>
+				</tr>				
+			</table>
+		</div>
+        <div class="well">
+            <table class="table table-bordered table-striped table-list" border="1">
+                <tr>
+                    <th width="20%">ที่เอกสาร</th>
+                    <th >จำนวนครุภัณฑ์</th>
+                    <th>หน่วยงานที่ใช้</th>
+                    <th>รายการ</th>
+                    <th>สถานที่ตั้ง/หน่วยงานที่รับผิดชอบ</th>
+                    <th>&nbsp;<button type="button" class="btn btn-primary">เพิ่ม</button></th>
+                </tr>
+                <tr>
+                    <td><input type="text" class="form-control custom-form-control" style="width:80%"></td>
+                    <td><input type="text" class="form-control custom-form-control" style="width:80%"></td>
+                    <td><input type="text" class="form-control custom-form-control" style="width:80%"></td>
+                    <td><input type="text" class="form-control custom-form-control" style="width:80%"></td>
+                    <td><input type="text" class="form-control custom-form-control" style="width:80%"></td>
+                    <td align="center">&nbsp; <img src="images/ic_delet.png" width="24" height="24"></img></td>
+                </tr>
+            </table>
+        </div>
+		</div>
+	</div>
+</form>

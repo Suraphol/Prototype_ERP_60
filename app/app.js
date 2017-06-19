@@ -219,12 +219,19 @@ app.controller('erps001FController',function($scope){
 		if($scope.relationId == '5'){
 			$scope.showCount = true;
 			$scope.showCareer = false;
+			$scope.showCount1 = false;
 		}else if($scope.relationId == '3' ||$scope.relationId == '4' ){
 			$scope.showCount = false;
 			$scope.showCareer = true;
+			$scope.showCount1 = false;
+		}else if($scope.relationId == '1' ||$scope.relationId == '2'){
+			$scope.showCount1 = true;
+			$scope.showCount = false;
+			$scope.showCareer = false;
 		}else{
 			$scope.showCount = false;
 			$scope.showCareer = false;
+			$scope.showCount1 = false;
 		}
 	}
 
@@ -954,6 +961,37 @@ app.config(function($stateProvider, $urlRouterProvider){
 				$scope.pageName='รายงานทะเบียนคุมเบิกเงินฎีกาคลัง';
 			}}
 		}
+	})
+	.state('erp04.erpr025',{url:"/erpr025",
+		views:{
+			'from@erp04':{templateUrl:"partials/Report/erps025C.html",
+			controller:function($scope){
+				$scope.pageCode='EPRS025';
+				$scope.pageName='รายงานสรุปการเบิกเงินรักษาพยาบาล';
+			}}
+		}
+	}).state('erp04.erps020',{
+		url:"/erps020",
+		views:{
+			'from@erp04':{templateUrl:"partials/erps020L.html",
+			controller:function($scope){
+				$scope.pageCode='EPRS020';
+				$scope.pageName='ประเภทและอัตราเงินบำรุงและค่าเล่าเรียน';
+			}
+		}
+		}
+	})
+	.state('erp04.erps020.add',{
+		url:"/erps020",
+		views:{
+			'from@erp04':{templateUrl:"partials/erps020F.html",
+			controller:function($scope){
+				$scope.pageCode='EPRS020';
+				$scope.pageName='ประเภทและอัตราเงินบำรุงและค่าเล่าเรียน';
+				$scope.statusFamailyList = statusFamailyList;
+			}
+		}
+		}
 	});
 });
 //end erp04
@@ -984,24 +1022,274 @@ app.config(function($stateProvider, $urlRouterProvider){
 		}
 		}		
 	})
-	.state('erp05.erps020',{
-		url:"/erps020",
+	.state('erp05.erps021',{
+		url:"/erps021",
 		views:{
-			'from@erp05':{templateUrl:"partials/erps020L.html",
+			'from@erp05':{templateUrl:"partials/erps021L.html",
 			controller:function($scope){
-				$scope.pageCode='EPRS020';
+				$scope.pageCode='EPRS021';
 				$scope.pageName='หน่วยนับ';
 			}
 		}
 		}
 	})
-	.state('erp05.erps020.add',{url:"/add",
+	.state('erp05.erps021.add',{url:"/add",
 		views:{
-			'from@erp05':{templateUrl:"partials/erps020F.html",
+			'from@erp05':{templateUrl:"partials/erps021F.html",
 			controller:function($scope){
-				$scope.back='erp05.erps020';
-				$scope.pageCode='EPRS020';
+				$scope.back='erp05.erps021';
+				$scope.pageCode='EPRS021';
 				$scope.pageName='หน่วยนับ';
+			}
+		}
+		}		
+	})
+	.state('erp05.erps022',{
+		url:"/erps022",
+		views:{
+			'from@erp05':{templateUrl:"partials/erps022L.html",
+			controller:function($scope){
+				$scope.pageCode='EPRS022';
+				$scope.pageName='ประเภทวัสดุ';
+			}
+		}
+		}
+	})
+	.state('erp05.erps022.add',{url:"/add",
+		views:{
+			'from@erp05':{templateUrl:"partials/erps022F.html",
+			controller:function($scope){
+				$scope.back='erp05.erps022';
+				$scope.pageCode='EPRS022';
+				$scope.pageName='ประเภทวัสดุ';
+			}
+		}
+		}		
+	})
+	.state('erp05.erps022.add1',{url:"/add1",
+		views:{
+			'from@erp05':{templateUrl:"partials/erps022F.html",
+			controller:function($scope){
+				$scope.back='erp05.erps022';
+				$scope.pageCode='EPRS022';
+				$scope.pageName='ประเภทวัสดุ';
+				$scope.name='เครื่องเขียน';
+			}
+		}
+		}		
+	})
+	.state('erp05.erps022.add2',{url:"/add2",
+		views:{
+			'from@erp05':{templateUrl:"partials/erps022F.html",
+			controller:function($scope){
+				$scope.back='erp05.erps022';
+				$scope.pageCode='EPRS022';
+				$scope.pageName='ประเภทวัสดุ';
+				$scope.name='เครื่องเขียน->ปากกา';
+			}
+		}
+		}		
+	})
+	.state('erp05.erps023',{
+		url:"/erps023",
+		views:{
+			'from@erp05':{templateUrl:"partials/erps023L.html",
+			controller:function($scope){
+				$scope.pageCode='EPRS023';
+				$scope.pageName='บันทึกรายการทะเบียนคุมวัสดุ';
+			}
+		}
+		}
+	})
+	.state('erp05.erps023.add',{url:"/add",
+		views:{
+			'from@erp05':{templateUrl:"partials/erps023F.html",
+			controller:function($scope){
+				$scope.back='erp05.erps023';
+				$scope.pageCode='EPRS023';
+				$scope.pageName='บันทึกรายการทะเบียนคุมวัสดุ';
+			}
+		}
+		}		
+	})
+	.state('erp05.erps024',{
+		url:"/erps024",
+		views:{
+			'from@erp05':{templateUrl:"partials/erps024L.html",
+			controller:function($scope){
+				$scope.pageCode='EPRS024';
+				$scope.pageName='บันทึกรายการเบิกวัสดุ';
+			}
+		}
+		}
+	})
+	.state('erp05.erps024.add',{url:"/add",
+		views:{
+			'from@erp05':{templateUrl:"partials/erps024F.html",
+			controller:function($scope){
+				$scope.back='erp05.erps024';
+				$scope.pageCode='EPRS024';
+				$scope.pageName='บันทึกรายการเบิกวัสดุ';
+			}
+		}
+		}		
+	})
+	.state('erp05.erps025',{
+		url:"/erps025",
+		views:{
+			'from@erp05':{templateUrl:"partials/erps025L.html",
+			controller:function($scope){
+				$scope.pageCode='EPRS025';
+				$scope.pageName='ประเภทครุภัณฑ์';
+			}
+		}
+		}
+	})
+	.state('erp05.erps025.add',{url:"/add",
+		views:{
+			'from@erp05':{templateUrl:"partials/erps025F.html",
+			controller:function($scope){
+				$scope.back='erp05.erps025';
+				$scope.pageCode='EPRS025';
+				$scope.pageName='ประเภทครุภัณฑ์';
+				$scope.maxlength = '5';
+			}
+		}
+		}		
+	})
+	.state('erp05.erps025.add1',{url:"/add1",
+		views:{
+			'from@erp05':{templateUrl:"partials/erps025F.html",
+			controller:function($scope){
+				$scope.back='erp05.erps025';
+				$scope.pageCode='EPRS025';
+				$scope.pageName='ประเภทครุภัณฑ์';
+				$scope.cc='01';
+				$scope.maxlength = '3';
+			}
+		}
+		}		
+	})
+	.state('erp05.erps026',{
+		url:"/erps026",
+		views:{
+			'from@erp05':{templateUrl:"partials/erps026L.html",
+			controller:function($scope){
+				$scope.pageCode='EPRS026';
+				$scope.pageName='บันทึกรายการครุภัณฑ์';
+			}
+		}
+		}
+	})
+	.state('erp05.erps026.add',{url:"/add",
+		views:{
+			'from@erp05':{templateUrl:"partials/erps026F.html",
+			controller:function($scope){
+				$scope.back='erp05.erps026';
+				$scope.pageCode='EPRS026';
+				$scope.pageName='บันทึกรายการครุภัณฑ์';
+			}
+		}
+		}		
+	})
+	.state('erp05.erps026.edit',{url:"/edit",
+		views:{
+			'from@erp05':{templateUrl:"partials/erps026FE.html",
+			controller:function($scope){
+				$scope.back='erp05.erps026';
+				$scope.pageCode='EPRS026';
+				$scope.pageName='บันทึกรายการครุภัณฑ์';
+			}
+		}
+		}		
+	})
+	.state('erp05.erps027',{
+		url:"/erps027",
+		views:{
+			'from@erp05':{templateUrl:"partials/erps027L.html",
+			controller:function($scope){
+				$scope.pageCode='EPRS027';
+				$scope.pageName='บันทึกรายการ ยืม-คืน ครุภัณฑ์';
+				$scope.unit = unit;
+			}
+		}
+		}
+	})
+	.state('erp05.erps027.add',{url:"/add",
+		views:{
+			'from@erp05':{templateUrl:"partials/erps027F.html",
+			controller:function($scope){
+				$scope.back='erp05.erps027';
+				$scope.pageCode='EPRS027';
+				$scope.pageName='บันทึกรายการ ยืม-คืน ครุภัณฑ์';
+				$scope.unit = unit;
+			}
+		}
+		}		
+	})
+	.state('erp05.erps028',{
+		url:"/erps028",
+		views:{
+			'from@erp05':{templateUrl:"partials/erps028L.html",
+			controller:function($scope){
+				$scope.pageCode='EPRS028';
+				$scope.pageName='บันทึกรายการ ส่งซ่อม-รับคืน ครุภัณฑ์';
+			}
+		}
+		}
+	})
+	.state('erp05.erps028.add',{url:"/add",
+		views:{
+			'from@erp05':{templateUrl:"partials/erps028F.html",
+			controller:function($scope){
+				$scope.back='erp05.erps028';
+				$scope.pageCode='EPRS028';
+				$scope.pageName='บันทึกรายการ ส่งซ่อม-รับคืน ครุภัณฑ์';
+			}
+		}
+		}		
+	})
+	.state('erp05.erps029',{
+		url:"/erps029",
+		views:{
+			'from@erp05':{templateUrl:"partials/erps029L.html",
+			controller:function($scope){
+				$scope.pageCode='EPRS029';
+				$scope.pageName='บันทึกรายการ ส่งคืนครุภัณฑ์';
+			}
+		}
+		}
+	})
+	.state('erp05.erps029.add',{url:"/add",
+		views:{
+			'from@erp05':{templateUrl:"partials/erps029F.html",
+			controller:function($scope){
+				$scope.back='erp05.erps029';
+				$scope.pageCode='EPRS029';
+				$scope.pageName='บันทึกรายการ ส่งคืนครุภัณฑ์';
+			}
+		}
+		}		
+	})
+	.state('erp05.erps030',{
+		url:"/erps030",
+		views:{
+			'from@erp05':{templateUrl:"partials/erps030L.html",
+			controller:function($scope){
+				$scope.pageCode='EPRS030';
+				$scope.pageName='บันทึกรายการโทรศัพท์มือถือ';
+			}
+		}
+		}
+	})
+	.state('erp05.erps030.add',{url:"/add",
+		views:{
+			'from@erp05':{templateUrl:"partials/erps030F.html",
+			controller:function($scope){
+				$scope.back='erp05.erps030';
+				$scope.pageCode='EPRS030';
+				$scope.pageName='บันทึกรายการโทรศัพท์มือถือ';
+				$scope.unit = unit;
 			}
 		}
 		}		

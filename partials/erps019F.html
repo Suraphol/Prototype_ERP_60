@@ -23,7 +23,7 @@
 					<td width="20%" align="right">วันที่:</td>
 					<td width="30%"><input type="text" maxlength="4" class="form-control custom-form-control" style="width:80%">&nbsp;<font color="red">*</font>
                     <img src="images/calendar_32.png" width="24" height="24"> </td>
-					<td align="right" width="20%">ฎีกาคลัง :</td>
+					<td align="right" width="20%">เลขที่GFMIS :</td>
 					<td width="30%"><input type="text" maxlength="4" class="form-control custom-form-control" style="width:50%">&nbsp;<font color="red">*</font></td>
 				</tr>
 
@@ -79,7 +79,7 @@
 					<td><input type="text" class="form-control custom-form-control" readonly></td>
                 </tr>
                 <tr>
-                    <td colspan="5"><p><strong>สำหรับการศึกษาของบุตร</strong>&nbsp; <font color="red">RM: สามารเบิกได้ อนุบาน -> ปี.ตรี และ อายุช่วง 3-25ปี</font> </td>
+                    <td colspan="5"><p><strong>สำหรับการศึกษาของบุตร</strong>&nbsp; <font color="red">RM: สามารเบิกได้ อนุบาล -> ป.ตรี และ อายุช่วง 3-25ปี</font> </td>
                 </tr>
                 <tr>
                     <td align="right">บุตรคนที่:</td>
@@ -112,8 +112,51 @@
                     <input type="text" class="form-control custom-form-control" name="Y" style="width: 10%" readonly> เดือน
                     <input type="text" class="form-control custom-form-control" name="Y" style="width: 10%" readonly> วัน</td>
                 </tr>
-                <tr>
+				<tr>
                     <td align="right">สถานศึกษา:</td>
+					<td><input type="radio" value="1" name="KK"  checked="true"> รัฐบาล<div></div>
+						<input type="radio" value="2" name="KK"> เอกชน</td>
+					<td align="right">เงินอุดหนุน: </td>
+					<td><input type="radio" value="1" name="FF"  checked="true"> รับ<div></div>
+						<input type="radio" value="2" name="FF"> ไม่รับ</td></td>
+					<td align="right"></td>
+					<td><font color="red">RM:เพราะสถานศึกษาเอกชน</font></td>
+                </tr>
+				<tr>
+                    <td align="right">ระดับ: <font color="red">RM:เฉพาะ ราชการ</font></td>
+					<td><select class="form-control custom-form-control" style="width:90%">
+                            <option value="">--กรุณาเลือก--</option>
+                            <option value="">อนุบาล</option>
+                            <option value="">ประถมศึกษา</option>
+							 <option value="">มัธยมศึกษาตอนต้น</option>
+                            <option value="">มัธยมศึกษาตอนปลายหรือปวช.</option>
+							 <option value="">อนุปริญาหรือเทียบเท่า</option>
+							 <option value="">ปริญญาตรี</option>
+                        </select>&nbsp;<font color="red">*</font></td>
+					<td align="right"></td>
+					<td></td>
+                    <td align="right"></td>
+					<td></td>                    
+                </tr>
+				<tr>
+                <td align="right">ระดับ: <font color="red">RM:เฉพาะ เอกชน</font></td>
+					<td><select class="form-control custom-form-control" style="width:90%">
+                            <option value="">--กรุณาเลือก--</option>
+                            <option value="">อนุบาล</option>
+                            <option value="">ประถมศึกษา</option>
+							 <option value="">มัธยมศึกษาตอนต้น</option>
+                            <option value="">มัธยมศึกษาตอนปลาย</option>
+							<option value="">ปวช.</option>
+							 <option value="">อนุปริญาหรือเทียบเท่า</option>
+							 <option value="">ปริญญาตรี</option>
+                        </select>&nbsp;<font color="red">*</font></td>
+					<td align="right"></td>
+					<td></td>
+                    <td align="right"></td>
+					<td></td>                    
+                </tr>
+                <tr>
+                    <td align="right">ชื่อสถานศึกษา:</td>
 					<td><input type="text" class="form-control custom-form-control" style="width:90%">&nbsp;<font color="red">*</font></td>
 					<td align="right">จังหวัด:</td>
 					<td><select class="form-control custom-form-control" style="width:90%">
@@ -125,6 +168,7 @@
                         </select></td></td>
                     
                 </tr>
+
                 <tr>
                     <td align="right">ชั้นที่ศึกษา:</td>
 					<td><input type="text" class="form-control custom-form-control" style="width:90%">&nbsp;<font color="red">*</font>
@@ -134,15 +178,24 @@
 					<td align="right">ปีการศึกษา :</td>
 					<td><input type="text" class="form-control custom-form-control" style="width:90%">&nbsp;<font color="red">*</font></td>
                 </tr>
+				
                 <tr>
-                    <td align="right">จำนวนเงิน:</td>
+                    <td align="right">จำนวนเงินตามใบเสร็จ:</td>
 					<td><input type="text" class="form-control custom-form-control" style="width:90%">&nbsp;<font color="red">*</font></td>
-					<td align="right">เงิน:</td>
-					<td><input type="radio" value="1" name="KK"  checked="true"> เงินบำรุงการศึกษา<div></div>
-						<input type="radio" value="2" name="KK"> เงินค่าเล่าเรียน</td>
+					<td align="right"></td>
+					<td></td>
 					<td align="right"></td>
 					<td></td>
                 </tr>
+				<tr>
+					<td align="right">จำนวนเงินที่เบิกได้:</td>
+					<td><input type="text" class="form-control custom-form-control" style="width:90%">&nbsp;<font color="red">*</font></td>
+					<td align="right">วันจ่าย:</td>
+					<td><input type="text" maxlength="4" class="form-control custom-form-control" style="width:60%">&nbsp;<font color="red">*</font>
+                    <img src="images/calendar_32.png" width="24" height="24"></td>
+					<td align="right"></td>
+					<td></td><td></td>
+				</tr>
              	<tr>
 					<td align="right">อัพโหลดไฟล์:</td>
 					<td><input type="file" id="exampleInputFile"></td>
@@ -165,9 +218,10 @@
 			<table class="table table-bordered table-striped table-list" border="1">
 				<tr>					
 					<th width="30%">ชื่อ-สกุล เจ้าของสิทธิ</th>					
-					<th width="30%">ชื่อ-สกุล ผู้รับ</th>
-                    <th>เบิกให้บุตรคนที่</th>
+					<th width="30%">ชื่อ-สกุล บุตร</th>
+                    <th>ลำดับที่</th>
                     <th>ภาคเรียนที่</th>
+					<th>ปีการศึกษา</th>
 					<th>จำนวนเงิน(บาท)</th>
 					<th>&nbsp;</th>
 				</tr>
@@ -175,7 +229,8 @@
                     <td>xxx xxxx xxxxxx</td>
                     <td>xxx xxxx xxxxxx</td>
                     <td align="center">1</td>
-                    <td>1</td>
+                    <td align="center">1</td>
+					 <td align="center">xxxx</td>
                     <td align="right">xx,xxx.xx</td>
                     <td align="center"><img src="images/ic_delet.png" width="24" height="24"></img>&nbsp; <img src="images/ic_edit.png" width="24" height="24"></img></td>
                 </tr>
@@ -183,12 +238,13 @@
                     <td>xxx xxxx xxxxxx</td>
                     <td>xxx xxxx xxxxxx</td>
                     <td align="center">3</td>
-                    <td>1</td>
+                    <td align="center">1</td>
+					<td >xxxx</td>
                     <td align="right">xx,xxx.xx</td>
                     <td align="center"><img src="images/ic_delet.png" width="24" height="24"></img>&nbsp; <img src="images/ic_edit.png" width="24" height="24"></img></td>
                 </tr>
                 <tr>
-                    <td colspan="4" align="center">รวม</td>
+                    <td colspan="5" align="center">รวม</td>
                     <td align="right">xx,xxx.xx</td>
                     <td></td>
                 </tr>

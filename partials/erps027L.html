@@ -1,0 +1,55 @@
+<form>
+	<div class="panel panel-primary">
+		<div class="panel-heading"><table width="100%">
+				<tr>
+					<td width="95%"><label>{{pageName}}</label></td>
+					<td><label>{{pageCode}}</label></td>
+				</tr>
+			</table></div>
+		<div class="panel-body">
+		<div class="list-group-item active">เงื่อนไขการค้นหา</div>
+		<div class="well">
+			<table width="85%" border="0" align="center">
+				<tr>
+                    <td align="right">เลขที่ผู้ยืม:</td>
+                    <td><input type="text" maxlength="4" class="form-control custom-form-control" style="width:60%"></td>
+                    <td align="right">หน่วย:</td>
+                    <td><select class="form-control custom-form-control" style="width:80%">
+                            <option>--ทั้งหมด--</option>
+                            <option ng-repeat="u in unit">{{u.name}} </option>
+                        </select></td>
+				</tr>
+				<tr>
+					<td colspan="4" align="center">
+						<button type="button" class="btn btn-primary">ค้นหา</button> 
+						<button type="button" class="btn btn-warning">ทั้งหมด</button>
+					</td>
+				</tr>
+			</table>
+		</div>
+		</div>
+	</div>
+	
+	<div class="nav" style="padding:4px; text-align:center; text-align:right;">
+	<a ui-sref=".add"><button type="button" class="btn btn-primary">เพิ่มข้อมูล</button></a>
+	</div>
+	<table class="table table-bordered table-striped table-list" border="1">
+		<tr>
+            <th width="15%">เลขที่ผู้ยืม</th>
+			<th width="15%">วันที่</th>
+            <th width="15%">สำนัก/กองผู้ยืม</th>      
+			<th width="25%" >&nbsp;</th>
+		</tr>
+		<tr>
+            <td align="center">xxx/xxxx</td>
+			<td align="center">xx/xx/xxxx</td>
+            <td>xxxxxxx</td>
+			<td align="center"><img src="images/ic_see.png" width="24" height="24">
+            </img>&nbsp;<img src="images/ic_edit.png" width="24" height="24" placeHolder="แก้ไข">
+            </img>&nbsp;<img src="images/ic_edit.png" width="24" height="24" placeHolder="คืน">
+            </img>&nbsp;<img src="images/ic_print.png" width="24" height="24">
+            </img>&nbsp; <img src="images/ic_delet.png" width="24" height="24"></img></td>
+		</tr>
+		
+	</table>
+</form>
