@@ -1294,6 +1294,29 @@ app.config(function($stateProvider, $urlRouterProvider){
 		}
 		}		
 	})
+	.state('erp05.erps031',{
+		url:"/erps031",
+		views:{
+			'from@erp05':{templateUrl:"partials/erps031L.html",
+			controller:function($scope){
+				$scope.pageCode='EPRS031';
+				$scope.pageName='บันทึกรายการโทรศัพท์มือถือ';
+			}
+		}
+		}
+	})
+	.state('erp05.erps031.add',{url:"/add",
+		views:{
+			'from@erp05':{templateUrl:"partials/erps031F.html",
+			controller:function($scope){
+				$scope.back='erp05.erps031';
+				$scope.pageCode='EPRS031';
+				$scope.pageName='บันทึกรายการโทรศัพท์มือถือ';
+				$scope.unit = unit;
+			}
+		}
+		}		
+	})
 });
 //end erp05
 //end Menu

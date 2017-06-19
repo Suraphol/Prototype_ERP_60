@@ -1,0 +1,97 @@
+<form>
+	<div class="panel panel-primary">
+		<div class="panel-heading"><table width="100%">
+				<tr>
+					<td width="95%"><label>{{pageName}}</label></td>
+					<td><label>{{pageCode}}</label></td>
+				</tr>
+			</table></div>
+		<div class="panel-body">
+		<div class="list-group-item active">ข้อมูล</div>
+		<div class="well">
+			<table width="85%" border="0" align="center">
+                <tr>
+                    <td width="20%" align="right">วันที่ รับ:</td>
+					<td width="30%"><input type="text" class="form-control custom-form-control" style="width:80%">
+                    <img src="images/calendar_32.png" width="24" height="24">&nbsp;<font color="red">*</font></td>
+                    <td width="20%" align="right"></td>
+                    <td width="30%"></td>
+                </tr>
+                <tr>
+                    <td align="right">หมายเลขโทรศัพท์(หลวง):</td>
+                    <td><input type="text" class="form-control custom-form-control" style="width:60%">&nbsp;<font color="red">*</font><button type="button" class="btn btn-info">ดึงข้อมูล</button></td>
+                    <td align="right"></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td align="right">ชื่อ:</td>
+                    <td><input type="text" class="form-control custom-form-control" style="width:80%" disabled></td>
+                    <td align="right">นามสกุล:</td>
+                    <td><input type="text" class="form-control custom-form-control" style="width:80%" disabled></td>
+                </tr>
+                <tr>
+                    <td align="right">ตำแหน่ง:</td>
+                    <td><input type="text" class="form-control custom-form-control" style="width:80%" disabled></td>
+                    <td align="right">หน่วยงาน:</td>
+                    <td><input type="text" class="form-control custom-form-control" style="width:80%" disabled></td>
+                </tr>
+                <tr>
+                    <td align="right">ยี่ห้อ:</td>
+                    <td><input type="text" class="form-control custom-form-control" style="width:80%" disabled></td>
+                    <td align="right">รุ่น:</td>
+                    <td><input type="text" class="form-control custom-form-control" style="width:80%" disabled></td>
+                </tr>
+                <tr>
+                    <td align="right">IMEI:</td>
+                    <td><input type="text" class="form-control custom-form-control" style="width:80%" disabled></td>
+                    <td align="right"></td>
+                    <td></td>
+                </tr>               
+                <tr>
+					<td colspan="4" align="center"><button type="button" class="btn btn-success">บันทึก</button> 
+						<a ui-sref="{{back}}"><button type="button" class="btn btn-warning">&nbsp;&nbsp;กลับ&nbsp;&nbsp;</button></a>
+						</td>
+				</tr>				
+			</table>
+		</div>
+        <div class="well">
+            <table width="85%" border="1" align="center" class="table table-bordered table-striped table-list">
+                <tr>
+                    <th width="10%">ลำดับ</th>
+                    <th width="20%">สถานะ</th>
+                    <th width="20%">วันที่</th>
+                    <th>รายละเอียด</th>
+                </tr>
+                <tr>
+                    <td>1.</td>
+                    <td>รับเครื่อง</td>
+                    <td><input type="text" class="form-control custom-form-control" style="width:70%">
+                    <img src="images/calendar_32.png" width="24" height="24">&nbsp;<font color="red">*</font></td>
+                    <td><textarea class="form-control custom-form-control"></textarea> </td>
+                </tr>
+                <tr>
+                    <td>2.</td>
+                    <td>ส่งเครื่องเข้าศูนย์</td>
+                    <td><input type="text" class="form-control custom-form-control" style="width:70%">
+                    <img src="images/calendar_32.png" width="24" height="24">&nbsp;<font color="red">*</font></td>
+                    <td><textarea class="form-control custom-form-control"></textarea> </td>
+                </tr>
+                <tr>
+                    <td>3.</td>
+                    <td>รับเครื่องจากศูนย์</td>
+                    <td><input type="text" class="form-control custom-form-control" style="width:70%">
+                    <img src="images/calendar_32.png" width="24" height="24">&nbsp;<font color="red">*</font></td>
+                    <td><textarea class="form-control custom-form-control"></textarea> </td>
+                </tr>
+                <tr>
+                    <td>4.</td>
+                    <td>ส่งคืน</td>
+                    <td><input type="text" class="form-control custom-form-control" style="width:70%">
+                    <img src="images/calendar_32.png" width="24" height="24">&nbsp;<font color="red">*</font></td>
+                    <td><textarea class="form-control custom-form-control"></textarea> </td>
+                </tr>
+            </table>
+        </div>
+		</div>
+	</div>
+</form>

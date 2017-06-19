@@ -18,8 +18,17 @@
                     <td width="30%"><input type="text" class="form-control custom-form-control" style="width:60%">&nbsp;<font color="red">*</font>
                     <button type="button" class="btn btn-info">ดึงข้อมูล</button></td>
                 </tr>
-                 <tr>
-                    <td colspan="5"><p><strong>รายละเอียดส่งซ่อม</strong> </td>
+                <tr>
+                    <td align="right">หน่วยงาน:</td>
+					<td><input type="text" maxlength="4" class="form-control custom-form-control" style="width:80%" disabled></td>
+                    <td align="right">ใช้ประจำที่:</td>
+                    <td><input type="text" maxlength="4" class="form-control custom-form-control" style="width:80%" disabled></td>
+                </tr>
+                <tr>
+                    <td align="right">ประเภทเงิน:</td>
+                    <td><input type="text" class="form-control custom-form-control" style="width:80%" disabled></td>
+                    <td align="right">วิธีการได้มา:</td>
+                    <td><input type="text" class="form-control custom-form-control" style="width:80%" disabled></td>
                 </tr>
                 <tr>
                     <td align="right">ประเภท:</td>
@@ -32,30 +41,13 @@
                     <td><input type="text" class="form-control custom-form-control" style="width:80%" disabled></td>
                     <td align="right">รุ่น/แบบ:</td>
                     <td><input type="text" class="form-control custom-form-control" style="width:80%" disabled></td>
-                </tr>
+                </tr> 
                 <tr>
-                    <td align="right">รายละเอียดการส่งซ่อม:</td>
-                    <td><textarea class="form-control custom-form-control"></textarea></td>
+                    <td align="right">หมายเหตุ:</td>
+                    <td><textarea class="form-control custom-form-control"></textarea> </td>
                     <td align="right"></td>
                     <td></td>
-                </tr>
-                <tr>
-                    <td colspan="5"><p><strong>รายละเอียดการรับคืน</strong> <font color="red">แสดงรายการนี้ หลังจากรับ</font></td>
-                </tr>
-                <tr>
-                    <td align="right">วันที่ที่รับคืน:</td>
-					<td ><input type="text" class="form-control custom-form-control" style="width:80%">&nbsp;<font color="red">*</font>
-                    <img src="images/calendar_32.png" width="24" height="24"></td>
-                    <td align="right">จำนวนเงิน(บาท):</td>
-                    <td ><input type="text" class="form-control custom-form-control" style="width:60%"></td>
-                </tr>
-                <tr>
-                    <td align="right">รายละเอียด:</td>
-                    <td><textarea class="form-control custom-form-control"></textarea></td>
-                    <td align="right"></td>
-                    <td></td>
-                </tr>
-                
+                </tr>          
                 <tr>
 					<td colspan="4" align="center"><button type="button" class="btn btn-success">บันทึก</button> 
 						<a ui-sref="{{back}}"><button type="button" class="btn btn-warning">&nbsp;&nbsp;กลับ&nbsp;&nbsp;</button></a>
