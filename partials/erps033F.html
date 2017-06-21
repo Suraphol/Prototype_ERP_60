@@ -1,0 +1,135 @@
+<form>
+	<div class="panel panel-primary">
+		<div class="panel-heading"><table width="100%">
+				<tr>
+					<td width="95%"><label>{{pageName}}</label></td>
+					<td><label>{{pageCode}}</label></td>
+				</tr>
+			</table></div>
+		<div class="panel-body">
+		<div class="list-group-item active">ข้อมูล</div>
+		<div class="well">
+			<table width="85%" border="0" align="center">
+                <tr>
+                    <td width="20%" align="right">วันที่:</td>
+					<td width="30%"><input type="text" class="form-control custom-form-control" style="width:80%">
+                    <img src="images/calendar_32.png" width="24" height="24">&nbsp;<font color="red">*</font></td>
+                    <td width="20%" align="right"></td>
+                    <td width="30%"></td>
+                </tr>
+                <tr>
+                    <td align="right">เรื่อง:</td>
+					<td><input type="text" class="form-control custom-form-control" style="width:90%">&nbsp;<font color="red">*</font></td>
+                    <td align="right"></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td align="right">ประเภทเงิน:</td>
+					<td><select class="form-control custom-form-control" style="width:80%">
+                            <option>--กรุณาเลือก--</option>
+                            <option>เงินงบประมาณ</option>
+                            <option>เงินนอกงบประมาณ</option>
+                            <option>เงินบริจาก/เงินช่วยเหลือ</option>
+                            <option>อื่นๆ (รับจากกองคลัง)</option>
+                        </select>&nbsp;<font color="red">*</font></td>
+                    <td align="right">สำนัก/กอง:</td>
+                    <td><select class="form-control custom-form-control" style="width:80%">
+						<option value="">--กรุณาเลือก--</option>
+						<option ng-repeat="unit in units" vale="{{unit.id}}">{{unit.name}}</option>
+					</select>&nbsp;<font color="red">*</font></td>
+                </tr>
+                <tr>
+                    <td align="right">รายละเอียด:</td>
+					<td><textarea class="form-control custom-form-control"></textarea> </td>
+                    <td align="right"></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td align="right">จำนวนเงิน:</td>
+					<td><input type="text" class="form-control custom-form-control" style="width:90%">&nbsp;<font color="red">*</font></td>
+                    <td align="right"></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td colspan="4"><strong>รายการจัดชื้อ</strong> </td>
+                </tr>
+                <tr>
+                    <td colspan="4">
+                        <table class="table table-bordered table-striped table-list" border="1">
+                            <tr>
+                                <th width="5%">ลำดับ</th>
+                                <th>รายการ</th>
+                                <th width="10%">จำนวน</th>
+                                <th width="20%">หน่วย</th>
+                                <th><button type="button" class="btn btn-primary">เพิ่ม</button></th>
+                            </tr>
+                            <tr>
+                                <td align="center" >1.</td>
+                                <td><input type="text" class="form-control custom-form-control" style="width:90%"> </td>
+                                <td><input type="text" class="form-control custom-form-control" style="width:90%"></td>
+                                <td><select class="form-control custom-form-control" style="width:90%">
+                                        <option>--กรุณาเลือก--</option>
+                                        <option>กล่อง</option>
+                                        <option>ด้าม</option>
+                                        <option>ชิ้น</option>
+                                    </select> </td>
+                                <td align="center" ></img>&nbsp; <img src="images/ic_delet.png" width="24" height="24" title="ลบ"></td>
+                            </tr>
+                        </table>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="4"><strong>คณะกรรมการ</strong> </td>
+                </tr>
+                <tr>
+                    <td colspan="4">
+                        <table class="table table-bordered table-striped table-list" border="1">
+                            <tr>
+                                <th width="5%">ลำดับ</th>
+                                <th width="40%">ชื่อ - สกุล</th>
+                                <th width="20%">ตำแหน่ง</th>
+                                <th width="20%">ตำแหน่งโครงการ</th>
+                                <th><button type="button" class="btn btn-primary">เพิ่ม</button></th>
+                            </tr>
+                            <tr>
+                                <td align="center" >1.</td>
+                                <td><select class="form-control custom-form-control" style="width:90%">
+                                        <option>--กรุณาเลือก--</option>
+                                    </select> </td>
+                                <td></td>
+                                <td>ประธานกรรมการ</td>
+                                <td align="center" ></img>&nbsp; <img src="images/ic_delet.png" width="24" height="24" title="ลบ"></td>
+                            </tr>
+                            <tr>
+                                <td align="center" >2.</td>
+                                <td><select class="form-control custom-form-control" style="width:90%">
+                                        <option>--กรุณาเลือก--</option>
+                                    </select> </td>
+                                <td></td>
+                                <td>กรรมการ</td>
+                                <td align="center" ></img>&nbsp; <img src="images/ic_delet.png" width="24" height="24" title="ลบ"></td>
+                            </tr>
+                            <tr>
+                                <td align="center" >3.</td>
+                                <td><select class="form-control custom-form-control" style="width:90%">
+                                        <option>--กรุณาเลือก--</option>
+                                    </select></td>
+                                <td></td>
+                                <td>กรรมการ</td>
+                                <td align="center" ></img>&nbsp; <img src="images/ic_delet.png" width="24" height="24" title="ลบ"></td>
+                            </tr>
+                        </table>
+
+                    </td>
+                </tr>
+                <tr>
+					<td colspan="4" align="center"><button type="button" class="btn btn-success">บันทึก</button> 
+						<a ui-sref="{{back}}"><button type="button" class="btn btn-warning">&nbsp;&nbsp;กลับ&nbsp;&nbsp;</button></a>
+						</td>
+				</tr>				
+			</table>
+		</div>
+		</div>
+	</div>
+</form>

@@ -1,0 +1,49 @@
+<form>
+	<div class="panel panel-primary">
+		<div class="panel-heading"><table width="100%">
+				<tr>
+					<td width="95%"><label>{{pageName}}</label></td>
+					<td><label>{{pageCode}}</label></td>
+				</tr>
+			</table></div>
+		<div class="panel-body">
+		<div class="list-group-item active">ข้อมูล</div>
+		<div class="well">
+			<table width="85%" border="0" align="center">
+                <tr>
+                    <td>คำนำหน้า:</td>
+                    <td><select class="form-control custom-form-control" style="width:80%">
+						<option value="">--กรุณาเลือก--</option>
+						<option value="">นาย</option>
+						<option value="">นาง</option>
+						<option value="">นางสาว</option>
+						<option value="">ว่าที่ร้อยตรี</option>
+						<option value="">ว่าที่ร้อยโท</option>
+						<option value="">ว่าที่ร้อยเอก</option>
+					</select>&nbsp;<font color="red">*</font></td>
+                    <td>ชื่อ:</td>
+                    <td><input type="text" maxlength="4" class="form-control custom-form-control" style="width:80%"><font color="red">*</font></td>
+                    <td>นามสกุล:</td>
+                    <td><input type="text" maxlength="4" class="form-control custom-form-control" style="width:80%"><font color="red">*</font></td>
+                </tr>
+                <tr>
+                    <td>ตำแหน่ง:</td>
+                    <td><input type="text" maxlength="4" class="form-control custom-form-control" style="width:80%"><font color="red">*</font></td>
+                    <td>สำนัก / กอง:</td>
+                    <td><select class="form-control custom-form-control" style="width:80%">
+						<option value="">--กรุณาเลือก--</option>
+						<option ng-repeat="unit in units" vale="{{unit.id}}">{{unit.name}}</option>
+					</select></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+					<td colspan="6" align="center"><button type="button" class="btn btn-success">บันทึก</button> 
+						<a ui-sref="{{back}}"><button type="button" class="btn btn-warning">&nbsp;&nbsp;กลับ&nbsp;&nbsp;</button></a>
+					</td>
+				</tr>				
+			</table>
+		</div>
+		</div>
+	</div>
+</form>

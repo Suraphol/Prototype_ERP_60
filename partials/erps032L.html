@@ -1,0 +1,60 @@
+<form>
+	<div class="panel panel-primary">
+		<div class="panel-heading"><table width="100%">
+				<tr>
+					<td width="95%"><label>{{pageName}}</label></td>
+					<td><label>{{pageCode}}</label></td>
+				</tr>
+			</table></div>
+		<div class="panel-body">
+		<div class="list-group-item active">เงื่อนไขการค้นหา</div>
+		<div class="well">
+			<table width="85%" border="0" align="center">
+				<tr>
+                    <td align="right">ชื่อ:</td>
+                    <td><input type="text" class="form-control custom-form-control" style="width:90%"></td>
+                    <td align="right">สำนัก/กอง:</td>
+                    <td><select class="form-control custom-form-control" style="width:80%">
+						<option value="">--กรุณาเลือก--</option>
+						<option ng-repeat="unit in units" vale="{{unit.id}}">{{unit.name}}</option>
+					</select></td>
+				</tr>
+				<tr>
+					<td colspan="4" align="center">
+						<button type="button" class="btn btn-primary">ค้นหา</button> 
+						<button type="button" class="btn btn-warning">ทั้งหมด</button>
+					</td>
+				</tr>
+			</table>
+		</div>
+		</div>
+	</div>
+	
+	<div class="nav" style="padding:4px; text-align:center; text-align:right;">
+	<a ui-sref=".add"><button type="button" class="btn btn-primary">เพิ่มข้อมูล</button></a>
+	</div>
+	<table class="table table-bordered table-striped table-list" border="1">
+		<tr>
+            <th width="15%">ชื่อ-สกุล</th>
+            <th width="15%">ตำแหน่งงาน</th>    
+            <th width="15%">สำนัก/กอง</th>
+			<th width="15%" >&nbsp;</th>
+		</tr>
+		<tr>
+            <td align="center">xxxxx xxxxxx</td>
+             <td align="center">xxxxxxx</td>
+            <td align="center">XXXXXXXXXX</td>           
+			<td align="center"><img src="images/ic_see.png" width="24" height="24">
+            </img>&nbsp;<img src="images/ic_edit.png" width="24" height="24" placeHolder="แก้ไข">
+            </img>&nbsp; <img src="images/ic_delet.png" width="24" height="24"></img></td>
+		</tr>
+		<tr>
+            <td align="center">xxxxx xxxxxx</td>
+             <td align="center">xxxxxxx</td>
+            <td align="center">XXXXXXXXXX</td>           >
+			<td align="center"><img src="images/ic_see.png" width="24" height="24">
+            </img>&nbsp;<img src="images/ic_edit.png" width="24" height="24" placeHolder="แก้ไข">
+            </img>&nbsp; <img src="images/ic_delet.png" width="24" height="24"></img></td>
+		</tr>	
+	</table>
+</form>

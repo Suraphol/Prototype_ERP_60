@@ -1300,7 +1300,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 			'from@erp05':{templateUrl:"partials/erps031L.html",
 			controller:function($scope){
 				$scope.pageCode='EPRS031';
-				$scope.pageName='บันทึกรายการโทรศัพท์มือถือ';
+				$scope.pageName='บันทึกรายการ ส่งซ่อม-รับคืน โทรศัพท์มือถือ';
 			}
 		}
 		}
@@ -1311,8 +1311,79 @@ app.config(function($stateProvider, $urlRouterProvider){
 			controller:function($scope){
 				$scope.back='erp05.erps031';
 				$scope.pageCode='EPRS031';
-				$scope.pageName='บันทึกรายการโทรศัพท์มือถือ';
-				$scope.unit = unit;
+				$scope.pageName='บันทึกรายการ ส่งซ่อม-รับคืน โทรศัพท์มือถือ';
+			}
+		}
+		}		
+	})
+	.state('erp05.erps032',{
+		url:"/erps032",
+		views:{
+			'from@erp05':{templateUrl:"partials/erps032L.html",
+			controller:function($scope){
+				$scope.pageCode='EPRS032';
+				$scope.pageName='ข้อมูลเจ้าหน้าที่หรือคณะกรรมการจัดชื้อ';
+				$scope.units = unit;
+			}
+		}
+		}
+	})
+	.state('erp05.erps032.add',{url:"/add",
+		views:{
+			'from@erp05':{templateUrl:"partials/erps032F.html",
+			controller:function($scope){
+				$scope.back='erp05.erps032';
+				$scope.pageCode='EPRS032';
+				$scope.pageName='ข้อมูลเจ้าหน้าที่หรือคณะกรรมการจัดชื้อ';
+				$scope.units = unit;
+			}
+		}
+		}		
+	})
+	.state('erp05.erps033',{
+		url:"/erps033",
+		views:{
+			'from@erp05':{templateUrl:"partials/erps033L.html",
+			controller:function($scope){
+				$scope.pageCode='EPRS033';
+				$scope.pageName='ขออนุมัติจัดชื้อพัสดุ';
+				$scope.units = unit;
+			}
+		}
+		}
+	})
+	.state('erp05.erps033.add',{url:"/add",
+		views:{
+			'from@erp05':{templateUrl:"partials/erps033F.html",
+			controller:function($scope){
+				$scope.back='erp05.erps033';
+				$scope.pageCode='EPRS033';
+				$scope.pageName='ขออนุมัติจัดชื้อพัสดุ';
+				$scope.units = unit;
+			}
+		}
+		}		
+	})
+	.state('erp05.erps034',{
+		url:"/erps034",
+		views:{
+			'from@erp05':{templateUrl:"partials/erps034L.html",
+			controller:function($scope){
+				$scope.pageCode='EPRS034';
+				$scope.pageName='ข้อมูลการตรวจรับพัสดุ';
+				$scope.units = unit;
+			}
+		}
+		}
+	})
+	.state('erp05.erps034.add',{url:"/add",
+		views:{
+			'from@erp05':{templateUrl:"partials/erps034F.html",
+			controller:function($scope){
+				$scope.back='erp05.erps034';
+				$scope.pageCode='EPRS034';
+				$scope.pageName='ข้อมูลการตรวจรับพัสดุ';
+				$scope.units = unit;
 			}
 		}
 		}		
