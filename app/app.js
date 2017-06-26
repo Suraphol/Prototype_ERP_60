@@ -1402,7 +1402,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 			'from@erp05':{templateUrl:"partials/Report/erps027C.html",
 			controller:function($scope){
 				$scope.pageCode='EPRS027';
-				$scope.pageName='ทะเบียนควบคุมทรัพย์สิน';
+				$scope.pageName='รายการเบิกเบิกวัสดุ';
 			}}
 		}
 	})
@@ -1412,6 +1412,60 @@ app.config(function($stateProvider, $urlRouterProvider){
 			controller:function($scope){
 				$scope.pageCode='EPRS028';
 				$scope.pageName='ทะเบียนควบคุมทรัพย์สิน(รายตัว)';
+			}}
+		}
+	})
+	.state('erp05.erpr029',{url:"/erpr029",
+		views:{
+			'from@erp05':{templateUrl:"partials/Report/erps029C.html",
+			controller:function($scope){
+				$scope.pageCode='EPRS029';
+				$scope.pageName='บัญชีตรวจสอบครุภัณฑ์ที่ชำรุด';
+			}}
+		}
+	})
+	.state('erp05.erpr030',{url:"/erpr030",
+		views:{
+			'from@erp05':{templateUrl:"partials/Report/erps030C.html",
+			controller:function($scope){
+				$scope.pageCode='EPRS030';
+				$scope.pageName='บัญชีตรวจสอบครุภัณฑ์ประจำปี';
+			}}
+		}
+	})
+	.state('erp05.erpr031',{url:"/erpr031",
+		views:{
+			'from@erp05':{templateUrl:"partials/Report/erps031C.html",
+			controller:function($scope){
+				$scope.pageCode='EPRS031';
+				$scope.pageName='รายละเอียดวัสดุคงเหลือ';
+			}}
+		}
+	})
+	.state('erp05.erpr032',{url:"/erpr032",
+		views:{
+			'from@erp05':{templateUrl:"partials/Report/erps032C.html",
+			controller:function($scope){
+				$scope.pageCode='EPRS032';
+				$scope.pageName='รายละเอียดยืมครุภัณฑ์';
+			}}
+		}
+	})
+	.state('erp05.erpr033',{url:"/erpr033",
+		views:{
+			'from@erp05':{templateUrl:"partials/Report/erps033C.html",
+			controller:function($scope){
+				$scope.pageCode='EPRS033';
+				$scope.pageName='รายละเอียดโทรศัพท์มือถือ';
+			}}
+		}
+	})
+	.state('erp05.erpr034',{url:"/erpr034",
+		views:{
+			'from@erp05':{templateUrl:"partials/Report/erps034C.html",
+			controller:function($scope){
+				$scope.pageCode='EPRS034';
+				$scope.pageName='ประวัติการส่งซ่อมโทรศัพท์มือถือ';
 			}}
 		}
 	})
