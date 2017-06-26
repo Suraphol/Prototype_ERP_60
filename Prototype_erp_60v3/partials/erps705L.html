@@ -1,0 +1,345 @@
+<form>{{url}}
+	<div class="panel panel-primary">{{fromName}}
+		<div class="panel-heading">
+			<table width="100%">
+				<tr>
+					<td width="95%"><label>หลักเกณฑ์การเสนอขอของพนักงานราชการ</label></td>
+					<td><label>ERPS703</label></td>
+				</tr>
+			</table>
+		</div>
+		<div class="panel-body">
+		<div class="list-group-item active">เงื่อนไขการค้นหา</div>
+		<div class="well">
+			<table width="85%" border="0" align="center">
+				<tr>
+					<td width="25%"></td>
+					<td width="20%">กลุ่มงาน: </td>
+					<td width="30%">
+						<select class="form-control" placeholder="กลุ่มงาน">
+							<option selected>ทั้งหมด</option>
+							<option>กลุ่มงานบริการ</option>
+							<option>กลุ่มงานเทคนิค</option>
+							<option>กลุ่มงานบริหารทั่วไป</option>
+							<option>กลุ่มงานวิชาชีพเฉพาะ</option>
+							<option>กลุ่มงานเชี่ยวชาญเฉพาะ</option>
+							<option>กลุ่มงานเชี่ยวชาญพิเศษ</option>
+						</select>
+					</td>
+					<td width="25%"></td>
+				</tr>
+				<tr>
+					<td colspan="4" align="center">
+						<button type="button" class="btn btn-primary">ค้นหา</button> 
+						<button type="button" class="btn btn-warning">ทั้งหมด</button>
+					</td>
+				</tr>
+			</table>
+		</div>
+		</div>
+	</div>
+	{{pathAdd}}
+	<div class="nav" style="padding:4px; text-align:center; text-align:right;">
+	<a ui-sref=".add"><button type="button" class="btn btn-primary" ng-click="add()">เพิ่มข้อมูล</button></a>
+	</div>
+	<table class="table table-bordered table-striped table-list" border="1">
+		<tr>
+			<th width="5%">ลำดับ</th>
+			<th width="30%">กลุ่มงาน</th>
+			<th width="50%">เครื่องราชอิสริยาภรณ์ที่เสนอขอ</th>
+			<th width="15%">&nbsp;</th>
+		</tr>
+		<tr>
+			<td align="center">1</td>
+			<td>กลุ่มงานบริการ</td>
+			<td>เบญจมาภรณ์มงกุฏไทย (บ.ม.)</td>
+			<td align="center">
+				<img src="images/ic_see.png" width="24" height="24"></img>
+				&nbsp; 
+				<img src="images/ic_edit.png" width="24" height="24"></img>
+				&nbsp; 
+				<img src="images/ic_delet.png" width="24" height="24"></img>
+			</td>
+		</tr>
+		<tr>
+			<td align="center">2</td>
+			<td>กลุ่มงานบริการ</td>
+			<td>เบญจมาภรณ์ช้างเผือก (บ.ช.)</td>
+			<td align="center">
+				<img src="images/ic_see.png" width="24" height="24"></img>
+				&nbsp; 
+				<img src="images/ic_edit.png" width="24" height="24"></img>
+				&nbsp; 
+				<img src="images/ic_delet.png" width="24" height="24"></img>
+			</td>
+		</tr>
+		<tr>
+			<td align="center">3</td>
+			<td>กลุ่มงานบริการ</td>
+			<td>จัตุรถาภรณ์มงกุฏไทย (จ.ม.)</td>
+			<td align="center">
+				<img src="images/ic_see.png" width="24" height="24"></img>
+				&nbsp; 
+				<img src="images/ic_edit.png" width="24" height="24"></img>
+				&nbsp; 
+				<img src="images/ic_delet.png" width="24" height="24"></img>
+			</td>
+		</tr>
+		<tr>
+			<td align="center">4</td>
+			<td>กลุ่มงานบริการ</td>
+			<td>จัตุรถาภรณ์ช้างเผือก (จ.ช.)</td>
+			<td align="center">
+				<img src="images/ic_see.png" width="24" height="24"></img>
+				&nbsp; 
+				<img src="images/ic_edit.png" width="24" height="24"></img>
+				&nbsp; 
+				<img src="images/ic_delet.png" width="24" height="24"></img>
+			</td>
+		</tr>
+
+		<tr>
+			<td align="center">5</td>
+			<td>กลุ่มงานเทคนิค</a></td>
+			<td>เบญจมาภรณ์มงกุฏไทย (บ.ม.)</a></td>
+			<td align="center">
+				<img src="images/ic_see.png" width="24" height="24"></img>
+				&nbsp; 
+				<img src="images/ic_edit.png" width="24" height="24"></img>
+				&nbsp; 
+				<img src="images/ic_delet.png" width="24" height="24"></img>
+			</td>
+		</tr>
+		<tr>
+			<td align="center">6</td>
+			<td>กลุ่มงานเทคนิค</a></td>
+			<td>เบญจมาภรณ์ช้างเผือก (บ.ช.)</a></td>
+			<td align="center">
+				<img src="images/ic_see.png" width="24" height="24"></img>
+				&nbsp; 
+				<img src="images/ic_edit.png" width="24" height="24"></img>
+				&nbsp; 
+				<img src="images/ic_delet.png" width="24" height="24"></img>
+			</td>
+		</tr>
+		<tr>
+			<td align="center">7</td>
+			<td>กลุ่มงานเทคนิค</a></td>
+			<td>จัตุรถาภรณ์มงกุฏไทย (จ.ม.)</a></td>
+			<td align="center">
+				<img src="images/ic_see.png" width="24" height="24"></img>
+				&nbsp; 
+				<img src="images/ic_edit.png" width="24" height="24"></img>
+				&nbsp; 
+				<img src="images/ic_delet.png" width="24" height="24"></img>
+			</td>
+		</tr>
+		<tr>
+			<td align="center">8</td>
+			<td>กลุ่มงานเทคนิค</a></td>
+			<td>จัตุรถาภรณ์ช้างเผือก (จ.ช.)</a></td>
+			<td align="center">
+				<img src="images/ic_see.png" width="24" height="24"></img>
+				&nbsp; 
+				<img src="images/ic_edit.png" width="24" height="24"></img>
+				&nbsp; 
+				<img src="images/ic_delet.png" width="24" height="24"></img>
+			</td>
+		</tr>
+
+		<tr>
+			<td align="center">9</td>
+			<td>กลุ่มงานบริหารทั่วไป</a></td>
+			<td>เบญจมาภรณ์ช้างเผือก (บ.ช.)</a></td>
+			<td align="center">
+				<img src="images/ic_see.png" width="24" height="24"></img>
+				&nbsp; 
+				<img src="images/ic_edit.png" width="24" height="24"></img>
+				&nbsp; 
+				<img src="images/ic_delet.png" width="24" height="24"></img>
+			</td>
+		</tr>
+		<tr>
+			<td align="center">10</td>
+			<td>กลุ่มงานบริหารทั่วไป</a></td>
+			<td>จัตุรถาภรณ์มงกุฏไทย (จ.ม.)</a></td>
+			<td align="center">
+				<img src="images/ic_see.png" width="24" height="24"></img>
+				&nbsp; 
+				<img src="images/ic_edit.png" width="24" height="24"></img>
+				&nbsp; 
+				<img src="images/ic_delet.png" width="24" height="24"></img>
+			</td>
+		</tr>
+		<tr>
+			<td align="center">11</td>
+			<td>กลุ่มงานบริหารทั่วไป</a></td>
+			<td>จัตุรถาภรณ์ช้างเผือก (จ.ช.)</a></td>
+			<td align="center">
+				<img src="images/ic_see.png" width="24" height="24"></img>
+				&nbsp; 
+				<img src="images/ic_edit.png" width="24" height="24"></img>
+				&nbsp; 
+				<img src="images/ic_delet.png" width="24" height="24"></img>
+			</td>
+		</tr>
+		<tr>
+			<td align="center">12</td>
+			<td>กลุ่มงานบริหารทั่วไป</a></td>
+			<td>ตริตาภรณ์มงกุฏไทย (ต.ม.)</a></td>
+			<td align="center">
+				<img src="images/ic_see.png" width="24" height="24"></img>
+				&nbsp; 
+				<img src="images/ic_edit.png" width="24" height="24"></img>
+				&nbsp; 
+				<img src="images/ic_delet.png" width="24" height="24"></img>
+			</td>
+		</tr>
+
+		<tr>
+			<td align="center">13</td>
+			<td>กลุ่มงานวิชาชีพเฉพาะ</a></td>
+			<td>จัตุรถาภรณ์มงกุฏไทย (จ.ม.)</a></td>
+			<td align="center">
+				<img src="images/ic_see.png" width="24" height="24"></img>
+				&nbsp; 
+				<img src="images/ic_edit.png" width="24" height="24"></img>
+				&nbsp; 
+				<img src="images/ic_delet.png" width="24" height="24"></img>
+			</td>
+		</tr>
+		<tr>
+			<td align="center">14</td>
+			<td>กลุ่มงานวิชาชีพเฉพาะ</a></td>
+			<td>จัตุรถาภรณ์ช้างเผือก (จ.ช.)</a></td>
+			<td align="center">
+				<img src="images/ic_see.png" width="24" height="24"></img>
+				&nbsp; 
+				<img src="images/ic_edit.png" width="24" height="24"></img>
+				&nbsp; 
+				<img src="images/ic_delet.png" width="24" height="24"></img>
+			</td>
+		</tr>
+		<tr>
+			<td align="center">15</td>
+			<td>กลุ่มงานวิชาชีพเฉพาะ</a></td>
+			<td>ตริตาภรณ์มงกุฏไทย (ต.ม.)</a></td>
+			<td align="center">
+				<img src="images/ic_see.png" width="24" height="24"></img>
+				&nbsp; 
+				<img src="images/ic_edit.png" width="24" height="24"></img>
+				&nbsp; 
+				<img src="images/ic_delet.png" width="24" height="24"></img>
+			</td>
+		</tr>
+		<tr>
+			<td align="center">16</td>
+			<td>กลุ่มงานวิชาชีพเฉพาะ</a></td>
+			<td>ตริตาภรณ์ช้างเผือก (ต.ช.)</a></td>
+			<td align="center">
+				<img src="images/ic_see.png" width="24" height="24"></img>
+				&nbsp; 
+				<img src="images/ic_edit.png" width="24" height="24"></img>
+				&nbsp; 
+				<img src="images/ic_delet.png" width="24" height="24"></img>
+			</td>
+		</tr>
+		<tr>
+			<td align="center">17</td>
+			<td>กลุ่มงานเชี่ยวชาญเฉพาะ</a></td>
+			<td>จัตุรถาภรณ์ช้างเผือก (จ.ช.)</a></td>
+			<td align="center">
+				<img src="images/ic_see.png" width="24" height="24"></img>
+				&nbsp; 
+				<img src="images/ic_edit.png" width="24" height="24"></img>
+				&nbsp; 
+				<img src="images/ic_delet.png" width="24" height="24"></img>
+			</td>
+		</tr>
+		<tr>
+			<td align="center">18</td>
+			<td>กลุ่มงานเชี่ยวชาญเฉพาะ</a></td>
+			<td>ตริตาภรณ์มงกุฏไทย (ต.ม.)</a></td>
+			<td align="center">
+				<img src="images/ic_see.png" width="24" height="24"></img>
+				&nbsp; 
+				<img src="images/ic_edit.png" width="24" height="24"></img>
+				&nbsp; 
+				<img src="images/ic_delet.png" width="24" height="24"></img>
+			</td>
+		</tr>
+		<tr>
+			<td align="center">19</td>
+			<td>กลุ่มงานเชี่ยวชาญเฉพาะ</a></td>
+			<td>ตริตาภรณ์ช้างเผือก (ต.ช.)</a></td>
+			<td align="center">
+				<img src="images/ic_see.png" width="24" height="24"></img>
+				&nbsp; 
+				<img src="images/ic_edit.png" width="24" height="24"></img>
+				&nbsp; 
+				<img src="images/ic_delet.png" width="24" height="24"></img>
+			</td>
+		</tr>
+		<tr>
+			<td align="center">20</td>
+			<td>กลุ่มงานเชี่ยวชาญเฉพาะ</a></td>
+			<td>ทวีติยาภรณ์มงกุฏไทย (ท.ม.)</a></td>
+			<td align="center">
+				<img src="images/ic_see.png" width="24" height="24"></img>
+				&nbsp; 
+				<img src="images/ic_edit.png" width="24" height="24"></img>
+				&nbsp; 
+				<img src="images/ic_delet.png" width="24" height="24"></img>
+			</td>
+		</tr>
+
+		<tr>
+			<td align="center">21</td>
+			<td>กลุ่มงานเชี่ยวชาญพิเศษ</a></td>
+			<td>ตริตาภรณ์มงกุฏไทย (ต.ม.)</a></td>
+			<td align="center">
+				<img src="images/ic_see.png" width="24" height="24"></img>
+				&nbsp; 
+				<img src="images/ic_edit.png" width="24" height="24"></img>
+				&nbsp; 
+				<img src="images/ic_delet.png" width="24" height="24"></img>
+			</td>
+		</tr>
+		<tr>
+			<td align="center">22</td>
+			<td>กลุ่มงานเชี่ยวชาญพิเศษ</a></td>
+			<td>ตริตาภรณ์ช้างเผือก (ต.ช.)</a></td>
+			<td align="center">
+				<img src="images/ic_see.png" width="24" height="24"></img>
+				&nbsp; 
+				<img src="images/ic_edit.png" width="24" height="24"></img>
+				&nbsp; 
+				<img src="images/ic_delet.png" width="24" height="24"></img>
+			</td>
+		</tr>
+		<tr>
+			<td align="center">23</td>
+			<td>กลุ่มงานเชี่ยวชาญพิเศษ</a></td>
+			<td>ทวีติยาภรณ์มงกุฏไทย (ท.ม.)</a></td>
+			<td align="center">
+				<img src="images/ic_see.png" width="24" height="24"></img>
+				&nbsp; 
+				<img src="images/ic_edit.png" width="24" height="24"></img>
+				&nbsp; 
+				<img src="images/ic_delet.png" width="24" height="24"></img>
+			</td>
+		</tr>
+		<tr>
+			<td align="center">24</td>
+			<td>กลุ่มงานเชี่ยวชาญพิเศษ</a></td>
+			<td>ทวีติยาภรณ์ช้างเผือก (ท.ช.)</a></td>
+			<td align="center">
+				<img src="images/ic_see.png" width="24" height="24"></img>
+				&nbsp; 
+				<img src="images/ic_edit.png" width="24" height="24"></img>
+				&nbsp; 
+				<img src="images/ic_delet.png" width="24" height="24"></img>
+			</td>
+		</tr>
+	</table>
+</form>

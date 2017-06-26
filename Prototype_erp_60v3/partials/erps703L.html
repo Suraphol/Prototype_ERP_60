@@ -1,0 +1,179 @@
+<form>{{url}}
+	<div class="panel panel-primary">{{fromName}}
+		<div class="panel-heading">
+			<table width="100%">
+				<tr>
+					<td width="95%"><label>หลักเกณฑ์การเสนอขอของข้าราชการ</label></td>
+					<td><label>ERPS703</label></td>
+				</tr>
+			</table>
+		</div>
+		<div class="panel-body">
+		<div class="list-group-item active">เงื่อนไขการค้นหา</div>
+		<div class="well">
+			<table width="85%" border="0" align="center">
+				<tr>
+					<td width="25%"></td>
+					<td width="20%">ประเภทตำแหน่ง: </td>
+					<td width="30%">
+						<select class="form-control" placeholder="ประเภทตำแหน่ง">
+							<option selected>ทั้งหมด</option>
+							<option>ทั่วไป</option>
+							<option>วิชาการ</option>
+							<option>อำนวยการ</option>
+							<option>บริหาร</option>
+						</select>
+					</td>
+					<td width="25%"></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>ระดับตำแหน่ง: </td>
+					<td>
+						<select class="form-control" placeholder="ระดับตำแหน่ง">
+							<option selected>ทั้งหมด</option>
+							<option>ปฏิบัติงาน</option>
+							<option>ชำนาญงาน</option>
+							<option>อาวุโส</option>
+							<option>ทักษะพิเศษ</option>
+							<option>ปฏิบัติการ</option>
+							<option>ชำนาญการ</option>
+							<option>ชำนาญการพิเศษ</option>
+							<option>เชี่ยวชาญ</option>
+							<option>ทรงคุณวุฒิ</option>
+							<option>อำนวยการต้น</option>
+							<option>อำนวยการต้น</option>
+							<option>บริหารต้น</option>
+							<option>บริหารสูง</option>
+						</select>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td colspan="4" align="center">
+						<button type="button" class="btn btn-primary">ค้นหา</button> 
+						<button type="button" class="btn btn-warning">ทั้งหมด</button>
+					</td>
+				</tr>
+			</table>
+		</div>
+		</div>
+	</div>
+	{{pathAdd}}
+	<div class="nav" style="padding:4px; text-align:center; text-align:right;">
+	<a ui-sref=".add"><button type="button" class="btn btn-primary" ng-click="add()">เพิ่มข้อมูล</button></a>
+	</div>
+	<table class="table table-bordered table-striped table-list" border="1">
+		<tr>
+			<th width="5%">ลำดับ</th>
+			<th width="20%">ประเภทตำแหน่ง</th>
+			<th width="20%">ระดับตำแหน่ง</th>
+			<th width="40%">เครื่องราชอิสริยาภรณ์ที่เสนอขอ</th>
+			<th width="15%">&nbsp;</th>
+		</tr>
+		<tr>
+			<td align="center">1</td>
+			<td>ทั่วไป</td>
+			<td>ปฏิบัติงาน</td>
+			<td>เบญจมาภรณ์มงกุฏไทย (บ.ม.)</td>
+			<td align="center">
+				<img src="images/ic_see.png" width="24" height="24"></img>
+				&nbsp; 
+				<img src="images/ic_edit.png" width="24" height="24"></img>
+				&nbsp; 
+				<img src="images/ic_delet.png" width="24" height="24"></img>
+			</td>
+		</tr>
+		<tr>
+			<td align="center">2</td>
+			<td>ทั่วไป</td>
+			<td>ปฏิบัติงาน</td>
+			<td>เบญจมาภรณ์ช้างเผือก (บ.ช.)</td>
+			<td align="center">
+				<img src="images/ic_see.png" width="24" height="24"></img>
+				&nbsp; 
+				<img src="images/ic_edit.png" width="24" height="24"></img>
+				&nbsp; 
+				<img src="images/ic_delet.png" width="24" height="24"></img>
+			</td>
+		</tr>
+		<tr>
+			<td align="center">3</td>
+			<td>ทั่วไป</td>
+			<td>ปฏิบัติงาน</td>
+			<td>จัตุรถาภรณ์มงกุฏไทย (จ.ม.)</td>
+			<td align="center">
+				<img src="images/ic_see.png" width="24" height="24"></img>
+				&nbsp; 
+				<img src="images/ic_edit.png" width="24" height="24"></img>
+				&nbsp; 
+				<img src="images/ic_delet.png" width="24" height="24"></img>
+			</td>
+		</tr>
+		<tr>
+			<td align="center">4</td>
+			<td>ทั่วไป</td>
+			<td>ปฏิบัติงาน</td>
+			<td>จัตุรถาภรณ์ช้างเผือก (จ.ช.)</td>
+			<td align="center">
+				<img src="images/ic_see.png" width="24" height="24"></img>
+				&nbsp; 
+				<img src="images/ic_edit.png" width="24" height="24"></img>
+				&nbsp; 
+				<img src="images/ic_delet.png" width="24" height="24"></img>
+			</td>
+		</tr>
+		<tr>
+			<td align="center">5</td>
+			<td>ทั่วไป</td>
+			<td>ชำนาญงาน</td>
+			<td>ตริตาภรณ์มงกุฏไทย (ต.ม.)</td>
+			<td align="center">
+				<img src="images/ic_see.png" width="24" height="24"></img>
+				&nbsp; 
+				<img src="images/ic_edit.png" width="24" height="24"></img>
+				&nbsp; 
+				<img src="images/ic_delet.png" width="24" height="24"></img>
+			</td>
+		</tr>
+		<tr>
+			<td align="center">6</td>
+			<td>ทั่วไป</td>
+			<td>ชำนาญงาน</td>
+			<td>ตริตาภรณ์ช้างเผือก (ต.ช.)</td>
+			<td align="center">
+				<img src="images/ic_see.png" width="24" height="24"></img>
+				&nbsp; 
+				<img src="images/ic_edit.png" width="24" height="24"></img>
+				&nbsp; 
+				<img src="images/ic_delet.png" width="24" height="24"></img>
+			</td>
+		</tr>
+		<tr>
+			<td align="center">7</td>
+			<td>ทั่วไป</td>
+			<td>อาวุโส</td>
+			<td>ทวีติยาภรณ์มงกุฏไทย (ท.ม.)</td>
+			<td align="center">
+				<img src="images/ic_see.png" width="24" height="24"></img>
+				&nbsp; 
+				<img src="images/ic_edit.png" width="24" height="24"></img>
+				&nbsp; 
+				<img src="images/ic_delet.png" width="24" height="24"></img>
+			</td>
+		</tr>
+		<tr>
+			<td align="center">8</td>
+			<td>ทั่วไป</td>
+			<td>อาวุโส</td>
+			<td>ทวีติยาภรณ์ช้างเผือก (ท.ช.)</td>
+			<td align="center">
+				<img src="images/ic_see.png" width="24" height="24"></img>
+				&nbsp; 
+				<img src="images/ic_edit.png" width="24" height="24"></img>
+				&nbsp; 
+				<img src="images/ic_delet.png" width="24" height="24"></img>
+			</td>
+		</tr>
+	</table>
+</form>

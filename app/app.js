@@ -1388,6 +1388,33 @@ app.config(function($stateProvider, $urlRouterProvider){
 		}
 		}		
 	})
+	.state('erp05.erpr026',{url:"/erpr026",
+		views:{
+			'from@erp05':{templateUrl:"partials/Report/erps026C.html",
+			controller:function($scope){
+				$scope.pageCode='EPRS026';
+				$scope.pageName='ทะเบียนวัสดุสำนักงาน';
+			}}
+		}
+	})
+	.state('erp05.erpr027',{url:"/erpr027",
+		views:{
+			'from@erp05':{templateUrl:"partials/Report/erps027C.html",
+			controller:function($scope){
+				$scope.pageCode='EPRS027';
+				$scope.pageName='ทะเบียนควบคุมทรัพย์สิน';
+			}}
+		}
+	})
+	.state('erp05.erpr028',{url:"/erpr028",
+		views:{
+			'from@erp05':{templateUrl:"partials/Report/erps028C.html",
+			controller:function($scope){
+				$scope.pageCode='EPRS028';
+				$scope.pageName='ทะเบียนควบคุมทรัพย์สิน(รายตัว)';
+			}}
+		}
+	})
 });
 //end erp05
 //end Menu

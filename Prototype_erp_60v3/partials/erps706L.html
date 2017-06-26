@@ -1,0 +1,128 @@
+<form>{{url}}
+	<div class="panel panel-primary">{{fromName}}
+		<div class="panel-heading">
+			<table width="100%">
+				<tr>
+					<td width="95%"><label>เสนอขอเครื่องราชอิสริยาภรณ์</label></td>
+					<td><label>ERPS706</label></td>
+				</tr>
+			</table>
+		</div>
+		<div class="panel-body">
+		<div class="list-group-item active">เงื่อนไขการค้นหา</div>
+		<div class="well">
+			<table width="85%" border="0" align="center">
+				<tr>
+					<td width="20%"></td>
+					<td width="30%">ปีที่เสนอขอ: </td>
+					<td width="30%">
+						<select class="form-control" placeholder="ปีที่เสนอขอ">
+							<option selected>2560</option>
+							<option>2561</option>
+							<option>2562</option>
+						</select>
+					</td>
+					<td width="20%"></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>ประเภทการเสอนขอ: </td>
+					<td>
+						<select class="form-control" placeholder="ประเภทการเสอนขอ">
+							<option selected>ทั้งหมด</option>
+							<option>ข้าราชการ</option>
+							<option>ลูกจ้างประจำ</option>
+							<option>พนักงานราชการ</option>
+<!-- 							
+							<option>คู่สมรส</option>
+							<option>เหรียญจักรพรรดิมาลา</option>
+ -->
+							</select>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>ประเภทชั้นเครื่องราชอิสริยาภรณ์: </td>
+					<td>
+						<select class="form-control" placeholder="ประเภทชั้นเครื่องราชอิสริยาภรณ์">
+							<option selected>ทั้งหมด</option>
+							<option>ชั้นสายสะพาย</option>
+							<option>ชั้นสายสะพาย (เกษียณ)</option>
+							<option>ต่ำกว่าสายสะพาย</option>
+							<option>เหรียญจักรพรรดิมาลา</option>
+						</select>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td colspan="4" align="center">
+						<button type="button" class="btn btn-primary">ค้นหา</button> 
+						<button type="button" class="btn btn-warning">ทั้งหมด</button>
+					</td>
+				</tr>
+			</table>
+		</div>
+		</div>
+	</div>
+	{{pathAdd}}
+	<div class="nav" style="padding:4px; text-align:center; text-align:right;">
+	<a ui-sref=".add1"><button type="button" class="btn btn-primary" ng-click="add()">เพิ่มข้อมูล</button></a>
+	</div>
+	<table class="table table-bordered table-striped table-list" border="1">
+		<tr>
+			<th width="5%">ลำดับ</th>
+			<th width="10%">ปีที่เสนอขอ</th>
+			<th width="20%">ประเภทการเสอนขอ</th>
+			<th width="25%">ประเภทชั้นเครื่องราชอิสริยาภรณ์</th>
+			<th width="15%">วันที่ประมวลผล</th>
+			<th width="10%">สถานะ</th>
+			<th width="15%">&nbsp;</th>
+		</tr>
+		<tr>
+			<td align="center">1</td>
+			<td align="center">2560</td>
+			<td>ข้าราชการ</td>
+			<td>ชั้นสายสะพาย</td>
+			<td align="center">10/05/2560</td>
+			<td align="center">เสนอขอ</td>
+			<td align="center">
+				<img src="images/ic_see.png" width="24" height="24"></img>
+				&nbsp; 
+				<a ui-sref="erp07.erps706.edit1"><img src="images/ic_edit.png" width="24" height="24"></img></a>
+				&nbsp; 
+				<img src="images/ic_delet.png" width="24" height="24"></img>
+			</td>
+		</tr>
+		<tr>
+			<td align="center">2</td>
+			<td align="center">2560</td>
+			<td>ลูกจ้างประจำ</td>
+			<td>ต่ำกว่าสายสะพาย</td>
+			<td align="center">10/05/2560</td>
+			<td align="center">เสนอขอ</td>
+			<td align="center">
+				<img src="images/ic_see.png" width="24" height="24"></img>
+				&nbsp; 
+				<a ui-sref="erp07.erps706.edit2"><img src="images/ic_edit.png" width="24" height="24"></img></a>
+				&nbsp; 
+				<img src="images/ic_delet.png" width="24" height="24"></img>
+			</td>
+		</tr>
+		<tr>
+			<td align="center">3</td>
+			<td align="center">2560</td>
+			<td>พนักงานราชการ</td>
+			<td>ต่ำกว่าสายสะพาย</td>
+			<td align="center">10/05/2560</td>
+			<td align="center">เสนอขอ</td>
+			<td align="center">
+				<img src="images/ic_see.png" width="24" height="24"></img>
+				&nbsp; 
+				<a ui-sref="erp07.erps706.edit4"><img src="images/ic_edit.png" width="24" height="24"></img></a>
+				&nbsp; 
+				<img src="images/ic_delet.png" width="24" height="24"></img>
+			</td>
+		</tr>
+	</table>
+</form>

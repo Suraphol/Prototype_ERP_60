@@ -1,0 +1,197 @@
+<form>
+	<div class="panel panel-primary">{{fromName}}
+		<div class="panel-heading"><table width="100%">
+				<tr>
+					<td width="95%"><label>บันทึกรายการส่งใช้เงินยืม</label></td>
+					<td><label>ERPS007</label></td>
+				</tr>
+			</table></div>
+		<div class="panel-body">
+		<div class="list-group-item active">ข้อมูล</div>
+		<div class="well">
+			<table width="85%" border="0" align="center">
+				<tr>
+					<td align="right">เลขที่ผู้ยืม:</td>
+					<td><input type="text" class="form-control" placeholder="เลขที่ผู้ยืม" style="width:200px" value="บย.1/60" readonly>&nbsp;<font color="red">*</font></td>
+					<td align="right">ประเภทเงินยืม:</td>
+					<td><select class="form-control" style="width:200px" readonly>
+							<option vlaue=""><--กรุณาเลือก--> </option>
+							<option vlaue="1" selected>เงินทดรองราชการ</option>
+							<option vlaue="2">เงินงบประมาณ</option>
+							<option vlaue="3">เงินนอกงบประมาณ</option>
+							<option vlaue="4">เงินนอกงบประมาณ (ลงทะเบียน)</option>
+						</select></td>
+				</tr>
+				<tr>
+					<td align="right">วันที่ยืม:</td>
+					<td><input type="text" class="form-control col-xs-10" placeholder="วันที่" style="width:150px" value="1/10/2559" readonly>
+					<img src="images/calendar_32.png" width="24" height="24">&nbsp;<font color="red">*</font></td>
+					<td align="right">เลขบัตรประชาชน:</td>
+					<td><input type="text" class="form-control" placeholder="เลขบัตรประชาชน" style="width:200px" value="1234567890123" readonly>&nbsp;<font color="red">*</font></td>
+				</tr>
+				<tr>
+					<td align="right">ชื่อ:</td>
+					<td><input type="text" class="form-control" placeholder="ชื่อ" style="width:200px" value="xxxxxxxxxx" readonly>&nbsp;<font color="red">*</font></td>
+					<td align="right">นามสกุล:</td>
+					<td><input type="text" class="form-control" placeholder="นามสกุล" style="width:200px" value="xxxxxxxxxx" readonly>&nbsp;<font color="red">*</font></td>
+				</tr>
+				<tr>
+					<td align="right">ยืม:</td>
+					<td><select class="form-control" ng-change="showDetail()" ng-model="typeLend" readonly>
+							<option value="" selected>อื่นๆ</option>							
+						</select> &nbsp;<font color="red">*</font></td>
+					<td align="right">อื่นๆ ระบุ:</td>
+					<td><input type="text" class="form-control" placeholder="อื่นๆ ระบุ" style="width:200px" value="ไปราชการแทน" readonly></td>
+				</tr>
+				<tr>
+					<td align="right"><div ng-show="between">ตั้งแต่วันที่:</div>
+						วันที่รับเงิน:
+					</td>
+					<td><input type="text" class="form-control col-xs-10" placeholder="วันที่" style="width:150px" value="1/10/2559" readonly>
+					<img src="images/calendar_32.png" width="24" height="24">&nbsp;<font color="red">*</font></td>
+					<td align="right"><div ng-show="between">ถึง</div></td>
+					<td><div ng-show="between"><input type="text" class="form-control col-xs-10" placeholder="วันที่" style="width:150px">
+					<img src="images/calendar_32.png" width="24" height="24">&nbsp;<font color="red">*</font></div></td>
+				</tr>		
+				<tr>
+					<td align="right">วันครบกำหนด:</td>
+					<td><input type="text" class="form-control col-xs-10" placeholder="วันที่" style="width:150px" value="30/10/2559" readonly>
+					&nbsp;<font color="red">*</font></td>
+					<td align="right"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td align="right">ยืมเพื่อใช้ราชการ:</td>
+					<td><textarea class="form-control" readonly></textarea> </td>
+					<td align="right"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td align="right">หน้าบัญชีธนาคาร:</td>
+					<td><input type="text" class="form-control col-xs-10" placeholder="หน้าบัญชีธนาคาร" style="width:150px" value="1234564565" readonly>
+					&nbsp;<font color="red">*</font> </td>
+					<td align="right">จำนวนเงิน:</td>
+					<td><input type="text" class="form-control col-xs-10" placeholder="จำนวนเงิน(บาท)" style="width:150px" value="x,xxx.xx" readonly>
+					&nbsp;<font color="red">*</font></td>
+				</tr>
+			
+			<tr>
+				<td colspan="5">
+					<div class="list-group-item active">ส่งใช้ใบสำคัญ/เบิกเพิ่ม</div>
+					<table class="table table-bordered table-striped table-list" width="100%" border="1">
+						<tr>
+							<th align="center">ลำดับ</th>
+							<th align="center">วันที่</th>
+							<th align="center">เลขอ้างอิง</th>
+							<th align="center">จำนวนเงิน</th>
+							<th align="center">หมายเหตุ</th>
+							<th align="center"><button type="button" class="btn btn-primary">เพิ่ม</button></th>
+						</tr>
+						<tr>
+							<td align="center">1.</td>
+							<td><input type="text" class="form-control col-xs-10" placeholder="วันที่" style="width:150px">
+							<img src="images/calendar_32.png" width="24" height="24">&nbsp;<font color="red">*</font></td>
+							<td><input type="text" class="form-control col-xs-10" placeholder="เลขอ้างอิง">&nbsp;&nbsp;<font color="red">*</font></td>
+							<td><input type="text" class="form-control col-xs-10" placeholder="จำนวนเงิน">&nbsp;<font color="red">*</font></td>
+							<td><input type="text" class="form-control col-xs-10" placeholder="หมายเหตุ"></td>
+							<td align="center"><button type="button" class="btn btn-danger">ลบ</button></td>
+						</tr>
+						<tr>
+							<td align="center">2.</td>
+							<td><input type="text" class="form-control col-xs-10" placeholder="วันที่" style="width:150px">
+							<img src="images/calendar_32.png" width="24" height="24">&nbsp;<font color="red">*</font></td>
+							<td><input type="text" class="form-control col-xs-10" placeholder="เลขอ้างอิง">&nbsp;&nbsp;<font color="red">*</font></td>
+							<td><input type="text" class="form-control col-xs-10" placeholder="จำนวนเงิน">&nbsp;<font color="red">*</font></td>
+							<td><input type="text" class="form-control col-xs-10" placeholder="หมายเหตุ"></td>
+							<td align="center"><button type="button" class="btn btn-danger">ลบ</button></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td colspan="2" align="center">รวม</td>
+							<td align="center">XX,XXX.XX</td>
+							<td></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="5">
+					<div class="list-group-item active">ส่งใช้เป็นเงินสด/เรียกคืน</div>
+					<table class="table table-bordered table-striped table-list" width="100%" border="1">
+						<tr>
+							<th align="center">ลำดับ</th>
+							<th align="center">วันที่</th>
+							<th align="center">เลขอ้างอิง</th>
+							<th align="center">จำนวนเงิน</th>
+							<th align="center">หมายเหตุ</th>
+							<th align="center"><button type="button" class="btn btn-primary">เพิ่ม</button></th>
+						</tr>
+						<tr>
+							<td align="center">1.</td>
+							<td><input type="text" class="form-control col-xs-10" placeholder="วันที่" style="width:150px">
+							<img src="images/calendar_32.png" width="24" height="24">&nbsp;<font color="red">*</font></td>
+							<td><input type="text" class="form-control col-xs-10" placeholder="เลขอ้างอิง">&nbsp;&nbsp;<font color="red">*</font></td>
+							<td><input type="text" class="form-control col-xs-10" placeholder="จำนวนเงิน">&nbsp;<font color="red">*</font></td>
+							<td><input type="text" class="form-control col-xs-10" placeholder="หมายเหตุ"></td>
+							<td align="center"><button type="button" class="btn btn-danger">ลบ</button></td>
+						</tr>
+						<tr>
+							<td align="center">2.</td>
+							<td><input type="text" class="form-control col-xs-10" placeholder="วันที่" style="width:150px">
+							<img src="images/calendar_32.png" width="24" height="24">&nbsp;<font color="red">*</font></td>
+							<td><input type="text" class="form-control col-xs-10" placeholder="เลขอ้างอิง">&nbsp;&nbsp;<font color="red">*</font></td>
+							<td><input type="text" class="form-control col-xs-10" placeholder="จำนวนเงิน">&nbsp;<font color="red">*</font></td>
+							<td><input type="text" class="form-control col-xs-10" placeholder="หมายเหตุ"></td>
+							<td align="center"><button type="button" class="btn btn-danger">ลบ</button></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td colspan="2" align="center">รวม</td>
+							<td align="center">XX,XXX.XX</td>
+							<td></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<!--<tr>
+				<td colspan="5">
+					<div class="list-group-item active">รายละเอียดใบสำคัญมากกว่า</div>
+					<table class="table table-bordered table-striped table-list" width="100%" border="1">
+						<tr>
+							<th align="center">ลำดับ</th>
+							<th align="center">วันที่</th>
+							<th align="center">จำนวนเงิน</th>
+							<th align="center">หมายเหตุ</th>
+							<th align="center"><button type="button" class="btn btn-primary">เพิ่ม</button></th>
+						</tr>
+						<tr>
+							<td align="center">1.</td>
+							<td><input type="text" class="form-control col-xs-10" placeholder="วันที่" style="width:150px">
+							<img src="images/calendar_32.png" width="24" height="24">&nbsp;<font color="red">*</font></td>
+							<td><input type="text" class="form-control col-xs-10" placeholder="จำนวนเงิน">&nbsp;<font color="red">*</font></td>
+							<td><input type="text" class="form-control col-xs-10" placeholder="หมายเหตุ"></td>
+							<td align="center"><button type="button" class="btn btn-danger">ลบ</button></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td align="center">รวม</td>
+							<td align="center">XX,XXX.XX</td>
+							<td></td>
+						</tr>
+					</table>
+				</td>
+			</tr>-->
+			
+			
+			
+			<tr>
+				<td colspan="6" align="center"><button type="button" class="btn btn-success">บันทึก</button> 
+					<a ui-sref="erp02.erps007"><button type="button" class="btn btn-warning">&nbsp;&nbsp;กลับ&nbsp;&nbsp;</button></a>
+				</td>
+			</tr>
+			</table>
+			</div>
+		</div>
+		</div>
+	</div>
+</form>

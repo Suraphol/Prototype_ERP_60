@@ -1,0 +1,120 @@
+<form ng-controller="erps001FController">{{url}}
+	<div class="panel panel-primary">{{fromName}}
+		<div class="panel-heading">
+			<table width="100%">
+				<tr>
+					<td width="95%"><label>ข้อมูลบุคคล</label></td>
+					<td><label>ERPS707</label></td>
+				</tr>
+			</table>
+		</div>
+		<div class="panel-body">
+		<div class="list-group-item active">เงื่อนไขการค้นหา</div>
+		<div class="well">
+			<table width="85%" border="0" align="center">
+				<tr>
+					<td>เลขบัตรประชาชน: </td>
+					<td><input type="text" class="form-control" placeholder="เลขบัตรประชาชน"></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>ชื่อ: </td>
+					<td><input type="text" class="form-control" placeholder="ชื่อ"></td>
+					<td>นามสกุล</td>
+					<td><input type="text" class="form-control" placeholder="นามสกุล"></td>
+				</tr>
+				<tr>
+					<td>สังกัด:&nbsp;<font color="red">*</font></td>
+					<td colspan="3">
+						<table>
+						<tr>
+							<td>
+								<label class="radio-inline">
+									<input type="radio" value="1" ng-model="subType" ng-change="showDetailsub()"> ส่วนกลาง
+								</label>
+								<label class="radio-inline">
+									<input type="radio" value="2" ng-model="subType" ng-change="showDetailsub()"> สถจ.
+								</label>
+							</td>
+							<td></td>
+							<td>
+								<div ng-show="AA"> สำนัก/กอง:</div>
+								<div ng-show="BB">จังหวัด:</div></td>
+							<td>
+								<div ng-show="AA">
+									<select class="form-control input-ms">
+										<option value=""><-- กรุณาเลือก --></option>
+										<option ng-repeat="unit in units" vale="{{unit.id}}">{{unit.name}}</option>
+									</select>
+								</div>
+								<div ng-show="BB">
+									<select class="form-control input-ms">
+										<option value=""><-- กรุณาเลือก --></option>
+										<option value="1">กระบี่</option>
+										<option value="2">กาญจนบุรี</option>
+										<option value="3">กาฬสินธุ์</option>
+										<option value="4">กำแพงเพชร</option>
+										<option value="5">ขอนแก่น</option>
+										<option value="6">จันทบุรี</option>					
+									</select>
+								</div>
+							</td>
+						</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="4" align="center">
+						<button type="button" class="btn btn-primary">ค้นหา</button> 
+						<button type="button" class="btn btn-warning">ทั้งหมด</button>
+					</td>
+				</tr>
+			</table>
+		</div>
+		</div>
+	</div>
+	{{pathAdd}}
+	<div class="nav" style="padding:4px; text-align:center; text-align:right;">
+	<a ui-sref=".add"><button type="button" class="btn btn-primary" ng-click="add()">เพิ่มข้อมูล</button></a>
+	</div>
+	<table class="table table-bordered table-striped table-list" border="1">
+		<tr>
+			<th>ลำดับ</th>
+			<th>เลขประจำตัวประชาชน</th>
+			<th>ชื่อ - นามสกุล</th>
+			<th>&nbsp;</th>
+		</tr>
+		<tr>
+			<td width="4%" align="center">1</td>
+			<td>x-xxxx-xxxxx-xx-x</td>
+			<td>cc xxxxxxxxx xxxxxxxxx</td>
+			<td width="10%" align="center"><img src="images/ic_see.png" width="24" height="24"></img>&nbsp; <img src="images/ic_edit.png" width="24" height="24"></img></td>
+		</tr>
+		<tr>
+			<td align="center">2</td>
+			<td>x-xxxx-xxxxx-xx-x</td>
+			<td>cc xxxxxxxxx xxxxxxxxx</td>
+			<td align="center"><img src="images/ic_see.png" width="24" height="24"></img>&nbsp; <img src="images/ic_edit.png" width="24" height="24"></img></td>
+		</tr>
+		<tr>
+			<td align="center">3</td>
+			<td>x-xxxx-xxxxx-xx-x</td>
+			<td>cc xxxxxxxxx xxxxxxxxx</td>
+			<td align="center"><img src="images/ic_see.png" width="24" height="24"></img>&nbsp; <img src="images/ic_edit.png" width="24" height="24"></img></td>
+		</tr>
+		<tr>
+			<td align="center">4</td>
+			<td>x-xxxx-xxxxx-xx-x</td>
+			<td>cc xxxxxxxxx xxxxxxxxx</td>
+			<td align="center"><img src="images/ic_see.png" width="24" height="24"></img>&nbsp; <img src="images/ic_edit.png" width="24" height="24"></img></td>
+		</tr>
+		<tr>
+			<td align="center">5</td>
+			<td>x-xxxx-xxxxx-xx-x</td>
+			<td>cc xxxxxxxxx xxxxxxxxx</td>
+			<td align="center"><img src="images/ic_see.png" width="24" height="24"></img>&nbsp; <img src="images/ic_edit.png" width="24" height="24"></img></td>
+		</tr>
+
+	</table>
+</form>

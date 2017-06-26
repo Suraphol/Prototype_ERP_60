@@ -1,0 +1,257 @@
+<form>{{url}}
+	<div class="panel panel-primary">{{fromName}}
+		<div class="panel-heading">
+			<table width="100%">
+				<tr>
+					<td width="95%"><label>ชั้นเครื่องราชอิสริยาภรณ์</label></td>
+					<td><label>ERPS702</label></td>
+				</tr>
+			</table>
+		</div>
+		<div class="panel-body">
+		<div class="list-group-item active">เงื่อนไขการค้นหา</div>
+		<div class="well">
+			<table width="85%" border="0" align="center">
+				<tr>
+					<td width="25%"></td>
+					<td width="20%">ประเภท: </td>
+					<td width="30%">
+						<select class="form-control" placeholder="ประเภท">
+							<option selected>ทั้งหมด</option>
+							<option>ชั้นสายสะพาย</option>
+							<option>ต่ำกว่าสายสะพาย</option>
+							<option>เหรียญ</option>
+						</select>
+					</td>
+					<td width="25%"></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>ชื่อชั้นเครื่องราชอิสริยาภรณ์: </td>
+					<td><input type="text" class="form-control" placeholder="ชื่อชั้นเครื่องราชอิสริยาภรณ์"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td colspan="4" align="center">
+						<button type="button" class="btn btn-primary">ค้นหา</button> 
+						<button type="button" class="btn btn-warning">ทั้งหมด</button>
+					</td>
+				</tr>
+			</table>
+		</div>
+		</div>
+	</div>
+	{{pathAdd}}
+	<div class="nav" style="padding:4px; text-align:center; text-align:right;">
+	<a ui-sref=".add"><button type="button" class="btn btn-primary" ng-click="add()">เพิ่มข้อมูล</button></a>
+	</div>
+	<table class="table table-bordered table-striped table-list" border="1">
+		<tr>
+			<th width="5%" rowspan="2">ลำดับ</th>
+			<th width="15%" rowspan="2">ประเภท</th>
+			<th width="35%" rowspan="2">ชื่อชั้นเครื่องราชอิสริยาภรณ์</th>
+			<th width="10%" rowspan="2">ชื่อย่อ</th>
+			<th width="20%" colspan="2">ราคา</th>
+			<th width="15%" rowspan="2">&nbsp;</th>
+		</tr>
+		<tr>
+			<th width="10%">บุรุษ</th>
+			<th width="10%">สตรี</th>
+		</tr>
+		<tr>
+			<td align="center">1</td>
+			<td align="center">เหรียญ</td>
+			<td>เหรียญจักรพรรดิมาลา</td>
+			<td align="center">ร.จ.พ.</td>
+			<td align="right">๒,๒๘๔</td>
+			<td align="right">๒,๖๖๔</td>
+			<td align="center">
+				<img src="images/ic_see.png" width="24" height="24"></img>
+				&nbsp; 
+				<img src="images/ic_edit.png" width="24" height="24"></img>
+				&nbsp; 
+				<img src="images/ic_delet.png" width="24" height="24"></img>
+			</td>
+		</tr>
+		<tr>
+			<td align="center">2</td>
+			<td align="center">ต่ำกว่าสายสะพาย</td>
+			<td>เบญจมาภรณ์มงกุฏไทย</td>
+			<td align="center">บ.ม.</td>
+			<td align="right">๓,๓๓๒</td>
+			<td align="right">๓,๕๒๒</td>
+			<td align="center">
+				<img src="images/ic_see.png" width="24" height="24"></img>
+				&nbsp; 
+				<img src="images/ic_edit.png" width="24" height="24"></img>
+				&nbsp; 
+				<img src="images/ic_delet.png" width="24" height="24"></img>
+			</td>
+		</tr>
+		<tr>
+			<td align="center">3</td>
+			<td align="center">ต่ำกว่าสายสะพาย</td>
+			<td>เบญจมาภรณ์ช้างเผือก</td>
+			<td align="center">บ.ช.</td>
+			<td align="right">๓,๓๓๒</td>
+			<td align="right">๓,๕๒๒</td>
+			<td align="center">
+				<img src="images/ic_see.png" width="24" height="24"></img>
+				&nbsp; 
+				<img src="images/ic_edit.png" width="24" height="24"></img>
+				&nbsp; 
+				<img src="images/ic_delet.png" width="24" height="24"></img>
+			</td>
+		</tr>
+		<tr>
+			<td align="center">4</td>
+			<td align="center">ต่ำกว่าสายสะพาย</td>
+			<td>จัตุรถาภรณ์มงกุฏไทย</td>
+			<td align="center">จ.ม.</td>
+			<td align="right">๓,๔๙๖</td>
+			<td align="right">๓,๗๐๘</td>
+			<td align="center">
+				<img src="images/ic_see.png" width="24" height="24"></img>
+				&nbsp; 
+				<img src="images/ic_edit.png" width="24" height="24"></img>
+				&nbsp; 
+				<img src="images/ic_delet.png" width="24" height="24"></img>
+			</td>
+		</tr>
+		<tr>
+			<td align="center">5</td>
+			<td align="center">ต่ำกว่าสายสะพาย</td>
+			<td>จัตุรถาภรณ์ช้างเผือก</td>
+			<td align="center">จ.ช.</td>
+			<td align="right">๓,๔๙๖</td>
+			<td align="right">๓,๗๐๘</td>
+			<td align="center">
+				<img src="images/ic_see.png" width="24" height="24"></img>
+				&nbsp; 
+				<img src="images/ic_edit.png" width="24" height="24"></img>
+				&nbsp; 
+				<img src="images/ic_delet.png" width="24" height="24"></img>
+			</td>
+		</tr>
+		<tr>
+			<td align="center">6</td>
+			<td align="center">ต่ำกว่าสายสะพาย</td>
+			<td>ตริตาภรณ์มงกุฏไทย</td>
+			<td align="center">ต.ม.</td>
+			<td align="right">๖,๔๐๖</td>
+			<td align="right">๕,๐๙๖</td>
+			<td align="center">
+				<img src="images/ic_see.png" width="24" height="24"></img>
+				&nbsp; 
+				<img src="images/ic_edit.png" width="24" height="24"></img>
+				&nbsp; 
+				<img src="images/ic_delet.png" width="24" height="24"></img>
+			</td>
+		</tr>
+		<tr>
+			<td align="center">7</td>
+			<td align="center">ต่ำกว่าสายสะพาย</td>
+			<td>ตริตาภรณ์ช้างเผือก</td>
+			<td align="center">ต.ช.</td>
+			<td align="right">๖,๖๙๖</td>
+			<td align="right">๕,๙๓๔</td>
+			<td align="center">
+				<img src="images/ic_see.png" width="24" height="24"></img>
+				&nbsp; 
+				<img src="images/ic_edit.png" width="24" height="24"></img>
+				&nbsp; 
+				<img src="images/ic_delet.png" width="24" height="24"></img>
+			</td>
+		</tr>
+		<tr>
+			<td align="center">8</td>
+			<td align="center">ต่ำกว่าสายสะพาย</td>
+			<td>ทวีติยาภรณ์มงกุฏไทย</td>
+			<td align="center">ท.ม.</td>
+			<td align="right">๑๖,๖๖๔</td>
+			<td align="right">๑๑,๖๑๒</td>
+			<td align="center">
+				<img src="images/ic_see.png" width="24" height="24"></img>
+				&nbsp; 
+				<img src="images/ic_edit.png" width="24" height="24"></img>
+				&nbsp; 
+				<img src="images/ic_delet.png" width="24" height="24"></img>
+			</td>
+		</tr>
+		<tr>
+			<td align="center">9</td>
+			<td align="center">ต่ำกว่าสายสะพาย</td>
+			<td>ทวีติยาภรณ์ช้างเผือก</td>
+			<td align="center">ท.ช.</td>
+			<td align="right">๑๕,๖๐๐</td>
+			<td align="right">๑๒,๓๑๖</td>
+			<td align="center">
+				<img src="images/ic_see.png" width="24" height="24"></img>
+				&nbsp; 
+				<img src="images/ic_edit.png" width="24" height="24"></img>
+				&nbsp; 
+				<img src="images/ic_delet.png" width="24" height="24"></img>
+			</td>
+		</tr>
+		<tr>
+			<td align="center">10</td>
+			<td align="center">สายสะพาย</td>
+			<td>ประถมาภรณ์มงกุฏไทย</td>
+			<td align="center">ป.ม.</td>
+			<td align="right">๒๗,๒๔๐</td>
+			<td align="right">๒๐,๘๓๔</td>
+			<td align="center">
+				<img src="images/ic_see.png" width="24" height="24"></img>
+				&nbsp; 
+				<img src="images/ic_edit.png" width="24" height="24"></img>
+				&nbsp; 
+				<img src="images/ic_delet.png" width="24" height="24"></img>
+			</td>
+		</tr>
+		<tr>
+			<td align="center">11</td>
+			<td align="center">สายสะพาย</td>
+			<td>ประถมาภรณ์ช้างเผือก</td>
+			<td align="center">ป.ช.</td>
+			<td align="right">๒๘,๖๕๘</td>
+			<td align="right">๒๒,๖๑๘</td>
+			<td align="center">
+				<img src="images/ic_see.png" width="24" height="24"></img>
+				&nbsp; 
+				<img src="images/ic_edit.png" width="24" height="24"></img>
+				&nbsp; 
+				<img src="images/ic_delet.png" width="24" height="24"></img>
+			</td>
+		</tr>
+		<tr>
+			<td align="center">12</td>
+			<td align="center">สายสะพาย</td>
+			<td>มหาวชิรมงกุฏ</td>
+			<td align="center">ม.ว.ม.</td>
+			<td align="right">๕๕,๕๑๖</td>
+			<td align="right">๔๓,๓๑๖</td>
+			<td align="center">
+				<img src="images/ic_see.png" width="24" height="24"></img>
+				&nbsp; 
+				<img src="images/ic_edit.png" width="24" height="24"></img>
+				&nbsp; 
+				<img src="images/ic_delet.png" width="24" height="24"></img>
+			</td>
+		</tr>
+		<tr>
+			<td align="center">13</td>
+			<td align="center">สายสะพาย</td>
+			<td>มหาปรมาภรณ์ช้างเผือก</td>
+			<td align="center">ม.ป.ช.</td>
+			<td align="right">๔๑,๕๖๐</td>
+			<td align="right">๓๒,๓๘๒</td>
+			<td align="center">
+				<img src="images/ic_see.png" width="24" height="24"></img>
+				&nbsp; 
+				<img src="images/ic_edit.png" width="24" height="24"></img>
+				&nbsp; 
+				<img src="images/ic_delet.png" width="24" height="24"></img>
+			</td>
+		</tr>
+	</table>
+</form>

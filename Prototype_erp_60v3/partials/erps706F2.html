@@ -1,0 +1,214 @@
+<form ng-controller="erps001FController">{{url}}
+	<div class="panel panel-primary">{{fromName}}
+		<div class="panel-heading"><table width="100%">
+				<tr>
+					<td width="95%"><label>เสนอขอเครื่องราชอิสริยาภรณ์</label></td>
+					<td><label>ERPS706</label></td>
+				</tr>
+			</table></div>
+		<div class="panel-body">
+		<div class="list-group-item active">เงื่อนไขการค้นหา</div>
+		<div class="well">
+
+<!-- Begin -->
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+ <tr>
+    <td width="20%" align="right">ชื่อ</td>
+    <td width="20%"><input type="text" class="form-control" name="" value=""></td>
+    <td width="10%" align="right">สกุล</td>
+    <td width="20%"><input type="text" class="form-control" name="" value=""></td>
+    <td width="30%"></td>
+  </tr>
+ <tr>
+    <td align="right">ประเภทตำแหน่ง</td>
+    <td>
+	  <select name="" class="form-control" placeholder="ประเภท">
+	    <option selected>เลือกประเภทตำแหน่ง</option>
+		<option>ทั่วไป</option>
+		<option>วิชาการ</option>
+		<option>อำนวยการ</option>
+		<option>บริหาร</option>
+	  </select>
+    </td>
+    <td align="right">ระดับตำแหน่ง</td>
+    <td>
+	  <select name="" class="form-control" placeholder="ประเภท">
+	    <option selected>เลือกระดับตำแหน่ง</option>
+		<option>ปฏิบัติงาน</option>
+		<option>ชำนาญงาน</option>
+		<option>อาวุโส</option>
+		<option>ทักษะพิเศษ</option>
+		<option>ปฏิบัติการ</option>
+		<option>ชำนาญการ</option>
+		<option>ชำนาญการพิเศษ</option>
+		<option>เชี่ยวชาญ</option>
+		<option>ทรงคุณวุฒิ</option>
+		<option>อำนวยการต้น</option>
+		<option>อำนวยการต้น</option>
+		<option>บริหารต้น</option>
+		<option>บริหารสูง</option>
+	  </select>
+    </td>
+    <td></td>
+  </tr>
+  <tr>
+	<td align="right">สังกัด</td>
+    <td colspan="4">
+	  <table>
+		<tr>
+		  <td>
+			<label class="radio-inline">
+			  <input type="radio" value="0" ng-model="subType" ng-change="showDetailsub()"> ทั้งหมด
+			</label>
+			<label class="radio-inline">
+			  <input type="radio" value="1" ng-model="subType" ng-change="showDetailsub()"> ส่วนกลาง
+			</label>
+			<label class="radio-inline">
+			  <input type="radio" value="2" ng-model="subType" ng-change="showDetailsub()"> สถจ.
+			</label>
+		  </td>
+		  <td></td>
+		  <td>
+		    <div ng-show="AA"> สำนัก/กอง:</div>
+			<div ng-show="BB">จังหวัด:</div>
+		  </td>
+		  <td>
+			<div ng-show="AA">
+			  <select class="form-control input-ms">
+				<option value=""><-- กรุณาเลือก --></option>
+				<option ng-repeat="unit in units" vale="{{unit.id}}">{{unit.name}}</option>
+			  </select>
+			</div>
+			<div ng-show="BB">
+			  <select class="form-control input-ms">
+				<option value=""><-- กรุณาเลือก --></option>
+				<option value="1">กระบี่</option>
+				<option value="2">กาญจนบุรี</option>
+				<option value="3">กาฬสินธุ์</option>
+				<option value="4">กำแพงเพชร</option>
+				<option value="5">ขอนแก่น</option>
+				<option value="6">จันทบุรี</option>					
+			  </select>
+			</div>
+		  </td>
+		</tr>
+	  </table>
+	</td>
+    <td></td>
+  </tr>
+  <tr class="trform">
+    <td align="right">เครื่องราชอิสริยาภรณ์ที่ขอพระราชทาน</td>
+    <td>
+	  <select name="" class="form-control" placeholder="ประเภท">
+	    <option selected>เลือกเครื่องราชอิสริยาภรณ์</option>
+		<option>เบญจมาภรณ์มงกุฏไทย (บ.ม.)</option>
+		<option>เบญจมาภรณ์ช้างเผือก (บ.ช.)</option>
+		<option>จัตุรถาภรณ์มงกุฏไทย (จ.ม.)</option>
+		<option>จัตุรถาภรณ์ช้างเผือก (จ.ช.)</option>
+		<option>ตริตาภรณ์มงกุฏไทย (ต.ม.)</option>
+		<option>ตริตาภรณ์ช้างเผือก (ต.ช.)</option>
+		<option>ทวีติยาภรณ์มงกุฏไทย (ท.ม.)</option>
+		<option>ทวีติยาภรณ์ช้างเผือก (ท.ช.)</option>
+		<option>ประถมาภรณ์มงกุฏไทย (ป.ม.)</option>
+		<option>ประถมาภรณ์ช้างเผือก (ป.ช.)</option>
+		<option>มหาวชิรมงกุฏ (ม.ว.ม.)</option>
+		<option>มหาปรมาภรณ์ช้างเผือก (ม.ป.ช.)</option>
+	  </select>
+	</td>
+    <td></td>
+  </tr>
+				<tr>
+					<td colspan="5" align="center">
+						<button type="button" class="btn btn-primary">ค้นหา</button> 
+						<button type="button" class="btn btn-warning">ทั้งหมด</button>
+					</td>
+				</tr>
+</table>
+		</div>
+		</div>
+
+<table width="60%" border="1" align="center">
+	<tr>
+		<td align="center">
+			<br>
+			<a href="partials/Report/erpr705C.pdf" target="_blank"><button type="button" class="btn btn-primary">ส่งออก Excel</button></a>
+			&nbsp;
+			<button type="button" class="btn btn-primary">เปลี่ยนสถานะ</button>
+			&nbsp;
+			<a ui-sref="erp07.erps706.add4"><button type="button" class="btn btn-primary">ประมวลผล</button></a>
+			&nbsp;
+			<a href="partials/Report/erpr704C.pdf" target="_blank"><button type="button" class="btn btn-primary">พิมพ์รายงาน</button></a>
+			<br>
+			<br>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			*หมายเหตู
+			<br>
+			- ส่งออก Excel ใช้สำหรับส่งข้อมูลออกมาในรูปแบบ Excel
+			<br>
+			- เปลี่ยนสถานะ ใช้สำหรับเปลี่ยนสถานะงานที่ทำเป็น ส่งข้อมูลให้หน่วยงาน
+			<br>
+			- ประมวลผล ใช้สำหรับประมวลผลเมื่อได้รับพระราชทาน
+			<br>
+			- พิมพ์รายงาน ใช้สำหรับออกรางานเพื่อให้หน่วยงานตรวจสอบ
+		</td>
+	</tr>
+</table>
+
+		<div class="panel-body">
+		<div class="list-group-item active">ข้อมูล</div>
+		<div class="well">
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr class="trform">
+    <td align="right">
+		<a ui-sref="erp07.erps706.add3"><button type="button" class="btn btn-primary" ng-click="add()">เพิ่มข้อมูล</button></a>
+	</td>
+  </tr>
+</table>
+
+	<table class="table table-bordered table-striped table-list" border="1">
+  <tr align="center">
+	<th width="5%">ลำดับ</th>
+    <th width="20%">ชื่อ-สกุล</th>
+    <th width="20%">สังกัด</th>
+    <th width="20%">ตำแหน่ง</th>
+    <th width="20%">เครื่องราชอิสริยาภรณ์</br>ที่ขอพระราชทาน</th>
+    <th width="15%"></th>
+  </tr>
+
+  <tr class="tr1" align="center">
+    <td>1</td>
+    <td align="left">
+	</td>
+    <td align="left">
+	</td>
+    <td align="left">
+	</td>
+    <td align="left">
+	</td>
+	<td align="center">
+		<img src="images/ic_see.png" width="24" height="24"></img>
+		&nbsp; 
+		<a ui-sref=".edit"><img src="images/ic_edit.png" width="24" height="24"></img></a>
+		&nbsp; 
+		<img src="images/ic_delet.png" width="24" height="24"></img>
+	</td>
+  </tr>
+<!-- End -->
+		
+				<tr>
+					<td colspan="6" align="center">
+						<a ui-sref="erp07.erps703"><button type="button" class="btn btn-success">บันทึก</button></a>
+						<a ui-sref="erp07.erps703"><button type="button" class="btn btn-warning">&nbsp;&nbsp;กลับ&nbsp;&nbsp;</button></a>
+						</td>
+				</tr>
+			</table>
+			
+		</div>
+		</div>
+			
+	</div>
+</form>

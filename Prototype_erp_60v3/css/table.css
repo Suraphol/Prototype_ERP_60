@@ -1,0 +1,12 @@
+@charset "utf-8";
+/* CSS Document */
+
+td{padding:4px;}
+
+.table-list{
+	border:1px;
+}
+
+.table-list th{
+	text-align:center;
+}

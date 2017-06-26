@@ -1,0 +1,38 @@
+<div class="container-fluid">
+	<div class="row-fluid">
+		<div class="col-md-2">
+			<div class="sidebar">
+				<div id="nav">
+					<h2 class="trigger">ข้อมูลพื้นฐาน</a></h2>
+					<div>
+						<ul class="trigger-ul">
+							<li class="trigger-li"><a ui-sref=".erps001">จัดการบุคลากร</a> </li>
+						</ul>
+					</div>
+					<h2 class="trigger">การดำเนินการ</h2> 
+ 					<div>
+ 						<ul class="trigger-ul">
+ 							<li class="trigger-li"><a ui-sref=".erps006">บันทึกรายการยืมเงิน</a> </li>
+ 							<li class="trigger-li"><a ui-sref=".erps007">บันทึกรายการส่งใช้เงินยืม</a> </li>
+ 						</ul>
+ 					</div>
+ 					<h2 class="trigger">รายงาน</h2> 
+			 		<div>
+			 			<ul class="trigger-ul">
+			 				<li class="trigger-li"><a ui-sref=".erpr010">ERPR010 รายงานลูกหนี้เงินยืม</a> </li>
+							<li class="trigger-li"><a ui-sref=".erpr011">ERPR011 รายงานลูกหนี้คงค้าง</a> </li>
+			 				<li class="trigger-li"><a ui-sref=".erpr012">ERPR012 รายงานทะเบียนลูกหนี้เงินยืม</a> </li>
+							<li class="trigger-li"><a ui-sref=".erpr013">ERPR013 รายงานการส่งลูกหนี้เงินยืมราชการ</a> </li>
+			 			</ul>
+			 		</div>
+
+				</div><!-- nav end -->
+
+			</div><!-- sidebar end -->
+		</div><!-- Menu end -->
+
+		<div class="col-md-10">
+			<div ui-view="from"></div>
+		</div>
+	</div>
+</div>

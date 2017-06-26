@@ -1,0 +1,370 @@
+<form ng-controller="erps004FController">
+	<div class="panel panel-primary">{{fromName}}
+		<div class="panel-heading"><table width="100%">
+				<tr>
+					<td width="95%"><label>บันทึกเลขอนุมัติและสัญญา</label></td>
+					<td><label>ERPS004</label></td>
+				</tr>
+			</table></div>
+		<div class="panel-body">
+		<div class="list-group-item active">ข้อมูล</div>
+		<div class="well">
+			<table width="100%" border="0" align="center">
+				<tr>
+					<td>เลขบัตรประชาชน:</td>
+					<td><input type="text" class="form-control" placeholder="เลขบัตรประชาชน" width="15" maxlength="13">&nbsp;<font color="red">*</font></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>คำนำหน้า:</td>
+					<td><input type="text" class="form-control" placeholder="คำนำหน้า" width="3" readonly>
+					</td>
+					<td>ชื่อ:</td>
+					<td><input type="text" class="form-control" placeholder="ชื่อ" readonly></td>
+					<td>นามสกุล:</td>
+					<td><input type="text" class="form-control" placeholder="นามสกุล" readonly></td>
+				</tr>
+				<tr>
+					<td>ตำแหน่ง:</td>
+					<td><input type="text" class="form-control" placeholder="ตำแหน่ง" readonly></td>
+					<td>ระดับ:</td>
+					<td><input type="text" class="form-control" placeholder="ระดับ" readonly></td>
+					<td>สำนัก/กอง:</td>
+					<td><input type="text" class="form-control" placeholder="สำนัก/กอง หรือ " readonly></td>
+				</tr>
+								<tr>
+					<td>เงินเดือนตั้งจ่าย:</td>
+					<td><input type="text" class="form-control" placeholder="เงินเดือนตั้งจ่าย" readonly></td>
+					<td>สังกัด:</td>
+					<td><input type="text" class="form-control" placeholder="สังกัด" readonly></td>
+					<td></td>
+					<td></td>
+				</tr>
+
+				<tr>
+					<td>เงินเดือน:</td>
+					<td><input type="text" class="form-control" placeholder="เงินเดือน" width="3" readonly>
+					</td>
+					<td>สิทธิตามระเบียบ:</td>
+					<td><input type="text" class="form-control" placeholder="จำนวนเงิน(บาท)" readonly>&nbsp;</td>
+					<td>สิทธิเบิกได้</td>
+					<td><input type="text" class="form-control" placeholder="จำนวนเงิน(บาท)" readonly>&nbsp;</td>
+				</tr>
+				<tr>
+					<td>ประเภท:</td>
+					<td><label class="radio-inline">
+						  <input type="radio" value="1" ng-model="inlineRadioOptions" ng-change="showDetail()"> ค่าเช่า
+						</label>
+						<label class="radio-inline">
+						  <input type="radio" value="2" ng-model="inlineRadioOptions" ng-change="showDetail()"> ค่าผ่อนชำระ</label>
+					</td>
+					<td>เลขที่อนุมัติ</td>
+					<td><input type="text" class="form-control" placeholder="เลขที่">&nbsp;<font color="red">*</font></td>
+					<td>วันที่อนุมัติ</td>
+					<td><input type="text" class="form-control col-xs-10" placeholder="วันที่" style="width:150px">
+					<img src="images/calendar_32.png" width="24" height="24">&nbsp;<font color="red">*</font></td>
+				</tr>
+				<!--<tr>
+					<td colspan="2" align="right">ระยะเวลาตามสัญญา:</td>
+					<td>วันที่เริ่ม</td>
+					<td><input type="text" class="form-control col-xs-10" placeholder="วันที่" style="width:150px">
+					<img src="images/calendar_32.png" width="24" height="24">&nbsp;<font color="red">*</font></td>
+					<td>วันที่สิ้นสุด</td>
+					<td><input type="text" class="form-control col-xs-10" placeholder="วันที่" style="width:150px">
+					<img src="images/calendar_32.png" width="24" height="24">&nbsp;<font color="red">*</font></td>
+				</tr>-->
+				<!--<tr>
+					<td align="right">ค่าเช่า/ค่าผ่อนชำระ:</td>
+					<td><input type="text" class="form-control" placeholder="จำนวนเงิน ค่าเช่า/ค่าผ่อนชำระ">&nbsp;<font color="red">*</font></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>-->
+				<tr>
+					<td align="right">ธนาคาร:</td>
+					<td><select class="form-control">
+							<option value="">ธนาคารทหารไทย</option>
+						</select> &nbsp;<font color="red">*</font></td>					
+					<td align="right">สาขา:</td>
+					<td><input type="text" class="form-control" placeholder="สาขา">&nbsp;<font color="red">*</font></td>
+					<td align="right">เลขที่บัญชี:</td>
+					<td><input type="text" class="form-control" placeholder="เลขที่บัญชี">&nbsp;<font color="red">*</font></td>
+				</tr>
+				<tr>
+					<td>อัพโหลดไฟล์</td>
+					<td><input type="file" id="exampleInputFile"></td>
+
+				</tr>
+				<tr>
+					<td colspan="6">
+
+					<div ng-show="A">
+						<!-- เช่าบ้าน -->
+						<div class="panel panel-default">
+							<div class="panel-heading">ค่าเช่า</div>
+							<div class="panel-body">
+							<div class="list-group-item active">รายละเอียดบ้านเช่า</div>
+								<table width="100%" border="0">
+								<tr>
+									<td align="right">วดป.ที่ทำสัญญา</td>
+									<td><input type="text" class="form-control col-xs-10" placeholder="วันที่" style="width:150px"><img src="images/calendar_32.png" width="24" height="24">&nbsp;<font color="red">*</font></td>
+									<td align="right">ชื่อเจ้าของบ้านเช่า:</td>
+									<td><input type="text" class="form-control col-xs-10" placeholder="ชื่อเจ้าของบ้านเช่า">&nbsp;<font color="red">*</font></td>
+									<td align="right"> เอกสารแสดงกรรมสิทธิ์ :</td>
+									<td><input type="text" class="form-control col-xs-10" placeholder="เอกสารแสดงกรรมสิทธิ์">&nbsp;<font color="red">*</font></td>
+								</tr>
+								<tr>
+									<td align="right">ที่อยู่บ้านเช่า:</td>
+									<td><textarea class="form-control"></textarea> </td>
+									<td align="right">ที่อยู่ผู้ให้เช่า:</td>
+									<td><textarea class="form-control"></textarea></td>
+									<td align="right">มอบอำนาจ:</td>
+									<td><input type="text" class="form-control col-xs-10" placeholder="มอบอำนาจ/ผู้มีอำนาจลงนาม"></td>
+								</tr>
+								<tr>
+									<td align="right">ระยะเวลา (ปี):</td>
+									<td><input type="text" class="form-control col-xs-10" placeholder="ระยะ">&nbsp;<font color="red">*</font></td>
+									<td align="right">เริ่มต้น:</td>
+									<td><input type="text" class="form-control col-xs-10" placeholder="เริ่มต้น" style="width:150px"><img src="images/calendar_32.png" width="24" height="24">&nbsp;<font color="red">*</font></td>
+									<td align="right">สิ้นสุด:</td>
+									<td><input type="text" class="form-control col-xs-10" placeholder="สิ้นสุด" style="width:150px"><img src="images/calendar_32.png" width="24" height="24">&nbsp;<font color="red">*</font></td>
+								</tr>
+								<tr>
+									<td align="right">อัตราค่าเช่า:</td>
+									<td><input type="text" class="form-control col-xs-10" placeholder="อัตราค่าเช่า(บาท)">&nbsp;<font color="red">*</font></td>
+									<td align="right">ขอเบิกตั้งแต่:</td>
+									<td><input type="text" class="form-control col-xs-10" placeholder="วันที่" style="width:120px"><img src="images/calendar_32.png" width="24" height="24">&nbsp;<font color="red">*</font></td>
+									<td align="right">หมายเหตุ:</td>
+									<td><input type="text" class="form-control col-xs-10" placeholder="หมายเหตุ"></td>
+								</tr>
+								<tr>
+										
+										<td align="right">เบิกจากสังกัดสุดท้ายถึง</td>
+										<td><input type="text" class="form-control col-xs-10" placeholder="สำนัก/กอง หรือจังหวัด" style="width:150px">
+											<input type="text" class="form-control col-xs-10" placeholder="วันที่" style="width:150px"><img src="images/calendar_32.png" width="24" height="24"></td>
+										<td align="right"></td>
+										<td></td>
+										<td align="right"></td>
+										<td></td>
+									</tr>
+								</table>
+							</div>
+						</div>
+						<!-- end เช่าบ้าน -->
+					</div>
+
+					<div ng-show="B">
+						<!-- เช่าชื้อ -->
+						<div class="panel panel-default">
+							<div class="panel-heading">ค่าผ่อนชำระ</div>
+							<div class="panel-body">
+							<div class="list-group-item active">รายละเอียดของสัญญาเงินกู้</div>
+								<table width="100%" border="0">
+									<tr>
+										<td colspan="6">
+											<table border="1" class="table table-bordered table-striped table-list">
+												<tr>
+													<th width="30%">เลขที่สัญญ</th>
+													<th width="10%">ระยะเวลากู้</th>
+													<th width="20%">เริ่มต้น</th>
+													<th width="20%">สิ้นสุด</th>
+													<th width="30%"><a ui-sref=".bankDetail"><button type="button" class="btn btn-primary" ng-click="add()">เพิ่มสัญญา</button></th>
+												</tr>
+												<tr>
+													<td>xxxxxxxxxxxxxxx</td>
+													<td>xx</td>
+													<td>xx/xx/xxxx</td>
+													<td>xx/xx/xxxx</td>
+													<td width="10%" align="center"><img src="images/ic_see.png" width="24" height="24"></img>&nbsp; <img src="images/ic_edit.png" width="24" height="24"></img>
+													&nbsp; <img src="images/ic_delet.png" width="24" height="24"></img></td>
+												</tr>
+												<tr>
+													<td>xxxxxxxxxxxxxxx</td>
+													<td>xx</td>
+													<td>xx/xx/xxxx</td>
+													<td>xx/xx/xxxx</td>
+													<td width="10%" align="center"><img src="images/ic_see.png" width="24" height="24"></img>&nbsp; <img src="images/ic_edit.png" width="24" height="24"></img>
+													&nbsp; <img src="images/ic_delet.png" width="24" height="24"></img></td>
+												</tr>
+											</table>
+
+										</td>
+									</tr>
+									<!--<tr>
+										<td align="right" >ธนาคาร:</td>
+										<td><input type="text" class="form-control col-xs-10" placeholder="ธนาคาร">&nbsp;<font color="red">*</font></td>
+										<td align="right">เลขที่สัญญา:</td>
+										<td><input type="text" class="form-control col-xs-10" placeholder="เลขที่สัญญา">&nbsp;<font color="red">*</font></td>
+										<td align="right">วดป.ของสัญญา:</td>
+										<td><input type="text" class="form-control col-xs-10" placeholder="วดป.ของสัญญา" style="width:150px"><img src="images/calendar_32.png" width="24" height="24">&nbsp;<font color="red">*</font></td>
+									</tr>
+									<tr>
+										<td align="right">ระยะเวลากู้:</td>
+										<td><input type="text" class="form-control col-xs-10" placeholder="ระยะ">&nbsp;<font color="red">*</font></td>
+										<td align="right">เริ่มต้น:</td>
+										<td><input type="text" class="form-control col-xs-10" placeholder="เริ่มต้น" style="width:150px"><img src="images/calendar_32.png" width="24" height="24">&nbsp;<font color="red">*</font></td>
+										<td align="right">สิ้นสุด:</td>
+										<td><input type="text" class="form-control col-xs-10" placeholder="สิ้นสุด" style="width:150px"><img src="images/calendar_32.png" width="24" height="24">&nbsp;<font color="red">*</font></td>
+									</tr>-->
+									<tr>
+										<td align="right">ผู้กู้ร่วม:</td>
+										<td><input type="text" class="form-control col-xs-10" placeholder="ผู้กู้ร่วม"></td>
+										<td align="right">ความสัมพันธ์:</td>
+										<td><input type="text" class="form-control col-xs-10" placeholder="ความสัมพันธ์"></td>
+										<td align="right">วดป.ที่จดทะเบียนสมรส</td>
+										<td><input type="text" class="form-control col-xs-10" placeholder="วันที่" style="width:150px"><img src="images/calendar_32.png" width="24" height="24"></td>
+									</tr>
+									<tr>
+										<td align="right">จำนวนเงินกู้ตามสัญญา:</td>
+										<td><input type="text" class="form-control col-xs-10" placeholder="จำนวนเงินกู้ตามสัญญา(บาท)">&nbsp;<font color="red">*</font></td>
+										<td align="right">จำนวนเงินที่มีสิทธิเบิก:</td>
+										<td><input type="text" class="form-control col-xs-10" placeholder="จำนวนเงินที่มีสิทธิเบิก(บาท)">&nbsp;<font color="red">*</font></td>
+										<td align="right"></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td colspan="2" align="right">อัตราค่าผ่อนชำระ</td>
+										<td align="right">ตามสัญญา:</td>
+										<td><input type="text" class="form-control col-xs-10" placeholder="อัตราค่าผ่อนชำระ">&nbsp;<font color="red">*</font></td>
+										<td></td>
+										<td></td>
+										<!--<td align="right">ตามสิทธิ:</td>-->
+										<!--<td><input type="text" class="form-control col-xs-10" placeholder="ตามสิทธิ">&nbsp;<font color="red">*</font></td>-->
+									</tr>
+									<tr>
+	
+										<td align="right">สิทธิเบิกได้:</td>
+										<td><input type="text" class="form-control col-xs-10" placeholder="ตามสิทธิ">&nbsp;<font color="red">*</font></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+
+									<tr>
+										<td align="right">วดป.ที่ย้ายชื่อเข้าทะเบียนบ้าน:</td>
+										<td><input type="text" class="form-control col-xs-10" placeholder="วันที่" style="width:120px"><img src="images/calendar_32.png" width="24" height="24"></td>
+										<td align="right">วดป.ที่เข้าอยู่อาศัย:</td>
+										<td><input type="text" class="form-control col-xs-10" placeholder="วันที่" style="width:150px"><img src="images/calendar_32.png" width="24" height="24"></td>
+										<td align="right">เบิกจากสังกัดสุดท้ายถึง:</td>
+										<td><input type="text" class="form-control col-xs-10" placeholder="หน่วยงานหรือจังหวัด" style="width:150px">
+											<input type="text" class="form-control col-xs-10" placeholder="วันที่" style="width:150px"><img src="images/calendar_32.png" width="24" height="24"></td>
+									</tr>
+									<tr>
+										<td align="right">ขอเบิกตั้งแต่:</td>
+										<td><input type="text" class="form-control col-xs-10" placeholder="วันที่" style="width:120px"><img src="images/calendar_32.png" width="24" height="24"></td>
+										<td></td><td></td>
+										<!--<td align="right">หมายเหตุ:</td>-->
+										<!--<td colspan="3"><input type="text" class="form-control col-xs-10" placeholder="หมายเหตุ"></td>-->
+									</tr>
+									<tr>
+										<td align="right">ประเภทค่าผ่อนชำระ:</td>
+										<td colspan="3">
+										<label class="radio-inline">
+						  					<input type="radio" value="1" ng-model="subType" ng-change="showDetailsub()"> กรณีซื้อบ้าน/ บ้านพร้อมที่ดิน
+											</label>
+											<label class="radio-inline">
+						  					<input type="radio" value="2" ng-model="subType" ng-change="showDetailsub()"> กรณีจ้างปลูกสร้างบ้าน</label></td>
+										<td></td>
+										<td></td>
+									</tr>
+								</table>
+								<div ng-show="BA">
+								<div class="list-group-item active">กรณีซื้อบ้าน/ บ้านพร้อมที่ดิน</div>
+								<table width="100%" border="0">
+									<tr>
+										<td align="right">วดป.สัญญาซื้อขายบ้าน/ที่ดิน:</td>
+										<td><input type="text" class="form-control col-xs-10" placeholder="วันที่" style="width:150px"><img src="images/calendar_32.png" width="24" height="24">&nbsp;<font color="red">*</font></td>
+										<td align="right">ชื่อผู้ขาย:</td>
+										<td><input type="text" class="form-control col-xs-10" placeholder="ชื่อผู้ขาย">&nbsp;<font color="red">*</font></td>
+										<td align="right">เลขที่โฉนด/ที่ตั้ง:</td>
+										<td><input type="text" class="form-control col-xs-10" placeholder="เลขที่โฉนด">&nbsp;<font color="red">*</font></td>
+									</tr>
+									<tr>
+										<td align="right">ที่อยู่:</td>
+										<td><textarea class="form-control"></textarea>&nbsp;<font color="red">*</font></td>
+										<td align="right">จำนวน:</td>
+										<td><input type="text" class="form-control col-xs-10" placeholder="จำนวน(บาท)">&nbsp;<font color="red">*</font></td>
+										<td align="right"></td>
+										<td></td>
+									</tr>
+									<tr>										
+										<td align="right">หมายเหตุ:</td>
+										<td><input type="text" class="form-control col-xs-10" placeholder="หมายเหตุ"></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+								</table></div>
+
+								<div ng-show="BB">
+								<div class="list-group-item active">กรณีจ้างปลูกสร้างบ้าน</div>
+								<table width="100%" border="0">
+									<tr>
+										<td align="right">เลขที่/วดป.ใบอนุมัติก่อสร้าง:</td>
+										<td><input type="text" class="form-control col-xs-10" placeholder="">&nbsp;<font color="red">*</font></td>
+										<td align="right">เลขที่/วดป.สัญญาจ้าง:</td>
+										<td><input type="text" class="form-control col-xs-10" placeholder="">&nbsp;<font color="red">*</font></td>
+										<td align="right">ผู้รับจ้าง:</td>
+										<td><input type="text" class="form-control col-xs-10" placeholder="ผู้รับจ้าง">&nbsp;<font color="red">*</font></td>
+									</tr>
+									<tr>
+										<td align="right">ผู้ว่าจ้าง:</td>
+										<td><input type="text" class="form-control col-xs-10" placeholder="ผู้ว่าจ้าง">&nbsp;<font color="red">*</font></td>
+										<td align="right"></td>
+										<td></td>
+										<td align="right"></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td align="right">เลขที่โฉนด/ที่ตั้ง:</td>
+										<td><input type="text" class="form-control col-xs-10" placeholder="เลขที่โฉนด/ที่ตั้ง">&nbsp;<font color="red">*</font></td>
+										<td align="right">ที่อยู่บ้านที่สร้าง:</td>
+										<td><textarea class="form-control"></textarea>&nbsp;<font color="red" placeholder="ที่สร้างบ้าน">*</font></td>
+										<td align="right">ราคาจ้างก่อสร้าง:</td>
+										<td><input type="text" class="form-control col-xs-10" placeholder="ราคา(บาท)">&nbsp;<font color="red">*</font></td>
+									</tr>
+									<tr>
+										<td align="right">วันเริ่มต้น:</td>
+										<td colspan="2"><input type="text" class="form-control col-xs-10" placeholder="วันที่" style="width:170px"><img src="images/calendar_32.png" width="24" height="24">&nbsp;<font color="red">*</font></td>
+										<td align="right">วันสิ้นสุด:</td>
+										<td colspan="2"><input type="text" class="form-control col-xs-10" placeholder="วันที่" style="width:170px"><img src="images/calendar_32.png" width="24" height="24">&nbsp;<font color="red">*</font></td>
+									</tr>
+									<tr>										
+										<td align="right">หมายเหตุ:</td>
+										<td><input type="text" class="form-control col-xs-10" placeholder="หมายเหตุ"></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+									<td
+								</table>
+								</div>
+							</div>
+						</div>						
+						<!-- END เช่าชื้อ -->
+						</div>
+					</td>
+				</tr>
+
+
+
+
+
+				<tr>
+					<td colspan="6" align="center"><button type="button" class="btn btn-success">บันทึก</button> 
+						<a ui-sref="erp01.erps004"><button type="button" class="btn btn-warning">&nbsp;&nbsp;กลับ&nbsp;&nbsp;</button></a>
+						</td>
+				</tr>
+			</table>
+
+		</div>
+		</div>
+	</div>
+</form>

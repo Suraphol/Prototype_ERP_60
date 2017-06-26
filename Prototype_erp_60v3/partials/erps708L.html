@@ -1,0 +1,107 @@
+<form ng-controller="erps001FController">
+	<div class="panel panel-primary">{{fromName}}
+		<div class="panel-heading"><table width="100%">
+				<tr>
+					<td width="95%"><label>การจ่าย / คืนเครื่องราชอิสริยาภรณ์</label></td>
+					<td><label>ERPS708</label></td>
+				</tr>
+			</table></div>
+		<div class="panel-body">
+		<div class="list-group-item active">ข้อมูล</div>
+		<div class="well">
+			<table width="85%" border="0" align="center">
+				<tr>
+					<td width="25%">เลขบัตรประชาชน:&nbsp;<font color="red">*</font></td>
+					<td width="20%"><input type="text" class="form-control" placeholder="เลขบัตรประชาชน" width="15" maxlength="13"></td>
+					<td width="10%"></td>
+					<td width="25%"></td>
+					<td width="20%"></td>
+				</tr>
+				<tr>
+					<td>คำนำหน้า:&nbsp;<font color="red">*</font></td>
+					<td colspan="4">
+						<table>
+						<tr>
+							<td>
+								<select class="form-control input-sm">
+									<option value=""><-- กรุณาเลือก --></option>
+									<option value="">นาย</option>
+									<option value="">นาง</option>
+									<option value="">นางสาว</option>
+									<option value="">ว่าที่ร้อยตรี</option>
+									<option value="">ว่าที่ร้อยโท</option>
+									<option value="">ว่าที่ร้อยเอก</option>
+								</select>
+							</td>
+							<td>ชื่อ:&nbsp;<font color="red">*</font></td>
+							<td><input type="text" class="form-control" placeholder="ชื่อ"></td>
+							<td>นามสกุล:&nbsp;<font color="red">*</font></td>
+							<td><input type="text" class="form-control" placeholder="นามสกุล"></td>
+						</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td>สังกัด:&nbsp;<font color="red">*</font></td>
+					<td><label class="radio-inline">
+						<input type="radio" value="1" ng-model="subType" ng-change="showDetailsub()"> ส่วนกลาง
+						</label>
+						<label class="radio-inline">
+						<input type="radio" value="2" ng-model="subType" ng-change="showDetailsub()"> สถจ.</label></td>
+					<td></td>
+					<td><div ng-show="AA"> สำนัก/กอง:</div><div ng-show="BB">จังหวัด:</div></td>
+					<td><div ng-show="AA"> <select class="form-control input-ms">
+						<option value=""><-- กรุณาเลือก --></option>
+						<option ng-repeat="unit in units" vale="{{unit.id}}">{{unit.name}}</option>
+					</select></div>
+					<div ng-show="BB">
+						<select class="form-control input-ms">
+							<option value=""><-- กรุณาเลือก --></option>
+							<option value="1">กระบี่</option>
+							<option value="2">กาญจนบุรี</option>
+							<option value="3">กาฬสินธุ์</option>
+							<option value="4">กำแพงเพชร</option>
+							<option value="5">ขอนแก่น</option>
+							<option value="6">จันทบุรี</option>					
+						</select>
+
+					</div>
+					</td>
+				</tr>
+				<tr>
+					<td>เครื่องราชอิสริยาภรณ์ที่เสนอขอ:</td>
+					<td>
+						<select name="" class="form-control" placeholder="ประเภท">
+							<option selected>เลิอกเครื่องราชอิสริยาภรณ์</option>
+							<option>เบญจมาภรณ์มงกุฏไทย (บ.ม.)</option>
+							<option>เบญจมาภรณ์ช้างเผือก (บ.ช.)</option>
+							<option>จัตุรถาภรณ์มงกุฏไทย (จ.ม.)</option>
+							<option>จัตุรถาภรณ์ช้างเผือก (จ.ช.)</option>
+							<option>ตริตาภรณ์มงกุฏไทย (ต.ม.)</option>
+							<option>ตริตาภรณ์ช้างเผือก (ต.ช.)</option>
+							<option>ทวีติยาภรณ์มงกุฏไทย (ท.ม.)</option>
+							<option>ทวีติยาภรณ์ช้างเผือก (ท.ช.)</option>
+							<option>ประถมาภรณ์มงกุฏไทย (ป.ม.)</option>
+							<option>ประถมาภรณ์ช้างเผือก (ป.ช.)</option>
+							<option>มหาวชิรมงกุฏ (ม.ว.ม.)</option>
+							<option>มหาปรมาภรณ์ช้างเผือก (ม.ป.ช.)</option>
+						</select>
+					</td>
+					<td></td>
+					<td>ปีที่เสนอขอ:</td>
+					<td>
+						<input type="text" class="form-control" placeholder="ปีที่ขอพระราชทาน" width="15" maxlength="13">
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td colspan="5" align="center">
+						<a ui-sref="erp07.erps708.add"><button type="button" class="btn btn-success">ค้นหา</button></a> 
+					</td>
+				</tr>
+			</table>
+			</div>
+		</div>
+		</div>
+	</div>
+</form>

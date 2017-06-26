@@ -1,0 +1,132 @@
+<form ng-controller="erps006FController">
+	<div class="panel panel-primary">{{fromName}}
+		<div class="panel-heading"><table width="100%">
+				<tr>
+					<td width="95%"><label>บันทึกรายการยืมเงิน</label></td>
+					<td><label>ERPS006</label></td>
+				</tr>
+			</table></div>
+		<div class="panel-body">
+		<div class="list-group-item active">ข้อมูล</div>
+		<div class="well">
+			<table width="85%" border="0" align="center">
+				<tr>
+					<td align="right" width="20%">ประเภทเงินยืม:</td>
+					<td width="20%"> <select class="form-control" style="width:200px" ng-model="borrowTypeId"  ng-change="showNumberDetail()">
+						<option ng-repeat="list in borrowType" value="{{list.id}}">{{list.name}} </option>
+						</select>&nbsp;<font color="red">*</font>
+					</td>
+					<td align="right" width="20%"><div ng-show="gfDoc">เลขที่ GFMIS:</div><div ng-show="courseDoc">รหัสหลักสูตร:</div></td>
+					<td width="20%"><div ng-show="gfDoc"><input type="text" class="form-control" placeholder="เลขที่ GF" style="width:200px">&nbsp;<font color="red">*</font></div>
+					 <div ng-show="courseDoc"><input type="text" class="form-control" placeholder="รหัสหลักสูตร" style="width:200px">&nbsp;<font color="red">*</font></div></td>
+					
+				</tr>
+				<tr>
+					<td align="right">เลขที่ผู้ยืม:</td>
+					<td><input type="text" class="form-control" placeholder="เลขที่ผู้ยืม" style="width:200px">&nbsp;<font color="red">*</font></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td align="right">วันที่ยืม:</td>
+					<td><input type="text" class="form-control col-xs-10" placeholder="วันที่" style="width:150px">
+					<img src="images/calendar_32.png" width="24" height="24">&nbsp;<font color="red">*</font></td>
+					<td align="right"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td align="right">ผู้ยืม:</td>
+					<td><select class="form-control selectpicker" data-live-search="true" name="person" style="width:200px" >
+							<option value=""></option>
+							<option ng-repeat="list in personList" value="{{list.id}}">{{list.idCard+' # '+list.FName+' '+list.LName}} </option>
+						</select> </td>
+					<td align="right"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td align="right">วัตถุประสงค์:</td>
+					<td><select class="form-control" ng-change="showDetail()" ng-model="typeLend" style="width:200px">
+							<option value=""></option>
+							<option ng-repeat="list in typeLendList" value="{{list.id}}">{{list.name}}</option>							
+						</select> &nbsp;<font color="red">*</font></td>
+					<td align="right"><div ng-show="other">อื่นๆ ระบุ:</div></td>
+					<td><div ng-show="other"><input type="text" class="form-control" placeholder="อื่นๆ ระบุ" style="width:200px"></div></td>
+				</tr>
+				<tr>
+					<td align="right"><div ng-show="between">ตั้งแต่วันที่:</div>
+						<div ng-show="pay">วันที่รับเงิน:</div>
+					</td>
+					<td><input type="text" class="form-control col-xs-10" placeholder="วันที่" style="width:150px">
+					<img src="images/calendar_32.png" width="24" height="24">&nbsp;<font color="red">*</font></td>
+					<td align="right"><div ng-show="between">ถึง</div></td>
+					<td><div ng-show="between"><input type="text" class="form-control col-xs-10" placeholder="วันที่" style="width:150px">
+					<img src="images/calendar_32.png" width="24" height="24">&nbsp;<font color="red">*</font></div></td>
+				</tr>		
+				<tr>
+					<td align="right">วันครบกำหนด:</td>
+					<td><input type="text" class="form-control col-xs-10" placeholder="วันที่" style="width:150px" readonly>
+					<br/>&nbsp;<font color="red"><div ng-show="pay">30 วันหลังจากวันรับเงิน</div> <div ng-show="between">15 วันหลังจากเดิ่นทางกลับ</div> </font></td>
+					<td align="right"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td align="right">ยืมเพื่อใช้ราชการ:</td>
+					<td><textarea class="form-control"></textarea> </td>
+					<td align="right"></td>
+					<td></td>
+				</tr>
+				<tr>
+					
+					<td align="right">จำนวนเงิน:</td>
+					<td><input type="text" class="form-control col-xs-10" placeholder="จำนวนเงิน(บาท)" style="width:150px">
+					&nbsp;<font color="red">*</font></td>
+					<td align="right"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td align="right">ประเภทการจ่าย:</td>
+					<td><label class="radio-inline">
+						<input type="radio" value="1" ng-model="payViaType" ng-change="payViaDetail()"> เงินสด</label>
+						<label class="radio-inline">
+						<input type="radio" value="2" ng-model="payViaType" ng-change="payViaDetail()"> เช็ค</label>
+						<label class="radio-inline">
+						<input type="radio" value="3" ng-model="payViaType" ng-change="payViaDetail()"> โอน</label>
+					</td>
+					<td align="right"></td>
+					<td>
+					</td>
+				
+				</tr>
+				
+				<tr>
+
+					
+					<td align="right"><div ng-show="viaCheque">เลขที่เช็ค:</div>
+						<div ng-show="viaBank">ธนาคาร:</div>
+					</td>
+					<td><div ng-show="viaCheque"><input type="text" class="form-control col-xs-10" placeholder="เลขที่เช็ค" style="width:150px"></div>
+					<div ng-show="viaBank"><select class="form-control">
+							<option value=""><-- กรุณาเลือก --></option>
+							<option value="1">ธนาคารกรุงไทย</option>
+							<option value="2">ธนาคารทหารไทย</option>
+						</select></div>
+					</td>
+					<td align="right"><div ng-show="viaCheque">วันที่เช็ค:</div>
+						<div ng-show="viaBank">เลขที่บัญชีธนาคาร:</div> </td>
+					<td><div ng-show="viaCheque"><input type="text" class="form-control col-xs-10" placeholder="วันที่" style="width:150px">
+						<img src="images/calendar_32.png" width="24" height="24"></div>
+						<div ng-show="viaBank"><input type="text" class="form-control col-xs-10" placeholder="เลขที่บัญชีธนาคาร" style="width:150px"></div>
+					</td>					
+				</tr>
+		
+			<tr>
+				<td colspan="6" align="center"><button type="button" class="btn btn-success">บันทึก</button> 
+					<a ui-sref="erp02.erps006"><button type="button" class="btn btn-warning">&nbsp;&nbsp;กลับ&nbsp;&nbsp;</button></a>
+				</td>
+			</tr>
+			</table>
+			</div>
+		</div>
+		</div>
+	</div>
+</form>

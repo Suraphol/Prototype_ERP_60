@@ -1,0 +1,134 @@
+<form ng-controller="erps001FController">
+	<div class="panel panel-primary">{{fromName}}
+		<div class="panel-heading"><table width="100%">
+				<tr>
+					<td width="95%"><label>เสนอขอเครื่องราชอิสริยาภรณ์</label></td>
+					<td><label>ERPS706</label></td>
+				</tr>
+			</table></div>
+		<div class="panel-body">
+		<div class="list-group-item active">ข้อมูล</div>
+		<div class="well">
+			<table width="85%" border="0" align="center">
+				<tr>
+					<td width="25%">เลขบัตรประชาชน:&nbsp;<font color="red">*</font></td>
+					<td width="20%"><input type="text" class="form-control" placeholder="เลขบัตรประชาชน" width="15" maxlength="13"></td>
+					<td width="10%"></td>
+					<td width="25%"></td>
+					<td width="20%"></td>
+				</tr>
+				<tr>
+					<td>คำนำหน้า:&nbsp;<font color="red">*</font></td>
+					<td colspan="4">
+						<table>
+						<tr>
+							<td><input type="text" class="form-control" placeholder="คำนำหน้า"></td>
+							<td>ชื่อ:&nbsp;<font color="red">*</font></td>
+							<td><input type="text" class="form-control" placeholder="ชื่อ"></td>
+							<td>นามสกุล:&nbsp;<font color="red">*</font></td>
+							<td><input type="text" class="form-control" placeholder="นามสกุล"></td>
+						</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td>สังกัด:&nbsp;<font color="red">*</font></td>
+					<td><label class="radio-inline">
+						<input type="radio" value="1" ng-model="subType" ng-change="showDetailsub()"> ส่วนกลาง
+						</label>
+						<label class="radio-inline">
+						<input type="radio" value="2" ng-model="subType" ng-change="showDetailsub()"> สถจ.</label></td>
+					<td></td>
+					<td><div ng-show="AA"> สำนัก/กอง:</div><div ng-show="BB">จังหวัด:</div></td>
+					<td><div ng-show="AA"> <select class="form-control input-ms">
+						<option value=""><-- กรุณาเลือก --></option>
+						<option ng-repeat="unit in units" vale="{{unit.id}}">{{unit.name}}</option>
+					</select></div>
+					<div ng-show="BB">
+						<select class="form-control input-ms">
+							<option value=""><-- กรุณาเลือก --></option>
+							<option value="1">กระบี่</option>
+							<option value="2">กาญจนบุรี</option>
+							<option value="3">กาฬสินธุ์</option>
+							<option value="4">กำแพงเพชร</option>
+							<option value="5">ขอนแก่น</option>
+							<option value="6">จันทบุรี</option>					
+						</select>
+
+					</div>
+					</td>
+				</tr>
+				<tr>
+					<td>ประเภทตำแหน่งปัจจุบัน:</td>
+					<td><input type="text" class="form-control col-xs-10" placeholder="ประเภทตำแหน่งปัจจุบัน" size="5"></td>
+					<td></td>
+					<td>ระดับตำแหน่งปัจจุบัน:</td>
+					<td><input type="text" class="form-control col-xs-10" placeholder="ระดับตำแหน่งปัจจุบัน" size="5"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>ตำแหน่งปัจจุบัน:</td>
+					<td><input type="text" class="form-control col-xs-10" placeholder="ตำแหน่งปัจจุบัน" size="5"></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>เครื่องราชอิสริยาภรณ์ที่มีสิทธิขอ:</td>
+					<td>
+						<input type="text" class="form-control" placeholder="เครื่องราชอิสริยาภรณ์ชั้นที่มีสิทธิขอ" width="15" maxlength="13">
+					</td>
+					<td></td>
+					<td>ปีที่มีสิทธิเสนอขอ:</td>
+					<td>
+						<input type="text" class="form-control" placeholder="ปีที่มีสิทธิเสนอขอ" width="15" maxlength="13">
+					</td>
+					<td></td>
+				</tr>
+			</table>
+			</div>
+			<!-- tabs -->
+			<ul class="nav nav-tabs" width="85%">
+				<li class="active"><a href="#" data-toggle="tab" data-target="#menu1">ประวัติได้รับพระราชทานเครื่องราชอิสริยาภรณ์</a></li>
+			</ul>
+			<div class="well">
+			<div class="tab-content">
+				<div id="menu1" class="tab-pane fade in active">
+					<h3>ประวัติได้รับพระราชทานเครื่องราชอิสริยาภรณ์</h3>
+					<table  width="100%" border="0" align="center" class="table table-bordered table-striped table-list">
+						<tr>
+							<th width="20%">วันที่ได้รับพระราชทาน</th>
+							<th width="25%">ชั้นเครื่องราชอิสริยาภรณ์</th>
+							<th width="25%">ราชกิจจานุเบกษา</th>
+							<th width="30%">สถานะ</th>
+						</tr>
+						<tr>
+							<td align="center">5 ธันวาคม พ.ศ.2555</td>
+							<td align="center">เบญจมาภรณ์มงกุฏไทย (บ.ม.)</td>
+							<td align="center">วันที่ประกาศ เล่มที่ ตอนที่ หน้าที่  ลำดับที่</td>
+							<td align="center">รับแล้ว (รับเอง)</td>
+						</tr>
+						<tr>
+							<td align="center">5 ธันวาคม พ.ศ.2560</td>
+							<td align="center">เบญจมาภรณ์มงกุฏไทย (บ.ช.)</td>
+							<td align="center">&nbsp;</td>
+							<td align="center">อยู่ระหว่างเสนอขอ</td>
+						</tr>
+					</table>
+				</div>
+
+			</div>
+			
+			<div class="well">
+			<div class="tab-content">
+				<div id="menu1" class="tab-pane fade in active">
+					<h4><a href="partials/Report/insignia120660.pdf">* วิธีประดับเครื่องราชอิสริยาภรณ์</a></h4>
+				</div>
+
+			</div>
+			<!-- end tabs -->
+		</div>
+		</div>
+	</div>
+</form>

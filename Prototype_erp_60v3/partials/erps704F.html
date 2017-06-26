@@ -1,0 +1,394 @@
+<form>
+	<div class="panel panel-primary">{{fromName}}
+		<div class="panel-heading"><table width="100%">
+				<tr>
+					<td width="95%"><label>หลักเกณฑ์การเสนอขอของลูกจ้างประจำ</label></td>
+					<td><label>ERPS704</label></td>
+				</tr>
+			</table></div>
+		<div class="panel-body">
+		<div class="list-group-item active">ข้อมูล</div>
+		<div class="well">
+
+<!-- Begin -->
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+ <tr>
+    <td width="30%" align="right">กลุ่ม</td>
+    <td width="30%">
+		<select class="form-control" placeholder="กลุ่ม">
+			<option selected>ทั้งหมด</option>
+			<option>กลุ่มงานบริการพื้นฐาน</option>
+			<option>กลุ่มงานสนับสนุน</option>
+			<option>กลุ่มงานช่าง</option>
+			<option>กลุ่มงานเทคนิคพิเศษ</option>
+		</select>
+   </td>
+    <td width="40%"></td>
+  </tr>
+  <tr class="trform">
+    <td align="right">เครื่องราชอิสริยาภรณ์ที่ขอพระราชทาน</td>
+    <td>
+	  <select name="" class="form-control" placeholder="ประเภท">
+	    <option selected>เลือกเครื่องราชอิสริยาภรณ์</option>
+		<option>เบญจมาภรณ์มงกุฏไทย (บ.ม.)</option>
+		<option>เบญจมาภรณ์ช้างเผือก (บ.ช.)</option>
+		<option>จัตุรถาภรณ์มงกุฏไทย (จ.ม.)</option>
+		<option>จัตุรถาภรณ์ช้างเผือก (จ.ช.)</option>
+		<option>ตริตาภรณ์มงกุฏไทย (ต.ม.)</option>
+		<option>ตริตาภรณ์ช้างเผือก (ต.ช.)</option>
+		<option>ทวีติยาภรณ์มงกุฏไทย (ท.ม.)</option>
+		<option>ทวีติยาภรณ์ช้างเผือก (ท.ช.)</option>
+		<option>ประถมาภรณ์มงกุฏไทย (ป.ม.)</option>
+		<option>ประถมาภรณ์ช้างเผือก (ป.ช.)</option>
+		<option>มหาวชิรมงกุฏ (ม.ว.ม.)</option>
+		<option>มหาปรมาภรณ์ช้างเผือก (ม.ป.ช.)</option>
+	  </select>
+	</td>
+    <td></td>
+  </tr>
+</table>
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr class="trform">
+    <td align="right">
+		<a ui-sref=".add"><button type="button" class="btn btn-primary" ng-click="add()">เพิ่มข้อมูล</button></a>
+	</td>
+  </tr>
+</table>
+
+<table width="100%" border="0" align="center" class="table table-bordered table-striped table-list">
+  <tr align="center">
+	<th width="5%">ลำดับ</th>
+    <th width="50%">เงื่อนไข</th>
+    <th width="40%">ตั้งค่า</th>
+    <th width="5%"></th>
+  </tr>
+
+  <tr align="center">
+    <td>1</td>
+    <td align="left">
+	  <select name="" class="form-control" placeholder="เงื่อนไข">
+		<option>เลือกเงื่อนไข</option>
+		<option selected>ต้องได้รับพระราชทานเครื่องราชอิสริยาภรณ์</option>
+		<option>ต้องมีอายุราชการ</option>
+		<!-- <option>ได้รับพระราชทานเครื่องราชอิสริยาภรณ์มาแล้ว</option> -->
+		<option>ระยะเวลาดำรงตำแหน่ง</option>
+		<option>ได้รับอัตราเงินเดือน</option>
+		<!-- <option>ระยะเวลาที่ได้รับอัตราเงินเดือนมาแล้ว</option> -->
+		<option>ได้รับเงินประจำตำแหน่ง</option>
+	  </select>
+	</td>
+    <td align="left">
+	  <table>
+	    <tr>
+          <td colspan="3" align="left">
+			<select name="" class="form-control" placeholder="เครื่องราชอิสริยาภรณ์">
+			  <option selected>ไม่มี</option>
+			  <option>เบญจมาภรณ์มงกุฏไทย (บ.ม.)</option>
+			  <option>เบญจมาภรณ์ช้างเผือก (บ.ช.)</option>
+			  <option>จัตุรถาภรณ์มงกุฏไทย (จ.ม.)</option>
+			  <option>จัตุรถาภรณ์ช้างเผือก (จ.ช.)</option>
+			  <option>ตริตาภรณ์มงกุฏไทย (ต.ม.)</option>
+			  <option>ตริตาภรณ์ช้างเผือก (ต.ช.)</option>
+			  <option>ทวีติยาภรณ์มงกุฏไทย (ท.ม.)</option>
+			  <option>ทวีติยาภรณ์ช้างเผือก (ท.ช.)</option>
+			  <option>ประถมาภรณ์มงกุฏไทย (ป.ม.)</option>
+			  <option>ประถมาภรณ์ช้างเผือก (ป.ช.)</option>
+			  <option>มหาวชิรมงกุฏ (ม.ว.ม.)</option>
+			  <option>มหาปรมาภรณ์ช้างเผือก (ม.ป.ช.)</option>
+			</select>
+          </td>
+	    </tr>
+		<tr>
+			<td width="55%">มาแล้วไม่ต่ำกว่า (ระยะเวลา) </td>
+			<td>
+				<input type="text" class="form-control" name="" value="5">
+			</td>
+			<td width="15%"> ปี</td>
+		</tr>
+	  </table>
+	</td>
+	<td align="center">
+		<img src="images/ic_delet.png" width="24" height="24"></img>
+	</td>
+  </tr>
+  <tr class="tr0" align="center">
+    <td>2</td>
+    <td align="left">
+	  <select name="" class="form-control" placeholder="เงื่อนไข">
+		<option>เลือกเงื่อนไข</option>
+		<option>ต้องได้รับพระราชทานเครื่องราชอิสริยาภรณ์</option>
+		<option selected>ต้องมีอายุราชการ</option>
+		<!-- <option>ได้รับพระราชทานเครื่องราชอิสริยาภรณ์มาแล้ว</option> -->
+		<option>ระยะเวลาดำรงตำแหน่ง</option>
+		<option>ได้รับอัตราเงินเดือน</option>
+		<!-- <option>ระยะเวลาที่ได้รับอัตราเงินเดือนมาแล้ว</option> -->
+		<option>ได้รับเงินประจำตำแหน่ง</option>
+	  </select>
+	</td>
+    <td align="left">
+		<table>
+		<tr>
+			<td>
+				<input type="text" class="form-control" name="" value="5">
+			</td>
+			<td width="5%"> ปี</td>
+		</tr>
+		</table>
+	</td>
+	<td align="center">
+		<img src="images/ic_delet.png" width="24" height="24"></img>
+	</td>
+  </tr>
+<!--   
+  <tr align="center">
+    <td>3</td>
+    <td align="left">
+	  <select name="" class="form-control" placeholder="เงื่อนไข">
+		<option>เลือกเงื่อนไข</option>
+		<option>ต้องได้รับพระราชทานเครื่องราชอิสริยาภรณ์</option>
+		<option>ต้องมีอายุราชการ</option>
+		<option selected>ได้รับพระราชทานเครื่องราชอิสริยาภรณ์มาแล้ว</option>
+		<option>ระยะเวลาดำรงตำแหน่ง</option>
+		<option>ได้รับอัตราเงินเดือน</option>
+		<option>ระยะเวลาที่ได้รับอัตราเงินเดือนมาแล้ว</option>
+		<option>ได้รับเงินประจำตำแหน่ง</option>
+	  </select>
+	</td>
+    <td align="left">
+		<table>
+		<tr>
+			<td>
+				<input type="text" class="form-control" name="" value="5">
+			</td>
+			<td width="5%"> ปี</td>
+		</tr>
+		</table>
+	</td>
+	<td align="center">
+		<img src="images/ic_delet.png" width="24" height="24"></img>
+	</td>
+  </tr>
+ -->
+  <tr align="center">
+    <td>3</td>
+    <td align="left">
+	  <select name="" class="form-control" placeholder="เงื่อนไข">
+		<option>เลือกเงื่อนไข</option>
+		<option>ต้องได้รับพระราชทานเครื่องราชอิสริยาภรณ์</option>
+		<option>ต้องมีอายุราชการ</option>
+		<!-- <option>ได้รับพระราชทานเครื่องราชอิสริยาภรณ์มาแล้ว</option> -->
+		<option selected>ระยะเวลาดำรงตำแหน่ง</option>
+		<option>ได้รับอัตราเงินเดือน</option>
+		<!-- <option>ระยะเวลาที่ได้รับอัตราเงินเดือนมาแล้ว</option> -->
+		<option>ได้รับเงินประจำตำแหน่ง</option>
+	  </select>
+	</td>
+    <td align="left">
+	  <table>
+	    <tr>
+          <td colspan="3" align="left">
+			<select class="form-control" placeholder="กลุ่ม">
+			  <option selected>ไม่มี</option>
+			  <option>กลุ่มงานบริการพื้นฐาน</option>
+			  <option>กลุ่มงานสนับสนุน</option>
+			  <option>กลุ่มงานช่าง</option>
+			  <option>กลุ่มงานเทคนิคพิเศษ</option>
+			</select>
+          </td>
+	    </tr>
+		<tr>
+			<td width="55%">มาแล้วไม่ต่ำกว่า (ระยะเวลา) </td>
+			<td>
+				<input type="text" class="form-control" name="" value="5">
+			</td>
+			<td width="15%"> ปี</td>
+		</tr>
+	  </table>
+	</td>
+	<td align="center">
+		<img src="images/ic_delet.png" width="24" height="24"></img>
+	</td>
+  </tr>
+  <tr align="center">
+    <td>4</td>
+    <td align="left">
+	  <select name="" class="form-control" placeholder="เงื่อนไข">
+		<option>เลือกเงื่อนไข</option>
+		<option>ต้องได้รับพระราชทานเครื่องราชอิสริยาภรณ์</option>
+		<option>ต้องมีอายุราชการ</option>
+		<!-- <option>ได้รับพระราชทานเครื่องราชอิสริยาภรณ์มาแล้ว</option> -->
+		<option>ระยะเวลาดำรงตำแหน่ง</option>
+		<option selected>ได้รับอัตราเงินเดือน</option>
+		<!-- <option>ระยะเวลาที่ได้รับอัตราเงินเดือนมาแล้ว</option> -->
+		<option>ได้รับเงินประจำตำแหน่ง</option>
+	  </select>
+	</td>
+    <td align="left">
+		<table>
+		<tr>
+			<td colspan="3">
+				<table>
+				<tr>
+					<td width="5%">
+						<input type="radio" class="form-control" checked> 
+					</td>
+					<td width="50%">
+						<select name="" class="form-control" placeholder="เงื่อนไข">
+							<option selected>มากกว่า</option>
+							<option>น้อยกว่า</option>
+							<option>เท่ากับ</option>
+							<option>มากกว่าหรือเท่ากับ</option>
+							<option>น้อยกว่าหรือเท่ากับ</option>
+						</select>
+					</td>
+					<td colspan=3>
+						<input type="text" class="form-control" name="">
+					</td>
+					<td width="5%"> บาท</td>
+				</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="3">
+				<table>
+				<tr>
+					<td width="5%">
+						<input type="radio" class="form-control">
+					</td>
+					<td width="15%">ตั้งแต่ </td>
+					<td width="30%">
+						<input type="text" class="form-control" name="">
+					</td>
+					<td width="15%">ถึง </td>
+					<td width="30%">
+						<input type="text" class="form-control" name="">
+					</td>
+					<td> บาท</td>
+				</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td width="55%">มาแล้วไม่ต่ำกว่า (ระยะเวลา) </td>
+			<td>
+				<input type="text" class="form-control" name="" value="5">
+			</td>
+			<td width="15%"> ปี</td>
+		</tr>
+		</table>
+	</td>
+	<td align="center">
+		<img src="images/ic_delet.png" width="24" height="24"></img>
+	</td>
+  </tr>
+<!--   
+  <tr align="center">
+    <td>6</td>
+    <td align="left">
+	  <select name="" class="form-control" placeholder="เงื่อนไข">
+		<option>เลือกเงื่อนไข</option>
+		<option>ต้องได้รับพระราชทานเครื่องราชอิสริยาภรณ์</option>
+		<option>ต้องมีอายุราชการ</option>
+		<option>ได้รับพระราชทานเครื่องราชอิสริยาภรณ์มาแล้ว</option>
+		<option>ระยะเวลาดำรงตำแหน่ง</option>
+		<option>ได้รับอัตราเงินเดือน</option>
+		<option selected>ระยะเวลาที่ได้รับอัตราเงินเดือนมาแล้ว</option>
+		<option>ได้รับเงินประจำตำแหน่ง</option>
+	  </select>
+	</td>
+    <td align="left">
+		<table>
+		<tr>
+			<td>
+				<input type="text" class="form-control" name="" value="5">
+			</td>
+			<td width="5%"> ปี</td>
+		</tr>
+		</table>
+	</td>
+	<td align="center">
+		<img src="images/ic_delet.png" width="24" height="24"></img>
+	</td>
+  </tr>
+ -->
+  <tr class="tr0" align="center">
+    <td>5</td>
+    <td align="left">
+	  <select name="" class="form-control" placeholder="เงื่อนไข">
+		<option>เลือกเงื่อนไข</option>
+		<option>ต้องได้รับพระราชทานเครื่องราชอิสริยาภรณ์</option>
+		<option>ต้องมีอายุราชการ</option>
+		<!-- <option>ได้รับพระราชทานเครื่องราชอิสริยาภรณ์มาแล้ว</option> -->
+		<option>ระยะเวลาดำรงตำแหน่ง</option>
+		<option>ได้รับอัตราเงินเดือน</option>
+		<!-- <option>ระยะเวลาที่ได้รับอัตราเงินเดือนมาแล้ว</option> -->
+		<option selected>ได้รับเงินประจำตำแหน่ง</option>
+	  </select>
+	</td>
+    <td align="left">
+		<table>
+		<tr>
+			<td>
+				<table>
+				<tr>
+					<td width="5%">
+						<input type="radio" class="form-control" checked> 
+					</td>
+					<td width="50%">
+						<select name="" class="form-control" placeholder="เงื่อนไข">
+							<option selected>มากกว่า</option>
+							<option>น้อยกว่า</option>
+							<option>เท่ากับ</option>
+							<option>มากกว่าหรือเท่ากับ</option>
+							<option>น้อยกว่าหรือเท่ากับ</option>
+						</select>
+					</td>
+					<td colspan=3>
+						<input type="text" class="form-control" name="">
+					</td>
+					<td width="5%"> บาท</td>
+				</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table>
+				<tr>
+					<td width="5%">
+						<input type="radio" class="form-control">
+					</td>
+					<td width="15%">ตั้งแต่ </td>
+					<td width="30%">
+						<input type="text" class="form-control" name="">
+					</td>
+					<td width="15%">ถึง </td>
+					<td width="30%">
+						<input type="text" class="form-control" name="">
+					</td>
+					<td> บาท</td>
+				</tr>
+				</table>
+			</td>
+		</tr>
+		</table>
+	</td>
+	<td align="center">
+		<img src="images/ic_delet.png" width="24" height="24"></img>
+	</td>
+  </tr>
+<!-- End -->
+		
+				<tr>
+					<td colspan="4" align="center">
+						<a ui-sref="erp07.erps703"><button type="button" class="btn btn-success">บันทึก</button></a>
+						<a ui-sref="erp07.erps703"><button type="button" class="btn btn-warning">&nbsp;&nbsp;กลับ&nbsp;&nbsp;</button></a>
+						</td>
+				</tr>
+			</table>
+		</div>
+		</div>
+	</div>
+</form>

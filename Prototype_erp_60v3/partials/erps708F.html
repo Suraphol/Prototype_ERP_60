@@ -1,0 +1,391 @@
+<form ng-controller="erps001FController">
+	<div class="panel panel-primary">{{fromName}}
+		<div class="panel-heading"><table width="100%">
+				<tr>
+					<td width="95%"><label>การจ่าย / คืนเครื่องราชอิสริยาภรณ์</label></td>
+					<td><label>ERPS708</label></td>
+				</tr>
+			</table></div>
+		<div class="panel-body">
+		<div class="list-group-item active">ข้อมูล</div>
+		<div class="well">
+			<table width="85%" border="0" align="center">
+				<tr>
+					<td width="25%">เลขบัตรประชาชน:&nbsp;<font color="red">*</font></td>
+					<td width="20%"><input type="text" class="form-control" placeholder="เลขบัตรประชาชน" width="15" maxlength="13"></td>
+					<td width="10%"></td>
+					<td width="25%"></td>
+					<td width="20%"></td>
+				</tr>
+				<tr>
+					<td>คำนำหน้า:&nbsp;<font color="red">*</font></td>
+					<td colspan="4">
+						<table>
+						<tr>
+							<td>
+								<select class="form-control input-sm">
+									<option value=""><-- กรุณาเลือก --></option>
+									<option value="">นาย</option>
+									<option value="">นาง</option>
+									<option value="">นางสาว</option>
+									<option value="">ว่าที่ร้อยตรี</option>
+									<option value="">ว่าที่ร้อยโท</option>
+									<option value="">ว่าที่ร้อยเอก</option>
+								</select>
+							</td>
+							<td>ชื่อ:&nbsp;<font color="red">*</font></td>
+							<td><input type="text" class="form-control" placeholder="ชื่อ"></td>
+							<td>นามสกุล:&nbsp;<font color="red">*</font></td>
+							<td><input type="text" class="form-control" placeholder="นามสกุล"></td>
+						</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td>เพศ:&nbsp;<font color="red">*</font></td>
+					<td><label class="radio-inline">
+						  <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" checked=""> ชาย
+						</label>
+						<label class="radio-inline">
+						  <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> หญิง
+						</label></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>วันเกิด:</td>
+					<td><div class="col-xs-10"> <input type="text" class="form-control col-xs-10" placeholder="วันเกิด" size="5"></div>
+					<img src="images/calendar_32.png" width="24" height="24"> <!--&nbsp;<font color="red">*</font>--> </td>
+					<td></td>
+					<td>ปีที่เกษียณ:</td>
+					<td><input type="text" class="form-control col-xs-10" placeholder="ปีที่เกษียณ" size="5"></td>
+				</tr>
+				<tr>
+					<td>อายุ:</td>
+					<td>
+						<table>
+							<tr>
+								<td><input type="text" class="form-control" name="Y" style="width: 10px"></td>
+								<td>ปี</td>
+								<td><input type="text" class="form-control" name="Y" style="width: 10px"></td>
+								<td>เดือน</td>
+								<td><input type="text" class="form-control" name="Y" style="width: 10px"></td>
+								<td>วัน</td>
+							</tr>
+						</table>
+					</td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>วันที่เข้ารับราชการ:&nbsp;<font color="red">*</font></td>
+					<td>
+						<div class="col-xs-10">
+							<input type="text" class="form-control col-xs-10" placeholder="วันที่เข้ารับราชการ" size="5">
+						</div>
+						<img src="images/calendar_32.png" width="24" height="24">
+					</td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>สังกัด:&nbsp;<font color="red">*</font></td>
+					<td><label class="radio-inline">
+						<input type="radio" value="1" ng-model="subType" ng-change="showDetailsub()"> ส่วนกลาง
+						</label>
+						<label class="radio-inline">
+						<input type="radio" value="2" ng-model="subType" ng-change="showDetailsub()"> สถจ.</label></td>
+					<td></td>
+					<td><div ng-show="AA"> สำนัก/กอง:</div><div ng-show="BB">จังหวัด:</div></td>
+					<td><div ng-show="AA"> <select class="form-control input-ms">
+						<option value=""><-- กรุณาเลือก --></option>
+						<option ng-repeat="unit in units" vale="{{unit.id}}">{{unit.name}}</option>
+					</select></div>
+					<div ng-show="BB">
+						<select class="form-control input-ms">
+							<option value=""><-- กรุณาเลือก --></option>
+							<option value="1">กระบี่</option>
+							<option value="2">กาญจนบุรี</option>
+							<option value="3">กาฬสินธุ์</option>
+							<option value="4">กำแพงเพชร</option>
+							<option value="5">ขอนแก่น</option>
+							<option value="6">จันทบุรี</option>					
+						</select>
+
+					</div>
+					</td>
+				</tr>
+				<tr>
+					<td>ประเภทตำแหน่งปัจจุบัน:</td>
+					<td>
+						<select name="" class="form-control" placeholder="ประเภท">
+							<option selected>เลือกประเภทตำแหน่ง</option>
+							<option>ทั่วไป</option>
+							<option>วิชาการ</option>
+							<option>อำนวยการ</option>
+							<option>บริหาร</option>
+						</select>
+					</td>
+					<td></td>
+					<td>ระดับตำแหน่งปัจจุบัน:</td>
+					<td>
+						<select name="" class="form-control" placeholder="ประเภท">
+							<option selected>เลือกระดับตำแหน่ง</option>
+							<option>ปฏิบัติงาน</option>
+							<option>ชำนาญงาน</option>
+							<option>อาวุโส</option>
+							<option>ทักษะพิเศษ</option>
+							<option>ปฏิบัติการ</option>
+							<option>ชำนาญการ</option>
+							<option>ชำนาญการพิเศษ</option>
+							<option>เชี่ยวชาญ</option>
+							<option>ทรงคุณวุฒิ</option>
+							<option>อำนวยการต้น</option>
+							<option>อำนวยการต้น</option>
+							<option>บริหารต้น</option>
+							<option>บริหารสูง</option>
+						</select>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>วันที่เข้าสู่ระดับปัจจุบัน:</td>
+					<td>
+						<div class="col-xs-10">
+							<input type="text" class="form-control col-xs-10" placeholder="วันที่เข้าสู่ระดับปัจจุบัน" size="5">
+						</div>
+						<img src="images/calendar_32.png" width="24" height="24">
+					</td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>ตำแหน่งปัจจุบัน:</td>
+					<td>
+						<select name="" class="form-control" placeholder="ตำแหน่ง">
+							<option selected>เลือกประเภทตำแหน่ง</option>
+							<option>ทั่วไป</option>
+							<option>วิชาการ</option>
+							<option>อำนวยการ</option>
+							<option>บริหาร</option>
+						</select>
+					</td>
+					<td></td>
+					<td>วันที่ดำรงตำแหน่งปัจจุบัน:</td>
+					<td>
+						<div class="col-xs-10">
+							<input type="text" class="form-control col-xs-10" placeholder="วันที่ดำรงตำแหน่งปัจจุบัน" size="5">
+						</div>
+						<img src="images/calendar_32.png" width="24" height="24">
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>เงินเดือนปัจจุบัน:</td>
+					<td><input type="text" class="form-control" placeholder="เงินเดือนปัจจุบัน" width="15" maxlength="13"></td>
+					<td></td>
+					<td>เงินเดือนย้อนหลัง 5 ปี:</td>
+					<td><input type="text" class="form-control" placeholder="เงินเดือนย้อนหลัง 5 ปี" width="15" maxlength="13"></td>
+				</tr>
+				<tr>
+					<td>เงินประจำตำแหน่ง:</td>
+					<td><input type="text" class="form-control" placeholder="เงินประจำตำแหน่ง" width="15" maxlength="13"></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>เครื่องราชอิสริยาภรณ์ที่มีสิทธิขอ:</td>
+					<td><input type="text" class="form-control" placeholder="เครื่องราชอิสริยาภรณ์ที่มีสิทธิขอ" width="15" maxlength="13"></td>
+					<td></td>
+					<td>ปีที่มีสิทธิเสนอขอ:</td>
+					<td>
+						<input type="text" class="form-control" placeholder="ปีที่มีสิทธิเสนอขอ" width="15" maxlength="13">
+					</td>
+					<td></td>
+				</tr>
+			</table>
+			</div>
+			<!-- tabs -->
+			
+			<ul class="nav nav-tabs" width="85%">
+				<li class="active"><a href="#" data-toggle="tab" data-target="#menu1">ประวัติได้รับพระราชทานเครื่องราชอิสริยาภรณ์</a></li>
+			</ul>
+			<div class="well">
+			
+			<fieldset>
+				<legend>จ่ายเครื่องราชอิสริยาภรณ์</legend>
+				<table width="85%" border="0" align="center">
+				<tr>
+					<td>ชั้นเครื่องราชอิสริยาภรณ์ที่ได้รับ</td>
+					<td>
+						<select name="" class="form-control" placeholder="ประเภท">
+							<option selected>เลือกเครื่องราชอิสริยาภรณ์</option>
+							<option>เบญจมาภรณ์มงกุฏไทย (บ.ม.)</option>
+							<option>เบญจมาภรณ์ช้างเผือก (บ.ช.)</option>
+							<option>จัตุรถาภรณ์มงกุฏไทย (จ.ม.)</option>
+							<option>จัตุรถาภรณ์ช้างเผือก (จ.ช.)</option>
+							<option>ตริตาภรณ์มงกุฏไทย (ต.ม.)</option>
+							<option>ตริตาภรณ์ช้างเผือก (ต.ช.)</option>
+							<option>ทวีติยาภรณ์มงกุฏไทย (ท.ม.)</option>
+							<option>ทวีติยาภรณ์ช้างเผือก (ท.ช.)</option>
+							<option>ประถมาภรณ์มงกุฏไทย (ป.ม.)</option>
+							<option>ประถมาภรณ์ช้างเผือก (ป.ช.)</option>
+							<option>มหาวชิรมงกุฏ (ม.ว.ม.)</option>
+							<option>มหาปรมาภรณ์ช้างเผือก (ม.ป.ช.)</option>
+						</select>
+					</td>
+					<td>วันที่รับเครื่องราชอิสริยาภรณ์</td>
+					<td>
+						<div class="col-xs-10">
+							<input type="text" class="form-control col-xs-10" placeholder="วันที่รับเครื่องราชอิสริยาภรณ์" size="5">
+						</div>
+						<img src="images/calendar_32.png" width="24" height="24">
+					</td>
+				</tr>
+				<tr>
+					<td rowspan="2">รับเครื่องราชอิสริยาภรณ์โดย</td>
+					<td colspan="3">
+						<input type="radio" name="recieve" checked>รับเอง
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="radio" name="recieve">รับแทน ชื่อผู้รับแทน 
+					</td>
+					<td colspan="2">
+						<input type="text" class="form-control" size="50">
+					</td>
+				</tr>
+				<tr>
+					<td>ใบประกาศกำกับเครื่องราชอิสริยาภรณ์</td>
+					<td>
+						<input type="radio" name="recieve" checked>รับ&nbsp;
+						<input type="radio" name="recieve">ไม่รับ
+					</td>
+					<td>วันที่รับใบประกาศกำกับ</td>
+					<td>
+						<div class="col-xs-10">
+							<input type="text" class="form-control col-xs-10" placeholder="วันที่รับใบประกาศกำกับ" size="5">
+						</div>
+						<img src="images/calendar_32.png" width="24" height="24">
+					</td>
+				</tr>
+				<tr>
+					<td rowspan="2">รับใบประกาศกำกับโดย</td>
+					<td colspan="3">
+						<input type="radio" name="recieve" checked>รับเอง
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="radio" name="recieve">รับแทน ชื่อผู้รับแทน 
+					</td>
+					<td colspan="2">
+						<input type="text" class="form-control" size="50">
+					</td>
+				</tr>
+				</table>
+			</fieldset>
+			
+			<fieldset>
+				<legend>คืนเครื่องราชอิสริยาภรณ์</legend>
+				<font color="red">*หมายเหตุ ข้อมูลส่วนนี้จะแสดงเมื่อมีชั้นเครื่องราชอิสริยาภรณ์ที่ต้องส่งคืน</font>
+				<table width="85%" border="0" align="center">
+				<tr>
+					<td>ชั้นเครื่องราชอิสริยาภรณ์ที่ส่งคืน</td>
+					<td>
+						<select name="" class="form-control" placeholder="ประเภท">
+							<option selected>เลือกเครื่องราชอิสริยาภรณ์</option>
+							<option>เบญจมาภรณ์มงกุฏไทย (บ.ม.)</option>
+							<option>เบญจมาภรณ์ช้างเผือก (บ.ช.)</option>
+							<option>จัตุรถาภรณ์มงกุฏไทย (จ.ม.)</option>
+							<option>จัตุรถาภรณ์ช้างเผือก (จ.ช.)</option>
+							<option>ตริตาภรณ์มงกุฏไทย (ต.ม.)</option>
+							<option>ตริตาภรณ์ช้างเผือก (ต.ช.)</option>
+							<option>ทวีติยาภรณ์มงกุฏไทย (ท.ม.)</option>
+							<option>ทวีติยาภรณ์ช้างเผือก (ท.ช.)</option>
+							<option>ประถมาภรณ์มงกุฏไทย (ป.ม.)</option>
+							<option>ประถมาภรณ์ช้างเผือก (ป.ช.)</option>
+							<option>มหาวชิรมงกุฏ (ม.ว.ม.)</option>
+							<option>มหาปรมาภรณ์ช้างเผือก (ม.ป.ช.)</option>
+						</select>
+					</td>
+					<td>วันที่ส่งคืนเครื่องราชอิสริยาภรณ์</td>
+					<td>
+						<div class="col-xs-10">
+							<input type="text" class="form-control col-xs-10" placeholder="วันที่ส่งคืนเครื่องราชอิสริยาภรณ์" size="5">
+						</div>
+						<img src="images/calendar_32.png" width="24" height="24">
+					</td>
+				</tr>
+				<tr>
+					<td>ส่งคืน</td>
+					<td>
+						<input type="radio" name="recieve" checked>คืนเหรียญ
+						&nbsp;
+						<input type="radio" name="recieve">ชดใช้ราคา 
+					</td>
+					<td colspan="2">
+						<input type="text" class="form-control" size="50">
+					</td>
+				</tr>
+				<tr>
+					<td>ชื่อผุ้ส่งคืน</td>
+					<td colspan="2">
+						<input type="text" name="" class="form-control" >
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>ชื่อผู้รับคืน</td>
+					<td colspan="2">
+						<input type="text" name="" class="form-control" >
+					</td>
+					<td></td>
+				</tr>
+				</table>
+			</fieldset>
+
+
+			<table width="85%" border="0" align="center">
+				<tr>
+					<td colspan="4" align="center">
+						<a ui-sref="erp07.erps708"><button type="button" class="btn btn-success">บันทึก</button></a>
+						<a ui-sref="erp07.erps708"><button type="button" class="btn btn-warning">&nbsp;&nbsp;กลับ&nbsp;&nbsp;</button></a>
+					</td>
+				</tr>
+			</table>
+
+			<div class="tab-content">
+				<div id="menu1" class="tab-pane fade in active">
+					<h3>ประวัติได้รับพระราชทานเครื่องราชอิสริยาภรณ์</h3>
+					<table  width="100%" border="0" align="center" class="table table-bordered table-striped table-list">
+						<tr>
+							<th width="20%">วันที่ได้รับพระราชทาน</th>
+							<th width="25%">ชั้นเครื่องราชอิสริยาภรณ์</th>
+							<th width="25%">ราชกิจจานุเบกษา</th>
+							<th width="30%">สถานะ</th>
+						</tr>
+						<tr>
+							<td align="center">5 ธันวาคม พ.ศ.2555</td>
+							<td align="center">เบญจมาภรณ์มงกุฏไทย (บ.ม.)</td>
+							<td align="center">วันที่ประกาศ เล่มที่ ตอนที่ หน้าที่  ลำดับที่</td>
+							<td align="center">รับแล้ว (รับเอง)</td>
+						</tr>
+					</table>
+				</div>				
+			</div>
+
+
+			<!-- end tabs -->
+
+			
+		</div>
+		</div>
+	</div>
+</form>

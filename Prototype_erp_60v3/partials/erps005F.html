@@ -1,0 +1,229 @@
+<form ng-controller="erps005FController">
+	<div class="panel panel-primary">{{fromName}}
+		<div class="panel-heading"><table width="100%">
+				<tr>
+					<td width="95%"><label>รายละเอียดการเบิกจ่ายประจำเดือน</label></td>
+					<td><label>ERPS005</label></td>
+				</tr>
+			</table></div>
+		<div class="panel-body">
+		<div class="list-group-item active">ข้อมูล</div>
+		<div class="well">
+			<table width="85%" border="0" align="center">
+				<tr>
+					<td align="right">ฎีกาประจำเดือน :</td>
+					<td width="20%"><select class="form-control" style="width:250px">
+						<option value="01">มกราคม</option>
+						<option value="02">กุมภาพันธ์</option>
+						<option value="03">มีนาคม</option>
+						<option value="04">เมษายน</option>
+						<option value="05">พฤษภาคม</option>
+						<option value="06">มิถุนายน</option>
+						<option value="07">กรกฎาคม</option>
+						<option value="08">สิงหาคม</option>
+						<option value="09">กันยายน</option>
+						<option value="10">ตุลาคม</option>
+						<option value="11">พฤศจิกายน</option>
+						<option value="12">ธันวาคม </option>
+					</select></td>
+					<td align="right" width="10%">ปี พ.ศ. :</td>
+					<td><select class="form-control" style="width:80px">
+						<option value="2559">2558</option>
+						<option value="2559">2559</option>
+						<option value="2560" selected>2560</option>
+						<option value="2561">2561</option>
+						<option value="2561">2562</option>
+					</select></td>
+				</tr>
+				<tr>
+					<td align="right">ประเภท:</td>
+					<td><label class="radio-inline">
+						  <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" checked=""> รายเดือน
+						</label>
+						<label class="radio-inline">
+						  <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> รายย่อย
+						</label></td>
+						<td></td>
+						<td></td>
+						<td></td>
+
+				</tr>
+				<tr>
+					<td align="right">เลขที่ฎีกา:</td>
+					<td><input type="text" class="form-control col-xs-10" placeholder="เลขที่ฎีกา" style="width:150px"></td>
+					<td>วันที่ขอเบิก:</td>
+					<td><input type="text" class="form-control col-xs-10" placeholder="วันที่" style="width:150px"><img src="images/calendar_32.png" width="24" height="24"></td>
+
+				</tr>
+				
+			</table>
+		</div>
+		<div class="well">
+			<table width="85%" border="0" align="center">
+				<tr>
+					<td>เลขบัตรประชาชน:</td>
+					<td><input type="text" class="form-control" placeholder="เลขบัตรประชาชน" width="15" maxlength="13">&nbsp;<font color="red">*</font></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>คำนำหน้า:</td>
+					<td><input type="text" class="form-control" placeholder="คำนำหน้า" width="3" readonly>
+					</td>
+					<td>ชื่อ:</td>
+					<td><input type="text" class="form-control" placeholder="ชื่อ" readonly></td>
+					<td>นามสกุล:</td>
+					<td><input type="text" class="form-control" placeholder="นามสกุล" readonly></td>
+				</tr>
+				<tr>
+					<td>ตำแหน่ง:</td>
+					<td><input type="text" class="form-control" placeholder="ตำแหน่ง" readonly></td>
+					<td>ระดับ:</td>
+					<td><input type="text" class="form-control" placeholder="ระดับ" readonly></td>
+					<td>สำนัก/กอง/สถจ.:</td>
+					<td><input type="text" class="form-control" placeholder="ตามตัว" readonly><font color="red">ตามตัว</font></td>
+				</tr>
+				<tr>
+					<td>เงินเดือนล่าสุด:</td>
+					<td><input type="text" class="form-control" placeholder="เงินเดือนล่าสุด" readonly></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>ค่าเช่า/ค่าผ่อนชำระ:</td>
+					<td><input type="text" class="form-control" placeholder="ล่าสุด"><font color="red">*เช่าบ้าน ดึงตามเลขอนุมัติ / ผ่อนชำระ ใส่เอง</font> </td>
+
+					<td>สิทธิตามระเบียบ(บาท):</td>
+					<td><input type="text" class="form-control" placeholder="ล่าสุด" readonly></td>
+					<td>สิทธิเบิกได้:</td>
+					<td><input type="text" class="form-control" placeholder="ล่าสุด" readonly></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><label class="radio-inline">
+						<input type="radio" value="1" ng-model="subType" ng-change="showDetailsub()"> เบิกตามสิทธิ</label>
+						<label class="radio-inline">
+						<input type="radio" value="2" ng-model="subType" ng-change="showDetailsub()"> เบิกส่วนต่าง</label></td>
+					<td><div ng-show="showMonth"> ส่วนต่างต่อเดือน:</div></td>
+					<td><div ng-show="showMonth"><input type="text" class="form-control" placeholder="ส่วนต่าง ต่อเดือน "><font color="red">*</font></div></td>
+					<td></td>
+					<td></td>
+
+
+				</tr>
+				<tr>
+					<td>เลขที่อนุมัติ:</td>
+					<td><select class="form-control"> 
+					<option value=""><--กรุณาเลือก--></option>
+					</select>&nbsp;<font color="red">*</font> </td>
+					<td>ลงวันที่:</td>
+					<td><input type="text" class="form-control" placeholder="ลงวันที่" readonly></td>
+					<td>ประเภทการเบิก:</td>
+					<td><input type="text" class="form-control" placeholder="ค่าเช่า/ค่าผ่อนชำระ" readonly></td>
+				</tr>
+				<tr>
+					<td colspan="2" align="right">ระยะเวลาตามสัญญา</td>
+					<td>วันที่เริ่ม: </td>
+					<td><input type="text" class="form-control" placeholder="วันที่เริ่ม" readonly></td>
+					<td>วันที่สิ้นสุด:</td>
+					<td><input type="text" class="form-control" placeholder="วันที่สิ้นสุด" readonly></td>
+				</tr>
+
+					<tr>
+
+					<td>เลขที่บัญชี:</td>
+					<td><input type="text" class="form-control" placeholder="เลขที่บัญชี" readonly></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>ขอเบิก:</td>
+					<td><input type="text" class="form-control col-xs-10" placeholder="วันที่" style="width:100px"><img src="images/calendar_32.png" width="24" height="24"></td>
+					<td align="center"><label>ถึง</label>
+					</div></td>
+					<td><input type="text" class="form-control col-xs-10" placeholder="วันที่" style="width:100px"><img src="images/calendar_32.png" width="24" height="24"></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>เบิก/จ่าย(บาท):</td>
+					<td><input type="text" class="form-control" placeholder="เบิก/จ่าย(บาท)"></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>อัพโหลดไฟล์แบบ 6006/ใบเสร็จ:</td>
+					<td><input type="file" id="exampleInputFile"></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+<!--
+ 				<tr>
+					<td colspan="6" align="center"><button type="button" class="btn btn-primary" style="width:200px">เพิ่ม</button></td>
+				</tr>-->
+				<tr>
+					<td colspan="6" align="center"><button type="button" class="btn btn-success">บันทึก</button> 
+						<a ui-sref="erp01.erps005"><button type="button" class="btn btn-warning">&nbsp;&nbsp;กลับ&nbsp;&nbsp;</button></a>
+						</td>
+				</tr>
+			</table>
+
+		</div>
+
+		<div>
+			<table class="table table-bordered table-striped table-list" border="1">
+				<tr>
+					
+					<th>เลขบัตรประชาชน</th>
+					<th>ชื่อ-สกุล</th>
+					<th>เลขที่อนุมัติ</th>
+					<th>สิทธิ(บาท)</th>
+					<th>เบิก/จ่าย(บาท)</th>
+					<th>เดือน</th>
+					<th>&nbsp;</th>
+				</tr>
+				<tr>
+					<td align="center">xxxxxxxxxxxx</td>
+					<td>xx xxxxxx xxxxxxx</td>
+					<td align="center">xxx/xx</td>
+					<td align="right">x,xxx.xx</td>
+					<td align="right">x,xxx.xx</td>
+					<td align="center">มกราคม 2559- มีนาคม 2559</td>
+					<td><button type="button" class="btn btn-primary">แก้ไข</button>&nbsp;
+					<button type="button" class="btn btn-danger">ลบ</button></td>
+				</tr>
+				<tr>
+					
+					<td align="center">xxxxxxxxxxxx</td>
+					<td>xx xxxxxx xxxxxxx</td>
+					<td align="center">xxx/xx</td>
+					<td align="right">x,xxx.xx</td>
+					<td align="right">x,xxx.xx</td>
+					<td align="center">มกราคม 2559</td>
+					<td><button type="button" class="btn btn-primary">แก้ไข</button>&nbsp;
+					<button type="button" class="btn btn-danger">ลบ</button></td>
+				</tr>
+				<tr>
+					<td colspan="4" align="center">รวม</td>
+					<td align="right">x,xxx.xx</td>
+					<td align="center"></td>
+				</tr>
+
+			</table>
+
+		</div>
+
+
+		</div>
+	</div>
+</form>
