@@ -11,20 +11,35 @@
 		<div class="well">
 			<table width="85%" border="0" align="center">
                 <tr>
-                    <td width="20%" align="right">วันที่:</td>
+                    <td width="20%" align="right">วันที่ยืม:</td>
 					<td width="30%"><input type="text" class="form-control custom-form-control" style="width:80%">&nbsp;<font color="red">*</font>
                     <img src="images/calendar_32.png" width="24" height="24"></td>
-                    <td width="20%" align="right">เลขที่ผู้ยืม:</td>
+                    <td width="20%" align="right">เลขที่ใบยืม:</td>
                     <td width="30%"><input type="text" class="form-control custom-form-control" style="width:80%">&nbsp;<font color="red">*</font></td>
+                </tr>
+                <tr>
+                    <td align="right">วันที่ครบกำหนดส่งคืน:</td>
+					<td><input type="text" class="form-control custom-form-control" style="width:80%">&nbsp;<font color="red">*</font>
+                    <img src="images/calendar_32.png" width="24" height="24"></td>
+                    <td align="right"></td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td align="right">หน่วยงานยืม:</td>
 					<td><select class="form-control custom-form-control" style="width:80%">
                             <option>--กรุณาเลือก--</option>
                             <option ng-repeat="u in unit">{{u.name}} </option>
+                             <option>อื่นๆ </option>
                         </select>&nbsp;<font color="red">*</font> </td>
-                    <td align="right">ฝ่าย:</td>
+                    <td align="right">ระบุ:</td>
+                    <td><input type="text" class="form-control custom-form-control" style="width:80%"><font color="red">* <div></div> กรณีเลือกอื่นๆ</font></td>
+                </tr>
+                <tr>
+
+                    <td align="right">ส่วน/ฝ่าย/กลุ่ม:</td>
                     <td><input type="text" class="form-control custom-form-control" style="width:80%"></td>
+                                        <td></td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td align="right">ผู้ยืม:</td>
@@ -49,7 +64,7 @@
             <table class="table table-bordered table-striped table-list" border="1">
                 <tr>
                     <th width="5%">ลำดับ</th>
-                    <th >รหัสครุภัณฑ์</th>
+                    <th >GFMIS/รหัสครุภัณฑ์</th>
                     <th width="20%">รายการ</th>                    
                     <th>หมายเหตุ</th>
                     <th>วันที่คืน <dir></dir><font color="red">RM:จะแสดงในการส่งคืนเท่านั้น</font></th>

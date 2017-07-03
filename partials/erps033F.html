@@ -19,9 +19,7 @@
                 </tr>
                 <tr>
                     <td align="right">เรื่อง:</td>
-					<td><input type="text" class="form-control custom-form-control" style="width:90%">&nbsp;<font color="red">*</font></td>
-                    <td align="right"></td>
-                    <td></td>
+					<td colspan="3"><input type="text" class="form-control custom-form-control" style="width:90%">&nbsp;<font color="red">*</font></td>
                 </tr>
                 <tr>
                     <td align="right">ประเภทเงิน:</td>
@@ -29,7 +27,7 @@
                             <option>--กรุณาเลือก--</option>
                             <option>เงินงบประมาณ</option>
                             <option>เงินนอกงบประมาณ</option>
-                            <option>เงินบริจาก/เงินช่วยเหลือ</option>
+                            <option>เงินบริจาค/เงินช่วยเหลือ</option>
                             <option>อื่นๆ (รับจากกองคลัง)</option>
                         </select>&nbsp;<font color="red">*</font></td>
                     <td align="right">สำนัก/กอง:</td>
@@ -38,18 +36,22 @@
 						<option ng-repeat="unit in units" vale="{{unit.id}}">{{unit.name}}</option>
 					</select>&nbsp;<font color="red">*</font></td>
                 </tr>
-                <tr>
+                <!--<tr>
                     <td align="right">รายละเอียด:</td>
-					<td><textarea class="form-control custom-form-control"></textarea> </td>
-                    <td align="right"></td>
-                    <td></td>
-                </tr>
+					<td colspan="3"><textarea class="form-control custom-form-control"></textarea> </td>
+                </tr>-->
                 <tr>
                     <td align="right">จำนวนเงิน:</td>
 					<td><input type="text" class="form-control custom-form-control" style="width:90%">&nbsp;<font color="red">*</font></td>
                     <td align="right"></td>
                     <td></td>
                 </tr>
+                <tr>
+					<td align="right">ไฟล์แนบ:</td>
+					<td><input type="file" id="exampleInputFile">&nbsp;<font color="red">*</font></td>
+                    <td></td>
+                    <td></td>
+				</tr>
                 <tr>
                     <td colspan="4"><strong>รายการจัดชื้อ</strong> </td>
                 </tr>

@@ -11,7 +11,8 @@ var app = angular.module('myApp', ['ui.router']);
 	{id:'3',name:'เงินนอกงบประมาณ'},
 	{id:'4',name:'เงินนอกงบประมาณ (ลงทะเบียน)'} ];
 
-	var unit = [{id:'1',code:'1500800000',name:'สถ.',fullName:''},
+	var unit = [
+	// {id:'1',code:'1500800000',name:'สถ.',fullName:''},
 	{id:'2',code:'1500800001',name:'สล.สถ.',fullName:''},
 	{id:'3',code:'1500800002',name:'กจ.',fullName:''},
 	{id:'4',code:'1500800003',name:'กค.',fullName:''},
@@ -1255,7 +1256,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 			'from@erp05':{templateUrl:"partials/erps029L.html",
 			controller:function($scope){
 				$scope.pageCode='EPRS029';
-				$scope.pageName='บันทึกรายการ ส่งคืนครุภัณฑ์';
+				$scope.pageName='บันทึกรายการ ชำรุดส่งคืนครุภัณฑ์';
 			}
 		}
 		}
@@ -1266,7 +1267,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 			controller:function($scope){
 				$scope.back='erp05.erps029';
 				$scope.pageCode='EPRS029';
-				$scope.pageName='บันทึกรายการ ส่งคืนครุภัณฑ์';
+				$scope.pageName='บันทึกรายการ ชำรุดส่งคืนครุภัณฑ์';
 			}
 		}
 		}		
