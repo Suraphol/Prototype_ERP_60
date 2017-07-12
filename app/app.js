@@ -80,7 +80,7 @@ app.controller('erps001FController',function($scope){
 		console.log($scope.subType2);
 		if($scope.subType2 == 0){
 			$scope.Affiliation =true;
-		}else{
+		}else{h
 			$scope.Affiliation =false;
 		}
 	};
