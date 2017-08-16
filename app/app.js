@@ -293,7 +293,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 		views:{
 			'from@erp01':{templateUrl:"partials/erps000L.html",
 			controller:function($scope){
-				$scope.pageCode='EPRS000';
+				$scope.pageCode='MAS001';
 				$scope.pageName='ข้อกฎหมาย/เอกสารประกอบการเบิก';
 			}
 		}
@@ -304,7 +304,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 			'from@erp01':{templateUrl:"partials/erps000F.html",
 			controller:function($scope){
 				$scope.back='erp01.erps000';
-				$scope.pageCode='EPRS000';
+				$scope.pageCode='MAS001';
 				$scope.pageName='ข้อกฎหมาย/เอกสารประกอบการเบิก';
 			}
 		}
@@ -436,7 +436,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 		views:{
 			'from@erp02':{templateUrl:"partials/erps000L.html",
 			controller:function($scope){
-				$scope.pageCode='EPRS000';
+				$scope.pageCode='MAS001';
 				$scope.pageName='ข้อกฎหมาย/เอกสารประกอบการเบิก';
 			}
 		}
@@ -447,7 +447,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 			'from@erp02':{templateUrl:"partials/erps000F.html",
 			controller:function($scope){
 				$scope.back='erp02.erps000';
-				$scope.pageCode='EPRS000';
+				$scope.pageCode='MAS001';
 				$scope.pageName='ข้อกฎหมาย/เอกสารประกอบการเบิก';
 			}
 		}
@@ -525,7 +525,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 		views:{
 			'from@erp03':{templateUrl:"partials/erps000L.html",
 			controller:function($scope){
-				$scope.pageCode='EPRS000';
+				$scope.pageCode='MAS001';
 				$scope.pageName='ข้อกฎหมาย/เอกสารประกอบการเบิก';
 			}
 		}
@@ -536,7 +536,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 			'from@erp03':{templateUrl:"partials/erps000F.html",
 			controller:function($scope){
 				$scope.back='erp03.erps000';
-				$scope.pageCode='EPRS000';
+				$scope.pageCode='MAS001';
 				$scope.pageName='ข้อกฎหมาย/เอกสารประกอบการเบิก';
 			}
 		}
@@ -547,7 +547,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 		views:{
 			'from@erp03':{templateUrl:"partials/erps008L.html",
 			controller:function($scope){
-				$scope.pageCode='EPRS008';
+				$scope.pageCode='COU001';
 				$scope.pageName='ตั้งต้นรายการจ่าย';
 			}
 		}
@@ -558,7 +558,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 		views:{
 			'from@erp03':{templateUrl:"partials/erps008F.html",
 			controller:function($scope){
-				$scope.pageCode='EPRS008';
+				$scope.pageCode='COU001';
 				$scope.pageName='ตั้งต้นรายการจ่าย';
 			}
 		}
@@ -569,7 +569,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 		views:{
 			'from@erp03':{templateUrl:"partials/erps009L.html",
 			controller:function($scope){
-				$scope.pageCode='EPRS009';
+				$scope.pageCode='COU003';
 				$scope.pageName='จัดการโครงการ';
 			}
 		}
@@ -580,7 +580,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 		views:{
 			'from@erp03':{templateUrl:"partials/erps009F.html",
 			controller:function($scope){
-				$scope.pageCode='EPRS009';
+				$scope.pageCode='COU003';
 				$scope.pageName='จัดการโครงการ';
 			}
 		}
@@ -591,7 +591,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 		views:{
 			'from@erp03':{templateUrl:"partials/erps010L.html",
 			controller:function($scope){
-				$scope.pageCode='EPRS010';
+				$scope.pageCode='COU004';
 				$scope.pageName='รายรับ';
 			}
 		}
@@ -602,7 +602,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 		views:{
 			'from@erp03':{templateUrl:"partials/erps010F.html",
 			controller:function($scope){
-				$scope.pageCode='EPRS010';
+				$scope.pageCode='COU004';
 				$scope.pageName='รายรับ';
 			}
 		}
@@ -613,7 +613,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 		views:{
 			'from@erp03':{templateUrl:"partials/erps011L.html",
 			controller:function($scope){
-				$scope.pageCode='EPRS011';
+				$scope.pageCode='COU005';
 				$scope.pageName='รายจ่าย';
 			}
 		}
@@ -624,7 +624,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 		views:{
 			'from@erp03':{templateUrl:"partials/erps011F.html",
 			controller:function($scope){
-				$scope.pageCode='EPRS011';
+				$scope.pageCode='COU005';
 				$scope.pageName='รายจ่าย';
 				$scope.detailPays = detailPayList;
 			}
@@ -658,7 +658,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 		views:{
 			'from@erp03':{templateUrl:"partials/erps013L.html",
 			controller:function($scope){
-				$scope.pageCode='EPRS013';
+				$scope.pageCode='COU007';
 				$scope.pageName='ทะเบียนคุมการใช้บัตรเครดิต';
 			}
 		}
@@ -669,7 +669,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 		views:{
 			'from@erp03':{templateUrl:"partials/erps013F.html",
 			controller:function($scope){
-				$scope.pageCode='EPRS013';
+				$scope.pageCode='COU007';
 				$scope.pageName='ทะเบียนคุมการใช้บัตรเครดิต';
 				$scope.personList =personList;
 			}
@@ -681,7 +681,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 		views:{
 			'from@erp03':{templateUrl:"partials/erps014L.html",
 			controller:function($scope){
-				$scope.pageCode='EPRS014';
+				$scope.pageCode='COU008';
 				$scope.pageName='ทะเบียนการรับ-จ่าย บัตรเครดิต';
 			}
 		}
@@ -692,7 +692,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 		views:{
 			'from@erp03':{templateUrl:"partials/erps014F.html",
 			controller:function($scope){
-				$scope.pageCode='EPRS014';
+				$scope.pageCode='COU008';
 				$scope.pageName='ทะเบียนการรับ-จ่าย บัตรเครดิต';
 			}
 		}
@@ -703,7 +703,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 		views:{
 			'from@erp03':{templateUrl:"partials/erps015L.html",
 			controller:function($scope){
-				$scope.pageCode='EPRS015';
+				$scope.pageCode='COU009';
 				$scope.pageName='ทะเบียนคุมข้อมูลอัตราค่าบริการโรงแรม';
 			}
 		}
@@ -714,7 +714,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 		views:{
 			'from@erp03':{templateUrl:"partials/erps015F.html",
 			controller:function($scope){
-				$scope.pageCode='EPRS015';
+				$scope.pageCode='COU009';
 				$scope.pageName='ทะเบียนคุมข้อมูลอัตราค่าบริการโรงแรม';
 			}
 		}
@@ -725,7 +725,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 		views:{
 			'from@erp03':{templateUrl:"partials/erps016L.html",
 			controller:function($scope){
-				$scope.pageCode='EPRS016';
+				$scope.pageCode='COU002';
 				$scope.pageName='โรงแรม';
 			}
 		}
@@ -736,7 +736,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 		views:{
 			'from@erp03':{templateUrl:"partials/erps016F.html",
 			controller:function($scope){
-				$scope.pageCode='EPRS016';
+				$scope.pageCode='COU002';
 				$scope.pageName='โรงแรม';
 			}
 		}
@@ -747,7 +747,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 		views:{
 			'from@erp03':{templateUrl:"partials/erps017L.html",
 			controller:function($scope){
-				$scope.pageCode='EPRS017';
+				$scope.pageCode='COU006';
 				$scope.pageName='นำส่งรายได้แผนดิน';
 			}
 		}
@@ -758,7 +758,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 		views:{
 			'from@erp03':{templateUrl:"partials/erps017F.html",
 			controller:function($scope){
-				$scope.pageCode='EPRS017';
+				$scope.pageCode='COU006';
 				$scope.pageName='นำส่งรายได้แผนดิน';
 			}
 		}
@@ -768,7 +768,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 		views:{
 			'from@erp03':{templateUrl:"partials/Report/erps014C.html",
 			controller:function($scope){
-				$scope.pageCode='EPRS014';
+				$scope.pageCode='COU010';
 				$scope.pageName='รายงานด้านรับ';
 			}}
 		}
@@ -777,7 +777,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 		views:{
 			'from@erp03':{templateUrl:"partials/Report/erps015C.html",
 			controller:function($scope){
-				$scope.pageCode='EPRS015';
+				$scope.pageCode='COU011';
 				$scope.pageName='รายงานด้านจ่าย';
 			}}
 		}
@@ -786,7 +786,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 		views:{
 			'from@erp03':{templateUrl:"partials/Report/erps016C.html",
 			controller:function($scope){
-				$scope.pageCode='EPRS016';
+				$scope.pageCode='COU012';
 				$scope.pageName='รายงานรับ-จ่าย';
 			}}
 		}
@@ -795,7 +795,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 		views:{
 			'from@erp03':{templateUrl:"partials/Report/erps017C.html",
 			controller:function($scope){
-				$scope.pageCode='EPRS017';
+				$scope.pageCode='COU013';
 				$scope.pageName='รายงานสรุปภาพรวมค่าใช้จ่ายโครงการฝึกอบรม';
 			}}
 		}
@@ -804,7 +804,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 		views:{
 			'from@erp03':{templateUrl:"partials/Report/erps018C.html",
 			controller:function($scope){
-				$scope.pageCode='EPRS018';
+				$scope.pageCode='COU014';
 				$scope.pageName='รายงานทะเบียนคุมบัตรเครดิตราชการ';
 			}}
 		}
@@ -813,7 +813,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 		views:{
 			'from@erp03':{templateUrl:"partials/Report/erps019C.html",
 			controller:function($scope){
-				$scope.pageCode='EPRS019';
+				$scope.pageCode='COU015';
 				$scope.pageName='รายงานทะเบียนการรับ-จ่ายบัตรวงเงินถาวร';
 			}}
 		}
@@ -822,7 +822,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 		views:{
 			'from@erp03':{templateUrl:"partials/Report/erps020C.html",
 			controller:function($scope){
-				$scope.pageCode='EPRS020';
+				$scope.pageCode='COU016';
 				$scope.pageName='รายงานอัตราค่าบริการของโครงการฝึกอบรม';
 			}}
 		}
@@ -840,7 +840,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 		views:{
 			'from@erp04':{templateUrl:"partials/erps000L.html",
 			controller:function($scope){
-				$scope.pageCode='EPRS000';
+				$scope.pageCode='MAS001';
 				$scope.pageName='ข้อกฎหมาย/เอกสารประกอบการเบิก';
 			}
 		}
@@ -851,7 +851,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 			'from@erp04':{templateUrl:"partials/erps000F.html",
 			controller:function($scope){
 				$scope.back='erp04.erps000';
-				$scope.pageCode='EPRS000';
+				$scope.pageCode='MAS001';
 				$scope.pageName='ข้อกฎหมาย/เอกสารประกอบการเบิก';
 			}
 		}
@@ -887,7 +887,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 		views:{
 			'from@erp04':{templateUrl:"partials/erps018L.html",
 			controller:function($scope){
-				$scope.pageCode='EPRS018';
+				$scope.pageCode='BEN001';
 				$scope.pageName='เบิกเงินรักษาพยาบาล';
 			}
 		}
@@ -898,7 +898,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 		views:{
 			'from@erp04':{templateUrl:"partials/erps018F.html",
 			controller:function($scope){
-				$scope.pageCode='EPRS018';
+				$scope.pageCode='BEN001';
 				$scope.pageName='เบิกเงินรักษาพยาบาล';
 				$scope.statusFamailyList = statusFamailyList;
 			}
@@ -910,7 +910,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 		views:{
 			'from@erp04':{templateUrl:"partials/erps019L.html",
 			controller:function($scope){
-				$scope.pageCode='EPRS019';
+				$scope.pageCode='BEN002';
 				$scope.pageName='เบิกเงินค่าเล่าเรียน';
 			}
 		}
@@ -921,7 +921,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 		views:{
 			'from@erp04':{templateUrl:"partials/erps019F.html",
 			controller:function($scope){
-				$scope.pageCode='EPRS019';
+				$scope.pageCode='BEN002';
 				$scope.pageName='เบิกเงินค่าเล่าเรียน';
 			}
 		}
@@ -931,7 +931,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 		views:{
 			'from@erp04':{templateUrl:"partials/Report/erps021C.html",
 			controller:function($scope){
-				$scope.pageCode='EPRS021';
+				$scope.pageCode='BEN003';
 				$scope.pageName='รายงานผู้เบิกเงินสวัสดิการ';
 			}}
 		}
@@ -940,7 +940,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 		views:{
 			'from@erp04':{templateUrl:"partials/Report/erps022C.html",
 			controller:function($scope){
-				$scope.pageCode='EPRS022';
+				$scope.pageCode='BEN004';
 				$scope.pageName='รายงานทะเบียนคุมเบิกเงินรักษาพยาบาล';
 			}}
 		}
@@ -949,7 +949,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 		views:{
 			'from@erp04':{templateUrl:"partials/Report/erps023C.html",
 			controller:function($scope){
-				$scope.pageCode='EPRS023';
+				$scope.pageCode='BEN005';
 				$scope.pageName='รายงานทะเบียนคุมเบิกเงินค่าเล่าเรียน';
 			}}
 		}
@@ -958,7 +958,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 		views:{
 			'from@erp04':{templateUrl:"partials/Report/erps024C.html",
 			controller:function($scope){
-				$scope.pageCode='EPRS024';
+				$scope.pageCode='BEN006';
 				$scope.pageName='รายงานทะเบียนคุมเบิกเงินฎีกาคลัง';
 			}}
 		}
@@ -967,7 +967,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 		views:{
 			'from@erp04':{templateUrl:"partials/Report/erps025C.html",
 			controller:function($scope){
-				$scope.pageCode='EPRS025';
+				$scope.pageCode='BEN007';
 				$scope.pageName='รายงานสรุปการเบิกเงินรักษาพยาบาล';
 			}}
 		}
@@ -1006,7 +1006,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 		views:{
 			'from@erp05':{templateUrl:"partials/erps000L.html",
 			controller:function($scope){
-				$scope.pageCode='EPRS000';
+				$scope.pageCode='MAS001';
 				$scope.pageName='ข้อกฎหมาย/เอกสารประกอบการเบิก';
 			}
 		}
@@ -1017,7 +1017,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 			'from@erp05':{templateUrl:"partials/erps000F.html",
 			controller:function($scope){
 				$scope.back='erp05.erps000';
-				$scope.pageCode='EPRS000';
+				$scope.pageCode='MAS001';
 				$scope.pageName='ข้อกฎหมาย/เอกสารประกอบการเบิก';
 			}
 		}
@@ -1028,7 +1028,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 		views:{
 			'from@erp05':{templateUrl:"partials/erps021L.html",
 			controller:function($scope){
-				$scope.pageCode='EPRS021';
+				$scope.pageCode='MAT001';
 				$scope.pageName='หน่วยนับ';
 			}
 		}
@@ -1039,7 +1039,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 			'from@erp05':{templateUrl:"partials/erps021F.html",
 			controller:function($scope){
 				$scope.back='erp05.erps021';
-				$scope.pageCode='EPRS021';
+				$scope.pageCode='MAT001';
 				$scope.pageName='หน่วยนับ';
 			}
 		}
@@ -1050,7 +1050,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 		views:{
 			'from@erp05':{templateUrl:"partials/erps022L.html",
 			controller:function($scope){
-				$scope.pageCode='EPRS022';
+				$scope.pageCode='MAT002';
 				$scope.pageName='ประเภทวัสดุ';
 			}
 		}
@@ -1061,7 +1061,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 			'from@erp05':{templateUrl:"partials/erps022F.html",
 			controller:function($scope){
 				$scope.back='erp05.erps022';
-				$scope.pageCode='EPRS022';
+				$scope.pageCode='MAT002';
 				$scope.pageName='ประเภทวัสดุ';
 			}
 		}
@@ -1072,7 +1072,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 			'from@erp05':{templateUrl:"partials/erps022F.html",
 			controller:function($scope){
 				$scope.back='erp05.erps022';
-				$scope.pageCode='EPRS022';
+				$scope.pageCode='MAT002';
 				$scope.pageName='ประเภทวัสดุ';
 				$scope.name='เครื่องเขียน';
 			}
@@ -1084,7 +1084,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 			'from@erp05':{templateUrl:"partials/erps022F.html",
 			controller:function($scope){
 				$scope.back='erp05.erps022';
-				$scope.pageCode='EPRS022';
+				$scope.pageCode='MAT002';
 				$scope.pageName='ประเภทวัสดุ';
 				$scope.name='เครื่องเขียน->ปากกา';
 			}
@@ -1096,7 +1096,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 		views:{
 			'from@erp05':{templateUrl:"partials/erps023L.html",
 			controller:function($scope){
-				$scope.pageCode='EPRS023';
+				$scope.pageCode='MAT007';
 				$scope.pageName='บันทึกรายการทะเบียนคุมวัสดุ';
 			}
 		}
@@ -1107,7 +1107,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 			'from@erp05':{templateUrl:"partials/erps023F.html",
 			controller:function($scope){
 				$scope.back='erp05.erps023';
-				$scope.pageCode='EPRS023';
+				$scope.pageCode='MAT007';
 				$scope.pageName='บันทึกรายการทะเบียนคุมวัสดุ';
 			}
 		}
@@ -1118,7 +1118,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 		views:{
 			'from@erp05':{templateUrl:"partials/erps024L.html",
 			controller:function($scope){
-				$scope.pageCode='EPRS024';
+				$scope.pageCode='MAT008';
 				$scope.pageName='บันทึกรายการเบิกวัสดุ';
 			}
 		}
@@ -1129,7 +1129,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 			'from@erp05':{templateUrl:"partials/erps024F.html",
 			controller:function($scope){
 				$scope.back='erp05.erps024';
-				$scope.pageCode='EPRS024';
+				$scope.pageCode='MAT008';
 				$scope.pageName='บันทึกรายการเบิกวัสดุ';
 			}
 		}
@@ -1140,7 +1140,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 		views:{
 			'from@erp05':{templateUrl:"partials/erps025L.html",
 			controller:function($scope){
-				$scope.pageCode='EPRS025';
+				$scope.pageCode='MAT003';
 				$scope.pageName='ประเภทครุภัณฑ์';
 			}
 		}
@@ -1151,7 +1151,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 			'from@erp05':{templateUrl:"partials/erps025F.html",
 			controller:function($scope){
 				$scope.back='erp05.erps025';
-				$scope.pageCode='EPRS025';
+				$scope.pageCode='MAT003';
 				$scope.pageName='ประเภทครุภัณฑ์';
 				$scope.maxlength = '5';
 			}
@@ -1163,7 +1163,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 			'from@erp05':{templateUrl:"partials/erps025F.html",
 			controller:function($scope){
 				$scope.back='erp05.erps025';
-				$scope.pageCode='EPRS025';
+				$scope.pageCode='MAT003';
 				$scope.pageName='ประเภทครุภัณฑ์';
 				$scope.cc='01';
 				$scope.maxlength = '3';
@@ -1176,7 +1176,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 		views:{
 			'from@erp05':{templateUrl:"partials/erps026L.html",
 			controller:function($scope){
-				$scope.pageCode='EPRS026';
+				$scope.pageCode='MAT009';
 				$scope.pageName='บันทึกรายการครุภัณฑ์';
 			}
 		}
@@ -1187,7 +1187,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 			'from@erp05':{templateUrl:"partials/erps026F.html",
 			controller:function($scope){
 				$scope.back='erp05.erps026';
-				$scope.pageCode='EPRS026';
+				$scope.pageCode='MAT009';
 				$scope.pageName='บันทึกรายการครุภัณฑ์';
 			}
 		}
@@ -1198,7 +1198,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 			'from@erp05':{templateUrl:"partials/erps026FE.html",
 			controller:function($scope){
 				$scope.back='erp05.erps026';
-				$scope.pageCode='EPRS026';
+				$scope.pageCode='MAT009';
 				$scope.pageName='บันทึกรายการครุภัณฑ์';
 			}
 		}
@@ -1209,7 +1209,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 		views:{
 			'from@erp05':{templateUrl:"partials/erps027L.html",
 			controller:function($scope){
-				$scope.pageCode='EPRS027';
+				$scope.pageCode='MAT010';
 				$scope.pageName='บันทึกรายการ ยืม-คืน ครุภัณฑ์';
 				$scope.unit = unit;
 			}
@@ -1221,7 +1221,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 			'from@erp05':{templateUrl:"partials/erps027F.html",
 			controller:function($scope){
 				$scope.back='erp05.erps027';
-				$scope.pageCode='EPRS027';
+				$scope.pageCode='MAT010';
 				$scope.pageName='บันทึกรายการ ยืม-คืน ครุภัณฑ์';
 				$scope.unit = unit;
 			}
@@ -1233,7 +1233,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 		views:{
 			'from@erp05':{templateUrl:"partials/erps028L.html",
 			controller:function($scope){
-				$scope.pageCode='EPRS028';
+				$scope.pageCode='MAT011';
 				$scope.pageName='บันทึกรายการ ส่งซ่อม-รับคืน ครุภัณฑ์';
 			}
 		}
@@ -1244,7 +1244,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 			'from@erp05':{templateUrl:"partials/erps028F.html",
 			controller:function($scope){
 				$scope.back='erp05.erps028';
-				$scope.pageCode='EPRS028';
+				$scope.pageCode='MAT011';
 				$scope.pageName='บันทึกรายการ ส่งซ่อม-รับคืน ครุภัณฑ์';
 			}
 		}
@@ -1255,7 +1255,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 		views:{
 			'from@erp05':{templateUrl:"partials/erps029L.html",
 			controller:function($scope){
-				$scope.pageCode='EPRS029';
+				$scope.pageCode='MAT012';
 				$scope.pageName='บันทึกรายการ ชำรุดส่งคืนครุภัณฑ์';
 			}
 		}
@@ -1266,7 +1266,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 			'from@erp05':{templateUrl:"partials/erps029F.html",
 			controller:function($scope){
 				$scope.back='erp05.erps029';
-				$scope.pageCode='EPRS029';
+				$scope.pageCode='MAT012';
 				$scope.pageName='บันทึกรายการ ชำรุดส่งคืนครุภัณฑ์';
 			}
 		}
@@ -1277,7 +1277,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 		views:{
 			'from@erp05':{templateUrl:"partials/erps030L.html",
 			controller:function($scope){
-				$scope.pageCode='EPRS030';
+				$scope.pageCode='MAT013';
 				$scope.pageName='บันทึกรายการโทรศัพท์มือถือ';
 			}
 		}
@@ -1288,7 +1288,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 			'from@erp05':{templateUrl:"partials/erps030F.html",
 			controller:function($scope){
 				$scope.back='erp05.erps030';
-				$scope.pageCode='EPRS030';
+				$scope.pageCode='MAT013';
 				$scope.pageName='บันทึกรายการโทรศัพท์มือถือ';
 				$scope.unit = unit;
 			}
@@ -1300,7 +1300,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 		views:{
 			'from@erp05':{templateUrl:"partials/erps031L.html",
 			controller:function($scope){
-				$scope.pageCode='EPRS031';
+				$scope.pageCode='MAT014';
 				$scope.pageName='บันทึกรายการ ส่งซ่อม-รับคืน โทรศัพท์มือถือ';
 			}
 		}
@@ -1311,7 +1311,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 			'from@erp05':{templateUrl:"partials/erps031F.html",
 			controller:function($scope){
 				$scope.back='erp05.erps031';
-				$scope.pageCode='EPRS031';
+				$scope.pageCode='MAT014';
 				$scope.pageName='บันทึกรายการ ส่งซ่อม-รับคืน โทรศัพท์มือถือ';
 			}
 		}
@@ -1322,7 +1322,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 		views:{
 			'from@erp05':{templateUrl:"partials/erps032L.html",
 			controller:function($scope){
-				$scope.pageCode='EPRS032';
+				$scope.pageCode='MAT004';
 				$scope.pageName='ข้อมูลเจ้าหน้าที่หรือคณะกรรมการจัดชื้อ';
 				$scope.units = unit;
 			}
@@ -1334,7 +1334,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 			'from@erp05':{templateUrl:"partials/erps032F.html",
 			controller:function($scope){
 				$scope.back='erp05.erps032';
-				$scope.pageCode='EPRS032';
+				$scope.pageCode='MAT004';
 				$scope.pageName='ข้อมูลเจ้าหน้าที่หรือคณะกรรมการจัดชื้อ';
 				$scope.units = unit;
 			}
@@ -1346,7 +1346,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 		views:{
 			'from@erp05':{templateUrl:"partials/erps033L.html",
 			controller:function($scope){
-				$scope.pageCode='EPRS033';
+				$scope.pageCode='MAT005';
 				$scope.pageName='ขออนุมัติจัดชื้อพัสดุ';
 				$scope.units = unit;
 			}
@@ -1358,7 +1358,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 			'from@erp05':{templateUrl:"partials/erps033F.html",
 			controller:function($scope){
 				$scope.back='erp05.erps033';
-				$scope.pageCode='EPRS033';
+				$scope.pageCode='MAT005';
 				$scope.pageName='ขออนุมัติจัดชื้อพัสดุ';
 				$scope.units = unit;
 			}
@@ -1370,7 +1370,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 		views:{
 			'from@erp05':{templateUrl:"partials/erps034L.html",
 			controller:function($scope){
-				$scope.pageCode='EPRS034';
+				$scope.pageCode='MAT006';
 				$scope.pageName='ข้อมูลการตรวจรับพัสดุ';
 				$scope.units = unit;
 			}
@@ -1382,7 +1382,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 			'from@erp05':{templateUrl:"partials/erps034F.html",
 			controller:function($scope){
 				$scope.back='erp05.erps034';
-				$scope.pageCode='EPRS034';
+				$scope.pageCode='MAT006';
 				$scope.pageName='ข้อมูลการตรวจรับพัสดุ';
 				$scope.units = unit;
 			}
@@ -1393,7 +1393,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 		views:{
 			'from@erp05':{templateUrl:"partials/Report/erps026C.html",
 			controller:function($scope){
-				$scope.pageCode='EPRS026';
+				$scope.pageCode='MAT015';
 				$scope.pageName='ทะเบียนวัสดุสำนักงาน';
 			}}
 		}
@@ -1402,7 +1402,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 		views:{
 			'from@erp05':{templateUrl:"partials/Report/erps027C.html",
 			controller:function($scope){
-				$scope.pageCode='EPRS027';
+				$scope.pageCode='MAT016';
 				$scope.pageName='รายการเบิกเบิกวัสดุ';
 			}}
 		}
@@ -1411,7 +1411,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 		views:{
 			'from@erp05':{templateUrl:"partials/Report/erps028C.html",
 			controller:function($scope){
-				$scope.pageCode='EPRS028';
+				$scope.pageCode='MAT017';
 				$scope.pageName='ทะเบียนควบคุมทรัพย์สิน(รายตัว)';
 			}}
 		}
@@ -1420,7 +1420,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 		views:{
 			'from@erp05':{templateUrl:"partials/Report/erps029C.html",
 			controller:function($scope){
-				$scope.pageCode='EPRS029';
+				$scope.pageCode='MAT018';
 				$scope.pageName='บัญชีตรวจสอบครุภัณฑ์ที่ชำรุด';
 			}}
 		}
@@ -1429,7 +1429,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 		views:{
 			'from@erp05':{templateUrl:"partials/Report/erps030C.html",
 			controller:function($scope){
-				$scope.pageCode='EPRS030';
+				$scope.pageCode='MAT019';
 				$scope.pageName='บัญชีตรวจสอบครุภัณฑ์ประจำปี';
 			}}
 		}
@@ -1438,7 +1438,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 		views:{
 			'from@erp05':{templateUrl:"partials/Report/erps031C.html",
 			controller:function($scope){
-				$scope.pageCode='EPRS031';
+				$scope.pageCode='MAT020';
 				$scope.pageName='รายละเอียดวัสดุคงเหลือ';
 			}}
 		}
@@ -1447,7 +1447,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 		views:{
 			'from@erp05':{templateUrl:"partials/Report/erps032C.html",
 			controller:function($scope){
-				$scope.pageCode='EPRS032';
+				$scope.pageCode='MAT021';
 				$scope.pageName='รายละเอียดยืมครุภัณฑ์';
 			}}
 		}
@@ -1456,7 +1456,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 		views:{
 			'from@erp05':{templateUrl:"partials/Report/erps033C.html",
 			controller:function($scope){
-				$scope.pageCode='EPRS033';
+				$scope.pageCode='MAT022';
 				$scope.pageName='รายละเอียดโทรศัพท์มือถือ';
 			}}
 		}
@@ -1465,7 +1465,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 		views:{
 			'from@erp05':{templateUrl:"partials/Report/erps034C.html",
 			controller:function($scope){
-				$scope.pageCode='EPRS034';
+				$scope.pageCode='MAT023';
 				$scope.pageName='ประวัติการส่งซ่อมโทรศัพท์มือถือ';
 			}}
 		}
