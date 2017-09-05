@@ -726,7 +726,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 			'from@erp03':{templateUrl:"partials/erps016L.html",
 			controller:function($scope){
 				$scope.pageCode='COU002';
-				$scope.pageName='โรงแรม';
+				$scope.pageName='ชื่อโรงแรม';
 			}
 		}
 		}
@@ -737,7 +737,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 			'from@erp03':{templateUrl:"partials/erps016F.html",
 			controller:function($scope){
 				$scope.pageCode='COU002';
-				$scope.pageName='โรงแรม';
+				$scope.pageName='ชื่อโรงแรม';
 			}
 		}
 		}
@@ -893,6 +893,30 @@ app.config(function($stateProvider, $urlRouterProvider){
 		}
 		}
 	})
+	.state('erp04.erps018Save',{
+		url:"/erps018",
+		views:{
+			'from@erp04':{templateUrl:"partials/erps018F.html",
+			controller:function($scope){
+				$scope.pageCode='BEN001';
+				$scope.pageName='เบิกเงินรักษาพยาบาล';
+				alert('อายุบุตรเกิน 20 ปีบริบูรณ์ หรือ จดทะเบียนสมรสแล้ว');
+			}
+		}
+		}
+	})
+	// .state('erp04.erps019Save',{
+	// 	url:"/erps019",
+	// 	views:{
+	// 		'from@erp04':{templateUrl:"partials/erps019F.html",
+	// 		controller:function($scope){
+	// 			$scope.pageCode='BEN002';
+	// 			$scope.pageName='เบิกเงินรักษาพยาบาล';
+	// 			alert('จำนวนเงินร่วมที่เบิกค่าเล่าเรียน เกินตามระเบียบ');
+	// 		}
+	// 	}
+	// 	}
+	// })
 	.state('erp04.erps018.add',{
 		url:"/erps018",
 		views:{
@@ -923,6 +947,18 @@ app.config(function($stateProvider, $urlRouterProvider){
 			controller:function($scope){
 				$scope.pageCode='BEN002';
 				$scope.pageName='เบิกเงินค่าเล่าเรียน';
+			}
+		}
+		}
+	})
+	.state('erp04.erps019Save',{
+		url:"/erps019",
+		views:{
+			'from@erp04':{templateUrl:"partials/erps019F.html",
+			controller:function($scope){
+				$scope.pageCode='BEN002';
+				$scope.pageName='เบิกเงินค่าเล่าเรียน';
+				alert('จำนวนเงินร่วมที่เบิกค่าเล่าเรียน เกินตามระเบียบ');
 			}
 		}
 		}
