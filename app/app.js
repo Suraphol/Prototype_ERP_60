@@ -726,7 +726,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 			'from@erp03':{templateUrl:"partials/erps016L.html",
 			controller:function($scope){
 				$scope.pageCode='COU002';
-				$scope.pageName='ชื่อโรงแรม';
+				$scope.pageName='โรงแรม';
 			}
 		}
 		}
@@ -737,7 +737,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 			'from@erp03':{templateUrl:"partials/erps016F.html",
 			controller:function($scope){
 				$scope.pageCode='COU002';
-				$scope.pageName='ชื่อโรงแรม';
+				$scope.pageName='โรงแรม';
 			}
 		}
 		}
@@ -905,18 +905,6 @@ app.config(function($stateProvider, $urlRouterProvider){
 		}
 		}
 	})
-	// .state('erp04.erps019Save',{
-	// 	url:"/erps019",
-	// 	views:{
-	// 		'from@erp04':{templateUrl:"partials/erps019F.html",
-	// 		controller:function($scope){
-	// 			$scope.pageCode='BEN002';
-	// 			$scope.pageName='เบิกเงินรักษาพยาบาล';
-	// 			alert('จำนวนเงินร่วมที่เบิกค่าเล่าเรียน เกินตามระเบียบ');
-	// 		}
-	// 	}
-	// 	}
-	// })
 	.state('erp04.erps018.add',{
 		url:"/erps018",
 		views:{
@@ -958,7 +946,8 @@ app.config(function($stateProvider, $urlRouterProvider){
 			controller:function($scope){
 				$scope.pageCode='BEN002';
 				$scope.pageName='เบิกเงินค่าเล่าเรียน';
-				alert('จำนวนเงินร่วมที่เบิกค่าเล่าเรียน เกินตามระเบียบ');
+				// alert('จำนวนเงินร่วมที่เบิกค่าเล่าเรียน เกินตามระเบียบ');
+				alert('ผู้ยืมนี้ยังไม่ได้ใช้หนี้เงินยืม ก่อนหน้านี้')
 			}
 		}
 		}
@@ -1359,7 +1348,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 			'from@erp05':{templateUrl:"partials/erps032L.html",
 			controller:function($scope){
 				$scope.pageCode='MAT004';
-				$scope.pageName='ข้อมูลเจ้าหน้าที่หรือคณะกรรมการจัดชื้อ';
+				$scope.pageName='ข้อมูลเจ้าหน้าที่หรือคณะกรรมการ';
 				$scope.units = unit;
 			}
 		}
@@ -1371,7 +1360,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 			controller:function($scope){
 				$scope.back='erp05.erps032';
 				$scope.pageCode='MAT004';
-				$scope.pageName='ข้อมูลเจ้าหน้าที่หรือคณะกรรมการจัดชื้อ';
+				$scope.pageName='ข้อมูลเจ้าหน้าที่หรือคณะกรรมการ';
 				$scope.units = unit;
 			}
 		}
@@ -1505,6 +1494,29 @@ app.config(function($stateProvider, $urlRouterProvider){
 				$scope.pageName='ประวัติการส่งซ่อมโทรศัพท์มือถือ';
 			}}
 		}
+	})
+	.state('erp05.erps035',{
+		url:"/erps035",
+		views:{
+			'from@erp05':{templateUrl:"partials/erps035L.html",
+			controller:function($scope){
+				$scope.pageCode='MAT024';
+				$scope.pageName='บันทึกรายการให้หรือโอนย้ายครุภัณฑ์';
+				$scope.unit = unit;
+			}
+		}
+		}
+	})
+	.state('erp05.erps035.add',{url:"/add",
+		views:{
+			'from@erp05':{templateUrl:"partials/erps035F.html",
+			controller:function($scope){
+				$scope.back='erp05.erps035';
+				$scope.pageCode='MAT024';
+				$scope.pageName='บันทึกรายการให้หรือโอนย้ายครุภัณฑ์';
+			}
+		}
+		}		
 	})
 });
 //end erp05
